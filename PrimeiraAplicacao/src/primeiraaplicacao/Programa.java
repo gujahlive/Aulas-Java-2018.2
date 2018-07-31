@@ -1,3 +1,5 @@
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -15,7 +17,11 @@ public class Programa {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("Cheguei na Bagacinha!");
+        int x = 10;
+        int y = 20;
+        int r = x + y;
+        System.out.println("x: "+x+" y: "+y+" Resultado: " +r+" ou "+(x+y));
+        
        
         // TODO code application logic here
     }
