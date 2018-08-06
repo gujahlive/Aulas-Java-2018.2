@@ -72,7 +72,7 @@ public class Programa {
                  }
                 break;
              case 4: 
-                  int n1,n2,cont = 0;
+                 /* int n1,n2,cont = 0;
         Scanner teclado = new Scanner(System.in);
         do{
             System.out.println("Informe o primeiro  valor:");
@@ -97,7 +97,7 @@ public class Programa {
                 }
             }
         }
-    System.out.printf("Existem %d números compatives\n",cont);
+    System.out.printf("Existem %d números compatives\n",cont);*/
                break;
 
         
@@ -114,3 +114,4 @@ public class Programa {
     }
     
 }
+} 
