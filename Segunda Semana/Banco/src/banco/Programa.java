@@ -19,16 +19,20 @@ public class Programa {
     public static void main(String[] args) {
         
         
-        
+        int sair = 0;
         Conta conta1 = new Conta();
         Conta conta2 = new Conta();
         conta1.agencia = "1234-1";
         conta1.cpf = "123456789";
         conta1.numero = "123456";
-        conta1.saldo = 100; 
-        conta1.limite = 200;
+        //conta1.saldo = 100; 
+        //conta1.limite = 200;
         conta2.saldo = 10; 
-        int escolha = Integer.parseInt(JOptionPane.showInputDialog("1- Saque\n2- Deposito\n3-Transferir"));
+        
+       conta1.saldo   = Double.parseDouble(JOptionPane.showInputDialog("Bem-vindo ao GugaBankAccount\ninicie com os seguintes dados\nDigite o saldo"));
+       conta1.limite  = Double.parseDouble(JOptionPane.showInputDialog("Digite o limite"));
+        do{
+                    int escolha = Integer.parseInt(JOptionPane.showInputDialog("1- Saque\n2- Deposito\n3-Transferir\n4- Saldo\n5-Credito\n6 -Sair"));
         switch(escolha){
         
             case 1: 
@@ -40,7 +44,7 @@ public class Programa {
                         System.out.println("Você utilizou uma parte do limite, vc nos deve "+ conta1.saldo);
                     }else System.out.println("Saldo Atal: "+ conta1.saldo+" Permitir saque: "+ conta1.permitirSaque);
 
-                }else System.out.println("Limite de saque excedido, Saldo: "+ conta1.saldo);
+                }else System.out.println("Limite de saque excedido, Saldo: "+ conta1.saldo+" Credito: "+(conta1.saldo+conta1.limite)+" Limite: "+(conta1.saldo+conta1.limite));//fazer um if para caso o limite seja utilizado
 
                 
             break;
@@ -64,10 +68,20 @@ public class Programa {
                 System.out.println("saldo conta 1: "+conta1.saldo+"saldo conta 2: "+conta2.saldo); 
 
             break;
+            case 4:System.out.println("Saldo Atual: "+conta1.saldo);break;
+            case 5:System.out.println("Credito especial: "+conta1.limite);break;
+            case 6: sair = 1 ;break;
         
         
         
         }
+            
+            
+            
+                   
+            
+        }while(sair==0);
+
          //conta2.saca(20);
         //System.out.println("saldo conta 2: " +conta2.saldo);
         
