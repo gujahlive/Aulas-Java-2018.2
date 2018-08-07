@@ -17,6 +17,7 @@ public class Conta {
     String cpf;
     double limite;
     boolean permitirSaque;
+    boolean permitirTransferencia;
     
     boolean saca(double valorSaque,double limite){
         if(this.limite+this.saldo >= valorSaque){
@@ -31,6 +32,16 @@ public class Conta {
      void deposita(double valorDeposito){
         this.saldo += valorDeposito;
         
+    }
+    
+    boolean tranferencia(double valorTransferencia ,Conta destino){
+            if(this.saldo > valorTransferencia){
+                this.saldo = this.saldo - valorTransferencia;
+                destino.saldo += valorTransferencia;
+                permitirTransferencia = true;
+            }
+            
+        return false;
     }
     
    
