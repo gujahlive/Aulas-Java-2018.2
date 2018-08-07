@@ -16,9 +16,20 @@ public class Conta {
     double saldo;
     String cpf;
     double limite;
+    boolean permitirSaque;
     
-    void saca(double valorSaque){
-        this.saldo -= valorSaque;
+    boolean saca(double valorSaque,double limite){
+        if(this.limite+this.saldo >= valorSaque){
+            this.saldo -= valorSaque;
+            permitirSaque = true;
+            //return true;
+        }else  permitirSaque = false; //somar o saldo com o limite
+            
+        return permitirSaque;//false;// ;
+        
+    }
+     void deposita(double valorDeposito){
+        this.saldo += valorDeposito;
         
     }
     

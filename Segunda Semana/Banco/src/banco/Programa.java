@@ -23,16 +23,27 @@ public class Programa {
         conta1.agencia = "1234-1";
         conta1.cpf = "123456789";
         conta1.numero = "123456";
-        conta1.saldo = 100000; 
-        conta2.saldo = 100; 
+        conta1.saldo = 100; 
+        conta1.limite = 200;
+        //conta2.saldo = 100; 
         System.out.println("Saldo Anterior: "+ conta1.saldo);
-        conta1.saca(200);
+       // conta1.saca(200);
+        //System.out.println("Saldo Atal: "+ conta1.saldo);
+        double quantidade = Double.parseDouble(JOptionPane.showInputDialog("Digite Saque"));//convertendo com o parse o JOptionpane
+        conta1.saca(quantidade,conta1.limite);// objeto conta1 chamando método saca.
+        
+        
+        System.out.println("Saldo Atal: "+ conta1.saldo+" Permitir saque: "+ conta1.permitirSaque);
+        
+        
+        
+        /*double quantidadeDeposite = Double.parseDouble(JOptionPane.showInputDialog("Digite Deposito"));//convertendo com o parse o JOptionpane
+        conta1.deposita(quantidadeDeposite);
         System.out.println("Saldo Atal: "+ conta1.saldo);
-        double quantidade = Double.parseDouble(JOptionPane.showInputDialog("Digite um Valor"));//convertendo com o parse o JOptionpane
-        conta1.saca(quantidade);// objeto conta1 chamando método saca.
-        System.out.println("Saldo Atal: "+ conta1.saldo);
-        conta2.saca(20);
-        System.out.println("saldo conta 2: " +conta2.saldo);
+        
+        
+        //conta2.saca(20);
+        System.out.println("saldo conta 2: " +conta2.saldo);*/
         
         
     }
