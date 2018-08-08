@@ -12,7 +12,7 @@ public class Tabuada {
     System.out.printf("Informe o número para a tabuada:\n");
     n = ler.nextInt();
  
-      try (FileWriter arq = new FileWriter("e:\\tabuada.txt")) {
+      try (FileWriter arq = new FileWriter("e:\\tabuada.txt")) { // no exemplo estava sem o try, o NB estava com alerta e coloquei, mas estava pegando mesmo assim
           PrintWriter gravarArq = new PrintWriter(arq);
           
           gravarArq.printf("+--Resultado--+%n");
