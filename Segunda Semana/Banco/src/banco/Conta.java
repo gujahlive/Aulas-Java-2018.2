@@ -44,6 +44,15 @@ public class Conta {
         return false;
     }
     
+  /*     boolean tranferencia(double valorTransferencia ,Conta destino){
+            if(this.saldo > valorTransferencia){
+                this.sacar(valorTransferencia);
+                destino.depositar(valorTransferencia);
+                permitirTransferencia = true;
+            }
+           
+    }*/
+    
    
     
     
