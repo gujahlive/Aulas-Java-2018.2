@@ -13,10 +13,13 @@ public class Carro {
         String cor;
         String modelo;
         double velocidadeAtual;
-        double velocidadeMaxima =220;
+        double velocidadeMaxima;
         boolean ligado;
         
+        void ligar(){
+            this.ligado = true;
         
+        }
       
         void acelera(double acelerou){//passando por parametro a quantidade que será somada à velocidadeAtual
             if(this.velocidadeAtual + acelerou > velocidadeMaxima){
