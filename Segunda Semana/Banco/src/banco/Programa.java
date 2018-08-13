@@ -37,7 +37,7 @@ public class Programa {
         
             case 1: 
                 double quantidade = Double.parseDouble(JOptionPane.showInputDialog("Digite Saque"));//convertendo com o parse o JOptionpane
-                conta1.saca(quantidade,conta1.limite);// objeto conta1 chamando método saca.
+                conta1.saca(quantidade);// objeto conta1 chamando método saca.
 
                 if(conta1.permitirSaque == true){
                     if(conta1.saldo<0){

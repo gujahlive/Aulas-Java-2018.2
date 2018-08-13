@@ -19,7 +19,7 @@ public class Conta {
     boolean permitirSaque;
     boolean permitirTransferencia;
     
-    boolean saca(double valorSaque,double limite){
+    boolean saca(double valorSaque){
         if(this.limite+this.saldo >= valorSaque){
             this.saldo -= valorSaque;
             permitirSaque = true;
@@ -34,7 +34,7 @@ public class Conta {
         
     }
     
-    boolean tranferencia(double valorTransferencia ,Conta destino){
+    /*boolean tranferencia(double valorTransferencia ,Conta destino){
             if(this.saldo > valorTransferencia){
                 this.saldo = this.saldo - valorTransferencia;
                 destino.saldo += valorTransferencia;
@@ -42,20 +42,14 @@ public class Conta {
             }
             
         return false;
-    }
+    }}*/
     
-  /*     boolean tranferencia(double valorTransferencia ,Conta destino){
-            if(this.saldo > valorTransferencia){
-                this.sacar(valorTransferencia);
-                destino.depositar(valorTransferencia);
-                permitirTransferencia = true;
-            }
+       boolean tranferencia(double valorTransferencia ,Conta destino){
+            if(this.saca(valorTransferencia)){
+                destino.deposita(valorTransferencia);
+                return true;
+                //permitirTransferencia = true;
+            }else{return false;}
            
-    }*/
-    
-   
-    
-    
-    
-    
+       }  
 }
