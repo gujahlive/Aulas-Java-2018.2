@@ -22,13 +22,14 @@ public class Carro {
         }
       
         void acelera(double acelerou){//passando por parametro a quantidade que será somada à velocidadeAtual
-            if(this.velocidadeAtual + acelerou > velocidadeMaxima){
+            if(this.velocidadeAtual + acelerou > this.velocidadeMaxima){
                 this.velocidadeAtual = velocidadeMaxima;
             }else this.velocidadeAtual += acelerou;
             
         }
         
         int pegaMarcha(){
+            //float vel = this.velocidadeAtual; pode substituir o this por uma variável em todos os campos.
             if(this.velocidadeAtual > 0 && this.velocidadeAtual <= 20){
                 return 1;
             }else if(this.velocidadeAtual > 20 && this.velocidadeAtual <= 40){
@@ -37,9 +38,9 @@ public class Carro {
                 return 3;
             }else if(this.velocidadeAtual > 60 && this.velocidadeAtual <= 100){
                 return 4;
-             } else if(this.velocidadeAtual > 100){
+             } else 
               return 5;
-             } else return 0; 
+            
            
         }
         

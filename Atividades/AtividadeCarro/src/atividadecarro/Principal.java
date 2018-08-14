@@ -30,13 +30,8 @@ public class Principal {
         carro1.velocidadeMaxima =220; 
         carro1.ligado = Boolean.parseBoolean(JOptionPane.showInputDialog("1 - Sim \n 0 - Não"));
         carro1.ligar();
-        if(carro1.ligado){
-            System.out.println("Ligado");
-        }else{
-            System.out.println("Desligado");
-        }
-        
-        // if(){
+    
+   
             carro1.velocidadeAtual = Double.parseDouble(JOptionPane.showInputDialog("Digite a Velocidade Atual do carro"));
             int marcha = carro1.pegaMarcha();
             System.out.println("O Carro está na marcha: "+marcha+" velocidade: "+carro1.velocidadeAtual);
@@ -44,7 +39,7 @@ public class Principal {
             carro1.acelera(acelerou);
             marcha = carro1.pegaMarcha();
             System.out.println("O Carro está na marcha: "+marcha+" velocidade: "+carro1.velocidadeAtual);
-        // }
+      
          
 
         
