@@ -17,12 +17,15 @@ public class Carro {
     float velocidadeMax;
    private String cor;// modificador de acesso private
    
-   public Carro(String cor,String modelo, float velocidadeMax){
+   public Carro(String cor,String modelo, float velocidadeMax){//contrutor tem que ser o mesmo nome da classe
         this.cor = cor;
         this.modelo = modelo;
         this.velocidadeMax = velocidadeMax; 
     
     }
+   public Carro(){
+       //*System.out.println("bvdk");
+   }
     
     void atribuiCor(String cor){ //setCor set atribui // set VOID para a atribuição
         this.cor = cor;
