@@ -5,6 +5,8 @@
  */
 package concessionaria;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author aluno
@@ -16,10 +18,10 @@ public class Programa {
      */
     public static void main(String[] args) {
         
-       Carro carro1 = new Carro();
+       Carro carro1 = new Carro(JOptionPane.showInputDialog("Informe a cor:"),JOptionPane.showInputDialog("Informe o modelo: "),Float.parseFloat(JOptionPane.showInputDialog("Infome a velocidade")));
        
-       carro1.atribuiCor("vermelho");
-        System.out.println("Cor: "+carro1.retornaCor());
+       //carro1.atribuiCor("vermelho");
+        System.out.println("Cor: "+carro1.retornaCor()+" Modelo: "+carro1.getModelo()+" Velocidade: "+carro1.getVelocidade());
         // TODO code application logic here
     }
     
