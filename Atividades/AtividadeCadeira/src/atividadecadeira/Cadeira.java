@@ -18,6 +18,7 @@ public class Cadeira {
     
     
     
+    
     void personalizar(String cor, String material, boolean braco, float altura){
         if(this.braco == true){
              this.valor *= 0.2; 
@@ -27,9 +28,9 @@ public class Cadeira {
     
     }
     void atribuirValor(){
-        if(this.altura > 0.1 && this.altura < 1 ){
+        if(this.altura > 0.1 && this.altura <= 1 ){
             this.valor = 50; 
-        }else if(this.altura > 1 && this.altura < 1.5 ){
+        }else if(this.altura > 1 && this.altura <= 1.5 ){
             this.valor = 100; 
         }else if(this.altura > 1.5 ){
             this.valor = 150; 
