@@ -1,8 +1,16 @@
+package pbl1;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
+/**
+ *
+ * @author ACQUA
+ */
+
 /*Calculadora de Frequência Cardíaca-alvo
 P1 - Ao realizar exercícios físicos, você pode utilizar um monitor de frequência cardíaca para ver se sua
 frequência permanece dentro de um intervalo seguro, sugerido pelos seus treinadores e médicos. Segundo a
@@ -22,19 +30,14 @@ cardíaca alvo da pessoa.
 Escreva um aplicativo Java que solicite a informação da pessoa - calcule e imprima a idade da pessoa (em
 anos), intervalo de frequência cardíaca máxima e frequência cardíaca-alvo. 
 */
-package pbl1;
-
-/**
- *
- * @author ACQUA
- */
-public class Programa {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+public class HeartRates {
+    
+    private String nome , sobrenome;
+    private int dia, mes , anoNasc;
+    
+    void HeartRates(String nome , String sobrenome,  int dia, int mes , int anoNasc){
+        
+        
     }
     
 }
