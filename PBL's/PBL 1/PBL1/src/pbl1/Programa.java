@@ -47,7 +47,7 @@ public class Programa {
         
         HeartRates pessoa = new HeartRates(JOptionPane.showInputDialog("Informe nome:"),JOptionPane.showInputDialog("Informe sobrenome: "),Integer.parseInt(JOptionPane.showInputDialog("Infome dia nasc: ")),Integer.parseInt(JOptionPane.showInputDialog("Infome mes nasc: ")),Integer.parseInt(JOptionPane.showInputDialog("Infome ano nasc: ")));
         System.out.println("nome: "+pessoa.getNome()+"\nsobrenome: "+pessoa.getSobreNome()+"\nData Nascimento: "+pessoa.getDiaNasc()+"-"+pessoa.getMesNasc()+"-"+pessoa.getAnoNasc());
-
+        int dataAtual = Integer.parseInt(JOptionPane.showInputDialog("Infome data atual: "));
         
         // TODO code application logic here
     }
