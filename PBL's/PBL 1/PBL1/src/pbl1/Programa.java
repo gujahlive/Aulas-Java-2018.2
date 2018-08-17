@@ -24,6 +24,8 @@ anos), intervalo de frequência cardíaca máxima e frequência cardíaca-alvo.
 */
 package pbl1;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ACQUA
@@ -34,7 +36,9 @@ public class Programa {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-      ddddbbbfii  
+        HeartRates pessoa = new HeartRates(JOptionPane.showInputDialog("Informe a cor:"),JOptionPane.showInputDialog("Informe o modelo: "),Float.parseFloat(JOptionPane.showInputDialog("Infome a velocidade")));
+        
+        
         // TODO code application logic here
     }
     

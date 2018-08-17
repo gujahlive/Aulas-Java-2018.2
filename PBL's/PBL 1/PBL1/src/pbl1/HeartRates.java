@@ -35,10 +35,46 @@ public class HeartRates {
     private String nome , sobrenome;
     private int dia, mes , anoNasc;
     
-    void HeartRates(String nome , String sobrenome,  int dia, int mes , int anoNasc){
+    public HeartRates(String nome , String sobrenome,  int dia, int mes , int anoNasc){
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.dia = dia;
+        this.mes = mes;
+        this.anoNasc = anoNasc;
         
         
         
+    }
+    void setNome(String nome){
+        this.nome = nome;
+    } 
+    String getNome(){
+        return this.nome;
+    }
+    void setSobreNome(String sobrenome){
+        this.sobrenome = sobrenome;
+    } 
+    String getSobreNome(){
+        return this.sobrenome;
+    }
+    void setDiaNasc(int dia){
+        this.dia = dia;
+    } 
+    int getDiaNasc(){
+        return this.dia;
+    }
+     void setMesNasc(int mes){
+        this.mes = mes;
+    } 
+    int getMesNasc(){
+        return this.mes;
+    }
+    
+    void setAnoNasc(int anoNasc){
+        this.anoNasc = anoNasc;
+    } 
+    int getAnoNasc(){
+        return this.anoNasc;
     }
     void CalcIdadeEmAnos(){
         
