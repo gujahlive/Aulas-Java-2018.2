@@ -39,6 +39,8 @@ public class Programa {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        int diaAtual,mesAtual,anoAtual,resultDia,resultMes,resultAno,resultIdade=0;
+        
         Date hoje = new Date();
         SimpleDateFormat df;
         df = new SimpleDateFormat("dd/MM/yyyy");
@@ -47,7 +49,20 @@ public class Programa {
         
         HeartRates pessoa = new HeartRates(JOptionPane.showInputDialog("Informe nome:"),JOptionPane.showInputDialog("Informe sobrenome: "),Integer.parseInt(JOptionPane.showInputDialog("Infome dia nasc: ")),Integer.parseInt(JOptionPane.showInputDialog("Infome mes nasc: ")),Integer.parseInt(JOptionPane.showInputDialog("Infome ano nasc: ")));
         System.out.println("nome: "+pessoa.getNome()+"\nsobrenome: "+pessoa.getSobreNome()+"\nData Nascimento: "+pessoa.getDiaNasc()+"-"+pessoa.getMesNasc()+"-"+pessoa.getAnoNasc());
-        int dataAtual = Integer.parseInt(JOptionPane.showInputDialog("Infome data atual: "));
+        diaAtual = Integer.parseInt(JOptionPane.showInputDialog("Infome dia atual: "));
+        mesAtual = Integer.parseInt(JOptionPane.showInputDialog("Infome mes atual: "));
+        anoAtual = Integer.parseInt(JOptionPane.showInputDialog("Infome ano atual: "));
+        if(anoAtual >= pessoa.getAnoNasc()){
+            resultAno = anoAtual - pessoa.getAnoNasc();
+            if(mesAtual >= pessoa.getMesNasc() ){
+                resultMes = mesAtual - pessoa.getMesNasc();
+                if(diaAtual >= pessoa.getDiaNasc() ){
+                    resultDia = diaAtual - pessoa.getDiaNasc();
+                    resultIdade = resultAno -1 ;
+                }
+            }
+        }
+        System.out.println("Idade: "+resultIdade);
         
         // TODO code application logic here
     }
