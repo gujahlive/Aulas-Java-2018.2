@@ -52,18 +52,10 @@ public class Programa {
         diaAtual = Integer.parseInt(JOptionPane.showInputDialog("Infome dia atual: "));
         mesAtual = Integer.parseInt(JOptionPane.showInputDialog("Infome mes atual: "));
         anoAtual = Integer.parseInt(JOptionPane.showInputDialog("Infome ano atual: "));
-        if(anoAtual >= pessoa.getAnoNasc()){
-            resultIdade = anoAtual - pessoa.getAnoNasc();
-            if(mesAtual <= pessoa.getMesNasc() ){
-                resultIdade -= 1;
-                if(diaAtual <= pessoa.getDiaNasc() ){
-                    resultIdade = resultIdade ;
-                }else resultIdade += 1 ;
-            }//else resultIdade += 1;
-        }
+        pessoa.CalcIdadeEmAnos(diaAtual, mesAtual, anoAtual);
+            
         
-        
-        System.out.println("Idade: "+resultIdade);
+        System.out.println("Idade: "+pessoa.getCalcIdade());
         
         // TODO code application logic here
     }

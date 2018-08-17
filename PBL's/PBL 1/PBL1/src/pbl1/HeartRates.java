@@ -33,7 +33,7 @@ anos), intervalo de frequência cardíaca máxima e frequência cardíaca-alvo.
 public class HeartRates {
     
     private String nome , sobrenome;
-    private int dia, mes , anoNasc;
+    private int dia, mes , anoNasc,resultIdade;
     
     public HeartRates(String nome , String sobrenome,  int dia, int mes , int anoNasc){
         this.nome = nome;
@@ -74,10 +74,23 @@ public class HeartRates {
     int getAnoNasc(){
         return this.anoNasc;
     }
-    void CalcIdadeEmAnos(){
-        
+    void CalcIdadeEmAnos(int diaAtual,int mesAtual,int anoAtual){
+         if(anoAtual >= getAnoNasc()){
+            this.resultIdade = anoAtual - getAnoNasc();
+            if(mesAtual <= getMesNasc() ){
+                this.resultIdade -= 1;
+                if(diaAtual <= getDiaNasc() ){
+                    this.resultIdade = resultIdade ;
+                }else this.resultIdade += 1 ;
+            }//else resultIdade += 1;
+        }
         
     }
+    int getCalcIdade(){
+    
+        return resultIdade;
+    }
+    
     void CalcFreqCardMax(){
     
     }
