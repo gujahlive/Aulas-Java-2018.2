@@ -59,7 +59,7 @@ public class Programa {
                 if(diaAtual <= pessoa.getDiaNasc() ){
                     resultIdade = resultIdade ;
                 }else resultIdade += 1 ;
-            }resultIdade = resultIdade;
+            }//else resultIdade += 1;
         }
         
         
