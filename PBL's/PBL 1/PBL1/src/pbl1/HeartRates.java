@@ -82,7 +82,7 @@ public class HeartRates {
     void CalcFreqCardMax(){
     
     }
-    void CalcFrewCardAlvo(){
+    void CalcFreCardAlvo(){
     
     }
 }
