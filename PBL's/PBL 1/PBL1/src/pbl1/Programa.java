@@ -36,7 +36,7 @@ public class Programa {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        HeartRates pessoa = new HeartRates(JOptionPane.showInputDialog("Informe a cor:"),JOptionPane.showInputDialog("Informe o modelo: "),Float.parseFloat(JOptionPane.showInputDialog("Infome a velocidade")));
+        HeartRates pessoa = new HeartRates(JOptionPane.showInputDialog("Informe nome:"),JOptionPane.showInputDialog("Informe sobrenome: "),Integer.parseInt(JOptionPane.showInputDialog("Infome dia nasc: ")),Integer.parseInt(JOptionPane.showInputDialog("Infome mes nasc: ")),Integer.parseInt(JOptionPane.showInputDialog("Infome ano nasc: ")));
         
         
         // TODO code application logic here
