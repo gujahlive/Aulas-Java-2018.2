@@ -38,6 +38,15 @@ public class HeartRates {
     void HeartRates(String nome , String sobrenome,  int dia, int mes , int anoNasc){
         
         
+        
     }
+    void CalcIdadeEmAnos(){
+        
+    }
+    void CalcFreqCardMax(){
     
+    }
+    void CalcFrewCardAlvo(){
+    
+    }
 }
