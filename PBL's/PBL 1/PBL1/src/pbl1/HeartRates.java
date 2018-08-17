@@ -42,8 +42,6 @@ public class HeartRates {
         this.mes = mes;
         this.anoNasc = anoNasc;
         
-        
-        
     }
     void setNome(String nome){
         this.nome = nome;
@@ -77,6 +75,7 @@ public class HeartRates {
         return this.anoNasc;
     }
     void CalcIdadeEmAnos(){
+        
         
     }
     void CalcFreqCardMax(){
