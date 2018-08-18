@@ -35,7 +35,7 @@ public class HeartRates {
     private String nome , sobrenome;
     private int dia, mes , anoNasc,resultIdade;
     //private int ;
-    private double FCMPM,result50,result85;
+    private double FCMPM=0,result50,result85;
     
     public HeartRates(String nome , String sobrenome,  int dia, int mes , int anoNasc){
         this.nome = nome;
@@ -89,23 +89,25 @@ public class HeartRates {
         
     }
     int getCalcIdade(){
-        return resultIdade;
+        return this.resultIdade;
     }
     
     double CalcFreqCardMax(){
-        FCMPM = 220 - resultIdade; 
+       this.FCMPM = 220 - this.resultIdade;    
+        return this.FCMPM;
         /* a fórmula para calcular a frequência cardíaca máxima por minuto é 220 menos sua idade.
-        Sua frequência cardíaca alvo é um intervalo entre 50 - 85% da frequência cardíaca máxima.*/
-        return FCMPM;
+        Sua frequência cardíaca alvo é um intervalo entre 50 - 85% da frequência cardíaca máxima.*/     
     }
     
+ 
     double CalcFreqCardAlvo(){
         int i,n=0;
         this.result50 = FCMPM * 0.50 ;
         this.result85 = FCMPM * 0.85;
-        /*for (i=(int) this.result50 ; i<this.result85 ; i++){
-            n = (int) (Math.random()*100);
-        }*/
+       for (i=(int) this.result50 ; i<this.result85 ; i++){
+       
+           n = (int) (Math.random()*100);
+       }
         
         
         return n; 
