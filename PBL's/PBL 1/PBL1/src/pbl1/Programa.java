@@ -53,9 +53,10 @@ public class Programa {
         mesAtual = Integer.parseInt(JOptionPane.showInputDialog("Infome mes atual: "));
         anoAtual = Integer.parseInt(JOptionPane.showInputDialog("Infome ano atual: "));
         pessoa.CalcIdadeEmAnos(diaAtual, mesAtual, anoAtual);
-            
-        
+        System.out.println("Data Atual: "+diaAtual+"-"+mesAtual+"-"+anoAtual);
         System.out.println("Idade: "+pessoa.getCalcIdade());
+        //System.out.println("Frequencia Cardiaca Maxima \ Minuto: "+pessoa.CalcFreqCardMax());
+        System.out.println("Frequencia Cardiaca Alvo: "+pessoa.CalcFreqCardAlvo());
         
         // TODO code application logic here
     }
