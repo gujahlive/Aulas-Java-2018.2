@@ -28,7 +28,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-
+import java.util.Random;
 /**
  *
  * @author ACQUA
@@ -40,7 +40,8 @@ public class Programa {
      */
     public static void main(String[] args) {
         int diaAtual,mesAtual,anoAtual,resultDia,resultMes,resultAno,resultIdade=0;
-        
+        int s = (int) (Math.random()*100);
+        System.out.println("ele: "+s);
         Date hoje = new Date();
         SimpleDateFormat df;
         df = new SimpleDateFormat("dd/MM/yyyy");
@@ -55,7 +56,7 @@ public class Programa {
         pessoa.CalcIdadeEmAnos(diaAtual, mesAtual, anoAtual);
         System.out.println("Data Atual: "+diaAtual+"-"+mesAtual+"-"+anoAtual);
         System.out.println("Idade: "+pessoa.getCalcIdade());
-        //System.out.println("Frequencia Cardiaca Maxima \ Minuto: "+pessoa.CalcFreqCardMax());
+       // System.out.println("Frequencia Cardiaca Maxima \ Minuto: "+pessoa.CalcFreqCardMax());
         System.out.println("Frequencia Cardiaca Alvo: "+pessoa.CalcFreqCardAlvo());
         
         // TODO code application logic here

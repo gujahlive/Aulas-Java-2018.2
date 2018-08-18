@@ -1,7 +1,5 @@
 package pbl1;
 
-import java.util.Random;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -95,7 +93,7 @@ public class HeartRates {
     }
     
     double CalcFreqCardMax(){
-        this.FCMPM = 220 - resultIdade; 
+        FCMPM = 220 - resultIdade; 
         /* a fórmula para calcular a frequência cardíaca máxima por minuto é 220 menos sua idade.
         Sua frequência cardíaca alvo é um intervalo entre 50 - 85% da frequência cardíaca máxima.*/
         return FCMPM;
@@ -103,11 +101,13 @@ public class HeartRates {
     
     double CalcFreqCardAlvo(){
         int i,n=0;
-        this.result50 = this.FCMPM * 0.50 ;
-        this.result85 = this.FCMPM * 0.85;
-        for (i=(int) this.result50 ; i<this.result85 ; i++){
-            n = (int) Math.random();
-        }
+        this.result50 = FCMPM * 0.50 ;
+        this.result85 = FCMPM * 0.85;
+        /*for (i=(int) this.result50 ; i<this.result85 ; i++){
+            n = (int) (Math.random()*100);
+        }*/
+        
+        
         return n; 
         
     }
