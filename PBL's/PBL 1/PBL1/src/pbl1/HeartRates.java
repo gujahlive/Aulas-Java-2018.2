@@ -106,7 +106,7 @@ public class HeartRates {
         this.result85 = FCMPM * 0.85;
        for (i=(int) this.result50 ; i<this.result85 ; i++){
        
-           n = (int) (Math.random()*100);
+           n = (int) (Math.random()*FCMPM);
        }
         
         
