@@ -53,5 +53,19 @@ public class Cadeira {
         this.material = material;
     
     }
+    public  void precificar(){
+        if(this.altura > 0 && this.altura <= 1 ){
+            this.valor = 50; 
+        }else if(this.altura > 1 && this.altura <= 1.5 ){
+            this.valor = 100; 
+        }else if(this.altura > 1.5 ){
+            this.valor = 150; 
+        } 
+         if(this.braco){
+             this.valor += this.valor*0.2; 
+           
+        }
+        
+    }
     
 }
