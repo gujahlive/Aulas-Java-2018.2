@@ -32,6 +32,8 @@ public class Programa {
         /*Conta[] contas = new Conta[5];//
         contas[0] = new Conta();
         contas[0].setDono("Gu");*/
+        
+        
         Conta[] contas = new Conta[2];
         for (i=0;i<2;i++){
             contas[i] = new Conta();
@@ -47,8 +49,14 @@ public class Programa {
             System.out.println("\n");
             
         }
-        
-        
+        ////////////////////////////////////////////////////////////////////////////////////////////
+       /* Conta conta1 =  new Conta();
+        conta1.setAgencia("123");
+        conta1.setDono("123");
+        conta1.setLimite(200);
+        contas[0] = conta1;*/
+       
+       
     }
     
 }
