@@ -33,9 +33,6 @@ public class Conta {
     public double getLimite(){
         return this.limite;
     }
-    public void setSaldo(double saldo){
-        this.saldo = saldo;
-    }
     public double getSaldo(){
         return this.saldo;
     }
