@@ -15,11 +15,9 @@ public class Conta {
     private double saldo;
     private String agencia;
     
-    public Conta(double saldo){
-        saldo = 0;
-        this.saldo = saldo; 
-    }
+
     public Conta(){
+        this.saldo = 0;
     }
     
     
