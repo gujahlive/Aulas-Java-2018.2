@@ -20,14 +20,24 @@ public class Programa {
         int i;
         Cadeira[] cadeiras = new Cadeira[2];
         Cadeira cadeira;
+        
+        boolean braco;
+
+        
         for(i=0 ; i<2 ; i++){
             cadeira = new Cadeira();
             cadeira.setAltura(Float.parseFloat(JOptionPane.showInputDialog("Altura")));
+            int verifica = JOptionPane.showConfirmDialog(null, "a dadeira tem braço?");
+            if(verifica == 1){
+                  braco = false;
+             }else braco = true;
+            cadeira.setBraco(braco);
+            
             cadeiras[i] = cadeira;
             
         }
         for(i=0 ; i<2 ; i++){
-            System.out.println("Altura: "+cadeiras[i].getAltura());
+            System.out.println("Altura: "+cadeiras[i].getAltura()+"Braço: "+cadeiras[i].getBraco());
             
         }
         // TODO code application logic here
