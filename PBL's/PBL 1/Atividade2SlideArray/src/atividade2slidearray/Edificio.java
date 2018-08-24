@@ -11,4 +11,10 @@ package atividade2slidearray;
  */
 public class Edificio {
     
+    private String cor;
+    private String nomeAndar;
+    private int qtPortas;
+   
+    
+    
 }
