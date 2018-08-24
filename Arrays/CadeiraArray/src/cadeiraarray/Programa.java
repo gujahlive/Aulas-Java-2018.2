@@ -39,7 +39,8 @@ public class Programa {
             
         }
         for(i=0 ; i<2 ; i++){
-            System.out.println("Altura: "+cadeiras[i].getAltura()+" Braço: "+cadeiras[i].getBraco()+"Valor: "+cadeiras[i].getValor());
+            System.out.println("Material: "+cadeiras[i].getMaterial()+"Cor: "+cadeiras[i].getCor()+
+                    "Altura: "+cadeiras[i].getAltura()+" Braço: "+cadeiras[i].getBraco()+"Valor: "+cadeiras[i].getValor());
             
         }
         // TODO code application logic here
