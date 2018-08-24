@@ -26,18 +26,20 @@ public class Programa {
         
         for(i=0 ; i<2 ; i++){
             cadeira = new Cadeira();
-            cadeira.setAltura(Float.parseFloat(JOptionPane.showInputDialog("Altura")));
+            cadeira.setCor(JOptionPane.showInputDialog("Cor: "));
+            cadeira.setMaterial(JOptionPane.showInputDialog("Material: "));
+            cadeira.setAltura(Float.parseFloat(JOptionPane.showInputDialog("Altura: ")));
             int verifica = JOptionPane.showConfirmDialog(null, "a dadeira tem braço?");
             if(verifica == 1){
                   braco = false;
              }else braco = true;
             cadeira.setBraco(braco);
-            
+            cadeira.precificar();
             cadeiras[i] = cadeira;
             
         }
         for(i=0 ; i<2 ; i++){
-            System.out.println("Altura: "+cadeiras[i].getAltura()+"Braço: "+cadeiras[i].getBraco());
+            System.out.println("Altura: "+cadeiras[i].getAltura()+" Braço: "+cadeiras[i].getBraco()+"Valor: "+cadeiras[i].getValor());
             
         }
         // TODO code application logic here
