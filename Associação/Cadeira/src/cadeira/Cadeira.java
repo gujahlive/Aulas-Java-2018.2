@@ -46,11 +46,11 @@ public class Cadeira {
        return this.valor;
    }
    
-   public void personalizar(String cor, String material, boolean braco, float altura){
+   public void personalizar(String cor, Material material, boolean braco, float altura){
         this.cor = cor;
         this.altura = altura;
         this.braco = braco;
-        //this.material = material;
+        this.material = material;
     
     }
     public  void precificar(){

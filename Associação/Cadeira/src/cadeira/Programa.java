@@ -19,15 +19,12 @@ public class Programa {
     public static void main(String[] args) {
         
         int i;
-        Cadeira[] cadeiras = new Cadeira[2];
+        Cadeira cadeiras = new Cadeira();
         Cadeira cadeira;
         
         boolean braco;
-
-        
-        for(i=0 ; i<2 ; i++){
             cadeira = new Cadeira();
-            cadeira.setCor(JOptionPane.showInputDialog("Cor: "));
+          //  cadeira.setCor(JOptionPane.showInputDialog("Cor: "));
          //   cadeira.setMaterial(JOptionPane.showInputDialog("Material: "));
             cadeira.setAltura(Float.parseFloat(JOptionPane.showInputDialog("Altura: ")));
             int verifica = JOptionPane.showConfirmDialog(null, "a dadeira tem braço?");
@@ -36,14 +33,20 @@ public class Programa {
              }else braco = true;
             cadeira.setBraco(braco);
             cadeira.precificar();
-            cadeiras[i] = cadeira;
+            cadeiras = cadeira;
             
-        }
-        for(i=0 ; i<2 ; i++){
-            System.out.println("Material: "+cadeiras[i].getMaterial()+" Cor: "+cadeiras[i].getCor()+
-                    " Altura: "+cadeiras[i].getAltura()+" Braço: "+cadeiras[i].getBraco()+" Valor: "+cadeiras[i].getValor());
-            
-        }
+             Material material = new Material();
+             material.setCor("Azivis");
+             material.setPeso(0.8);
+             material.setPreco(40);
+             cadeira.setMaterial(material);
+    
+        
+    
+    
+            System.out.println("Material: "+cadeiras.getMaterial()+" Cor: "+cadeira.getMaterial().getCor()+ " Altura: "+cadeiras.getAltura()+" Braço: "+cadeiras.getBraco()+" Valor: "+cadeiras.getValor());
+            System.out.println(" Cor: "+cadeira.getMaterial().getCor()+"Peso: "+cadeira.getMaterial().getPeso()+"Preço Material: "+cadeira.getMaterial().getPreco());
+       
             
         
         
