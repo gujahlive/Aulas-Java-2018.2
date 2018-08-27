@@ -18,11 +18,11 @@ public class Material {
         this.cor = cor;
     }
     
-    public double getPeso (){
-        return this.peso;
+    public String getCor (){
+        return this.cor;
     }
     
-   public void setPeso(double preco){
+   public void setPreco(double preco){
         this.preco = preco ;
     }
     

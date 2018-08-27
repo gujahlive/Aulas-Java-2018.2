@@ -50,7 +50,7 @@ public class Cadeira {
         this.cor = cor;
         this.altura = altura;
         this.braco = braco;
-        this.material = material;
+        //this.material = material;
     
     }
     public  void precificar(){
