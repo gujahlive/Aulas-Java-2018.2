@@ -5,6 +5,7 @@
  */
 package cadeira;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -33,20 +34,24 @@ public class Programa {
              }else braco = true;
             cadeira.setBraco(braco);
             cadeira.precificar();
- 
+             
+            ArrayList<Material> materiais = new ArrayList();
+            for (i = 0 ; i< 3; i++){
+                             Material material = new Material();
+                              material.setCor("Azivis");
+                                material.setPeso(0.8);
+                                  material.setPreco(40);
+                                  materiais.add(material);
+         
             
-             Material material = new Material();
-             material.setCor("Azivis");
-             material.setPeso(0.8);
-             material.setPreco(40);
-            cadeira.setMaterial(material);
-    
-        
-    
-    
-            System.out.println("Material: "+cadeira.getMaterial()+" Cor: "+cadeira.getMaterial().getCor()+ " Altura: "+cadeira.getAltura()+" Braço: "+cadeira.getBraco()+" Valor: "+cadeira.getValor());
-            System.out.println(" Cor: "+cadeira.getMaterial().getCor()+"Peso: "+cadeira.getMaterial().getPeso()+"Preço Material: "+cadeira.getMaterial().getPreco());
+            }
+            cadeira.setMateriais(materiais);
+
+   //         cadeira.setMaterial(material);
+           //System.out.println("Material: "+cadeira.getMaterial()+" Cor: "+cadeira.getMaterial().getCor()+ " Altura: "+cadeira.getAltura()+" Braço: "+cadeira.getBraco()+" Valor: "+cadeira.getValor());
+         //   System.out.println(" Cor: "+cadeira.getMaterial().getCor()+"Peso: "+cadeira.getMaterial().getPeso()+"Preço Material: "+cadeira.getMaterial().getPreco());
        
+             
             
         
         
