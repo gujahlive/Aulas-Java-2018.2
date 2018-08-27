@@ -39,7 +39,7 @@ public class Programa {
              material.setCor("Azivis");
              material.setPeso(0.8);
              material.setPreco(40);
-             cadeira.setMaterial(material);
+            cadeira.setMaterial(material);
     
         
     
