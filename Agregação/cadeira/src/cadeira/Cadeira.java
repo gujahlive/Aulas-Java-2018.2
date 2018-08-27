@@ -28,9 +28,9 @@ public class Cadeira {
     public void setMateriais(ArrayList<Material> materiais){
         this.materiais= materiais;
     }
-   // public Material getMaterial(){
- //       return this.material;
- //   }
+   public ArrayList<Material> getMaterial(){
+       return this.materiais;
+   }
     public void setBraco(boolean braco){
         this.braco = braco;
     }
