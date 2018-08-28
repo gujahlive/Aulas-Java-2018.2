@@ -17,19 +17,23 @@ public class Porta {
    private float dimensaoz;
    
    public void abre(){
-   
+       this.aberta = true;
    }
-    public void fecha(){
-   
+   public void fecha(){
+       this.aberta = false;
    }
-   public void pinta(String s){
    
-   }
    public boolean estaAberta(){
-      return true;
+      return this.aberta;
+    
    }
    
-   
-   
+   public void pinta(String cor){
+       this.cor = cor;
+   }
+   public String getCor(){
+       return this.cor;
+   }
+    
     
 }
