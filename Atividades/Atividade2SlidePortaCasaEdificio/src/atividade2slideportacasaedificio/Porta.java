@@ -15,6 +15,9 @@ public class Porta {
    private float dimensaoX;
    private float dimensaoY;
    private float dimensaoZ;
+   public Porta(){
+   
+   }
    
    public void abre(){
        this.aberta = true;
