@@ -36,7 +36,7 @@ public class Casa {
          
    //  }
     public void totalDePortas(){
-         this.qtPortas = this.portas.size(); 
+         this.qtPortas = this.portas.size(); //tamanho de portas quantas portas tem.
          
      }
     public int qtPortasAbertas(){

@@ -72,7 +72,7 @@ public class Principal {
             porta.setDimensaoZ(Float.parseFloat(JOptionPane.showInputDialog("Dimensão Z: ")));
             System.out.println("Dimensão X: " + porta.getDimensaoX() + " Dimensão Y: " + porta.getDimensaoY() + " Dimensão Z: " + porta.getDimensaoZ());
 
-            casa.setQtPortas(Integer.parseInt(JOptionPane.showInputDialog("Quantas portas na casa?")));
+            casa.cadastrarPortas(JOptionPane.showInputDialog("Quantas portas na casa?"));//o parametro é do tipo porta
 
             statusInserirPorta = Integer.parseInt(JOptionPane.showInputDialog("deseja inserir mais uma porta?\n1 - sim\n0 - não"));
             casa.setPorta(porta);
