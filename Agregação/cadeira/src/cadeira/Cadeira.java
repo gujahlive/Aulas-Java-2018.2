@@ -14,10 +14,15 @@ import java.util.ArrayList;
 public class Cadeira {
         private String cor;
         private ArrayList<Material> materiais;
+        private Material material;
         private boolean braco;
         private float altura;
         private  double valor;
     
+        public Cadeira(){
+                    this.materiais = new ArrayList<>();
+        } 
+      
     
     public void setCor(String cor){
         this.cor = cor;
@@ -27,6 +32,9 @@ public class Cadeira {
     }
     public void setMateriais(ArrayList<Material> materiais){
         this.materiais= materiais;
+    }
+   public void setMaterial(Material material){
+        this.materiais.add(material);
     }
    public ArrayList<Material> getMaterial(){
        return this.materiais;
