@@ -18,6 +18,9 @@ public class Principal {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+       /////////////////////////////////////////////////////////////////////////////////////////////
+       ///////////////////////////////PARTE TESTE CLASSE PORTA ///////////////////////////////////////
+       ///////////////////////////////////////////////////////////////////////////////////////////////
        Porta porta = new Porta();
        Casa casa = new Casa();
        System.out.println("Porta: "+porta.estaAberta());
@@ -39,11 +42,21 @@ public class Principal {
         porta.setDimensaoY(Float.parseFloat(JOptionPane.showInputDialog("Dimensão Y: ")));
         porta.setDimensaoZ(Float.parseFloat(JOptionPane.showInputDialog("Dimensão Z: ")));
         System.out.println("Dimensão X: "+porta.getDimensaoX()+" Dimensão Y: "+ porta.getDimensaoY()+" Dimensão Z: "+porta.getDimensaoZ() );
+       
+
+       /////////////////////////////////////////////////////////////////////////////////////////////
+       ///////////////////////////////PARTE TESTE CLASSE CASA ////////////////////////////////////////////////////////////////
+       ///////////////////////////////////////////////////////////////////////////////////////////////
+        casa.pinta(JOptionPane.showInputDialog("Qual a cor da casa? "));
+        int statusInserirPorta;
+        do{
+         statusInserirPorta = Integer.parseInt(JOptionPane.showInputDialog("deseja pintar a porta?\n1 - sim\n0 - não"));
+       }while(statusInserirPorta == 1);
+        casa.setQtPortas(Integer.parseInt(JOptionPane.showInputDialog("Quantas portas tem a casa?")));
+        
         ArrayList<Porta> portas = new ArrayList<>();
-         
+        
         for (int i = 0; i < 3; i++) {
-            
-            casa.setQtPortas(Integer.parseInt(JOptionPane.showInputDialog("Quantas portas tem a casa?")));
             
             casa.setPorta(porta);// adciona a porta no arraylist pelo metodo setPorta
         }
