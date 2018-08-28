@@ -14,7 +14,7 @@ public class Porta {
    private String cor;
    private float dimensaoX;
    private float dimensaoY;
-   private float dimensaoz;
+   private float dimensaoZ;
    
    public void abre(){
        this.aberta = true;
@@ -33,6 +33,24 @@ public class Porta {
    }
    public String getCor(){
        return this.cor;
+   }
+   public void setDimensaoX(float dX){
+       this.dimensaoX = dX;
+   }
+   public float getDimensaoX(){
+       return this.dimensaoX;
+   }
+    public void setDimensaoY(float dY){
+       this.dimensaoY = dY;
+   }
+    public float getDimensaoY(){
+       return this.dimensaoY;
+   }
+   public void setDimensaoZ(float dZ){
+       this.dimensaoZ = dZ;
+   }
+   public float getDimensaoZ(){
+       return this.dimensaoZ;
    }
     
     

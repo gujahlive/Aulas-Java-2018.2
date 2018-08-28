@@ -34,8 +34,16 @@ public class Principal {
        System.out.println("Cor atual da porta: "+  porta.getCor());
        statusCor = Integer.parseInt(JOptionPane.showInputDialog("deseja pintar a porta?\n1 - sim\n0 - não"));
        }while(statusCor == 1);
+        porta.setDimensaoX(Float.parseFloat(JOptionPane.showInputDialog("Dimensão X: ")));
+        porta.setDimensaoY(Float.parseFloat(JOptionPane.showInputDialog("Dimensão Y: ")));
+        porta.setDimensaoZ(Float.parseFloat(JOptionPane.showInputDialog("Dimensão Z: ")));
+        System.out.println("Dimensão X: "+porta.getDimensaoX()+" Dimensão Y: "+ porta.getDimensaoY()+" Dimensão Z: "+porta.getDimensaoZ() );
        
-        // TODO code application logic here
+
+
+// TODO code application logic here
+   
+    
     }
     
 }
