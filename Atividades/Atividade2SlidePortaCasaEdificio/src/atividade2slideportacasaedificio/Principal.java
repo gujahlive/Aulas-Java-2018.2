@@ -5,6 +5,7 @@
  */
 package atividade2slideportacasaedificio;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -18,7 +19,7 @@ public class Principal {
      */
     public static void main(String[] args) {
        Porta porta = new Porta();
-       
+       Casa casa = new Casa();
        System.out.println("Porta: "+porta.estaAberta());
        
        int statusPorta = Integer.parseInt(JOptionPane.showInputDialog("1 - abrir\n2 - fechar"));
@@ -38,9 +39,17 @@ public class Principal {
         porta.setDimensaoY(Float.parseFloat(JOptionPane.showInputDialog("Dimensão Y: ")));
         porta.setDimensaoZ(Float.parseFloat(JOptionPane.showInputDialog("Dimensão Z: ")));
         System.out.println("Dimensão X: "+porta.getDimensaoX()+" Dimensão Y: "+ porta.getDimensaoY()+" Dimensão Z: "+porta.getDimensaoZ() );
-       
+        ArrayList<Porta> portas = new ArrayList<>();
+         
+        for (int i = 0; i < 3; i++) {
+            
+            casa.setQtPortas(Integer.parseInt(JOptionPane.showInputDialog("Quantas portas tem a casa?")));
+            
+            casa.setPorta(porta);// adciona a porta no arraylist pelo metodo setPorta
+        }
+        
 
-
+        
 // TODO code application logic here
    
     
