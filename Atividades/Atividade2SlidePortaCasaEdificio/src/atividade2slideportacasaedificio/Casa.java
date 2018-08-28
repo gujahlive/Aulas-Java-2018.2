@@ -20,9 +20,7 @@ public class Casa {
             this.portas = new ArrayList<>();
         } 
    
-    public void setQtPortas(int qtPortas) {
-        this.qtPortas = qtPortas;
-    }
+
 
     public void pinta(String cor){
         this.cor = cor;
@@ -33,9 +31,24 @@ public class Casa {
      public int qtPortasEstaoAbertas(){
          return this.qTPortasAbertas; // instaciar a porta aqui
      }
-     public int totalDePortas(){
-         return this.qtPortas;
+    // public int totalDePortas(){
+     //    return this.portas.size(); 
+         
+   //  }
+    public void totalDePortas(){
+         this.qtPortas = this.portas.size(); 
+         
      }
+    public int qtPortasAbertas(){
+       int q =0;
+        for(int i=0 ; i < this.qtPortas ;i++){
+            if(this.portas.get(i).estaAberta()){   //tá perguntando se é true que está aberta não precisa colocar == true 
+                q++;
+            }
+        }
+        return q;
+    }
+     
      public void cadastrarPortas(Porta porta){
          this.portas.add(porta);
      }
