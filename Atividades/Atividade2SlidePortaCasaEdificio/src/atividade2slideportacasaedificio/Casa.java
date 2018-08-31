@@ -29,15 +29,7 @@ public class Casa {
         this.cor = cor;
     }
 
-    public int qtPortasAbertas(){
-       int q =0;
-        for(int i=0 ; i < this.qtPortas ;i++){
-            if(this.portas.get(i).estaAberta()){   //tá perguntando se é true que está aberta não precisa colocar == true 
-                q++;
-            }
-        }
-        return q;
-    }
+
      
      public void cadastrarPortas(Porta porta){
          this.qtPortas += 1;
@@ -48,26 +40,26 @@ public class Casa {
     public void setPortas(ArrayList<Porta> portas){
         this.portas = portas;
     }
-    /* public void setPorta(Porta porta){
-        this.portas.add(porta);
-    }*///fazendo a mesma coisa que cadastrarPortas
+
    public ArrayList<Porta> getPortas(){
        return this.portas;
    }
    
    public void totalDePortas(){
-        //this.qtPortas += 1;
-        this.qtPortas = this.portas.size(); //tamanho de portas quantas portas tem.
+        this.qtPortas = this.portas.size(); //tamanho de portas quantas portas tem. MÉTODO N FUNCIONANDO PERGUNTAR A FRAN
          
      }
    public int getTotalDePortas(){
         return this.qtPortas;
     }
-    public int qtPortasEstaoAbertas(){
-         return this.qTPortasAbertas; // instaciar a porta aqui
-     }
-    // public int totalDePortas(){
-     //    return this.portas.size(); 
-         
-   //  }
+   public int qtPortasAbertas(){
+       int q =0;
+        for(int i=0 ; i < this.qtPortas ;i++){
+            if(this.portas.get(i).estaAberta()){   //tá perguntando se é true que está aberta não precisa colocar == true 
+                q++;
+            }
+        }
+        return q;
+    }
+
 }

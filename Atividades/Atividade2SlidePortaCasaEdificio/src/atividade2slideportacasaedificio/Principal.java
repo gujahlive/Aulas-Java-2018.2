@@ -79,7 +79,9 @@ public class Principal {
             
         } while (statusInserirPorta == 1);
         
-    
+        for(int i = 0; i < casa.getTotalDePortas() ; i++){
+            //System.out.println("PORTA "+(i+1)+": "+"");
+        }
          System.out.println("\nTotal de Portas: "+casa.getTotalDePortas());
          System.out.println("Total de Portas Abertas: "+casa.qtPortasAbertas());
 
