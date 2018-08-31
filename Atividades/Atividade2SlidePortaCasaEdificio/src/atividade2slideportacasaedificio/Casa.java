@@ -28,20 +28,7 @@ public class Casa {
      public void setCor(String cor) {
         this.cor = cor;
     }
-     public int qtPortasEstaoAbertas(){
-         return this.qTPortasAbertas; // instaciar a porta aqui
-     }
-    // public int totalDePortas(){
-     //    return this.portas.size(); 
-         
-   //  }
-    public void totalDePortas(){
-         this.qtPortas = this.portas.size(); //tamanho de portas quantas portas tem.
-         
-     }
-    public int getTotalDePortas(){
-        return this.qtPortas;
-    }
+
     public int qtPortasAbertas(){
        int q =0;
         for(int i=0 ; i < this.qtPortas ;i++){
@@ -53,17 +40,34 @@ public class Casa {
     }
      
      public void cadastrarPortas(Porta porta){
+         this.qtPortas += 1;
          this.portas.add(porta);
+         
      }
      
     public void setPortas(ArrayList<Porta> portas){
         this.portas = portas;
     }
-     public void setPorta(Porta porta){
+    /* public void setPorta(Porta porta){
         this.portas.add(porta);
-    }
+    }*///fazendo a mesma coisa que cadastrarPortas
    public ArrayList<Porta> getPortas(){
        return this.portas;
    }
-     
+   
+   public void totalDePortas(){
+        //this.qtPortas += 1;
+        this.qtPortas = this.portas.size(); //tamanho de portas quantas portas tem.
+         
+     }
+   public int getTotalDePortas(){
+        return this.qtPortas;
+    }
+    public int qtPortasEstaoAbertas(){
+         return this.qTPortasAbertas; // instaciar a porta aqui
+     }
+    // public int totalDePortas(){
+     //    return this.portas.size(); 
+         
+   //  }
 }
