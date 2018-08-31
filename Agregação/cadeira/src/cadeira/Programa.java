@@ -32,14 +32,14 @@ public class Programa {
         cadeira.setBraco(braco);
         cadeira.precificar();*/
         
-        ArrayList<Material> materiais = new ArrayList<>();
+       // ArrayList<Material> materiais = new ArrayList<>();  usa-se a instacia do arraylist na principal se for setar todos os objetos na classe principal
         for (i = 0; i < 3; i++) {
             Material material = new Material();
-            material.setCor(JOptionPane.showInputDialog("Informe a cor: "));
+            material.setCor(JOptionPane.showInputDialog("Informe a cor "+(i+1)+":"));
             material.setPeso(Double.parseDouble(JOptionPane.showInputDialog("Informe o peso: ")));
             material.setPreco(Double.parseDouble(JOptionPane.showInputDialog("Informe o preço: ")));
             //materiais.add(material);// adciona o material no arraylist localmente
-             cadeira.setMaterial(material);// adciona o material no arraylist pelo metodo set material
+             cadeira.setMaterial(material);// setando o material no final do arraylist pelo metodo setMaterial na classe cadeira
         }
        // cadeira.setMateriais(materiais);// seta o arraylist dos materiais.add(material) 
 

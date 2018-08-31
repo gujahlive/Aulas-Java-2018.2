@@ -48,7 +48,7 @@ public class Principal {
         ///////////////////////////////PARTE TESTE CLASSE CASA ////////////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////////////////////////
         casa.pinta(JOptionPane.showInputDialog("Qual a cor da casa? "));
-        ArrayList<Porta> portas = new ArrayList<>();
+       // ArrayList<Porta> portas = new ArrayList<>();
         
         int statusInserirPorta;
         do {
@@ -78,7 +78,7 @@ public class Principal {
             casa.setPorta(porta);
             
         } while (statusInserirPorta == 1);
-        casa.setPortas(portas);
+        //casa.setPortas(portas);
         //casa.setQtPortas(Integer.parseInt(JOptionPane.showInputDialog("Quantas portas tem a casa?")));
          System.out.println("Total de Portas: "+casa.getTotalDePortas());
 // TODO code application logic here
