@@ -56,27 +56,12 @@ public class Principal {
         int statusInserirPorta;
         do {
             Porta porta = new Porta();
-            int statusPorta = Integer.parseInt(JOptionPane.showInputDialog("1 - abrir\n2 - fechar"));
-            if (statusPorta == 1) {
-                porta.abre();
-            } else {
-                porta.fecha();
-          }
-            int statusCor;
-            do {
-
-                porta.pinta(JOptionPane.showInputDialog("Qual a cor da porta?"));
-                System.out.println("Cor atual da porta: " + porta.getCor());
-                statusCor = Integer.parseInt(JOptionPane.showInputDialog("deseja pintar a porta?\n1 - sim\n0 - não"));
-            } while (statusCor == 1);
-            porta.setDimensaoX(Float.parseFloat(JOptionPane.showInputDialog("Dimensão X: ")));
-            porta.setDimensaoY(Float.parseFloat(JOptionPane.showInputDialog("Dimensão Y: ")));
-            porta.setDimensaoZ(Float.parseFloat(JOptionPane.showInputDialog("Dimensão Z: ")));
-            System.out.println("Dimensão X: " + porta.getDimensaoX() + " Dimensão Y: " + porta.getDimensaoY() + " Dimensão Z: " + porta.getDimensaoZ());
             statusInserirPorta = Integer.parseInt(JOptionPane.showInputDialog("deseja inserir mais uma porta?\n1 - sim\n0 - não"));
             casa.cadastrarPortas(porta);//o parametro é do tipo porta
             //casa.setPorta(porta); metodo cadastrar porta seta a porra da porta
-            
+            if(casa.retornaPosicaoDaPorta()%2==0){
+                 porta.fecha();  
+            }else  porta.abre();
         } while (statusInserirPorta == 1);
         
         for(int i = 0; i < casa.getTotalDePortas() ; i++){

@@ -36,6 +36,9 @@ public class Casa {
          this.portas.add(porta);
          
      }
+     public int retornaPosicaoDaPorta(){
+         return this.qtPortas;
+     }
      
     public void setPortas(ArrayList<Porta> portas){
         this.portas = portas;
