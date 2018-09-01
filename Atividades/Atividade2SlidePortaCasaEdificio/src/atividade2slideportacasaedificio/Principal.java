@@ -50,31 +50,54 @@ public class Principal {
         ///////////////////////////////PARTE TESTE CLASSE CASA ////////////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////////////////////////
         
-        Casa casa = new Casa();
+       /* Casa casa = new Casa();
         casa.pinta(JOptionPane.showInputDialog("Qual a cor da casa? "));
         
-        int statusInserirPorta;
+        int statusInserirPorta = JOptionPane.YES_NO_OPTION;
         do {
             Porta porta = new Porta();
-            statusInserirPorta = Integer.parseInt(JOptionPane.showInputDialog("deseja inserir mais uma porta?\n1 - sim\n0 - não"));
+            statusInserirPorta = JOptionPane.showConfirmDialog(null,"deseja inserir mais uma porta?","Casa",statusInserirPorta);
             casa.cadastrarPortas(porta);//o parametro é do tipo porta
             //casa.setPorta(porta); metodo cadastrar porta seta a porra da porta
             if(casa.retornaPosicaoDaPorta()%2==0){
                  porta.fecha();  
             }else  porta.abre();
-        } while (statusInserirPorta == 1);
+        } while (statusInserirPorta == 0);
         
         for(int i = 0; i < casa.getTotalDePortas() ; i++){
             //System.out.println("PORTA "+(i+1)+": "+"");
         }
-         System.out.println("\nTotal de Portas: "+casa.getTotalDePortas());
-         System.out.println("Total de Portas Abertas: "+casa.qtPortasAbertas());
+         System.out.println("Cor da casa: "+casa.getCor());
+         System.out.println("Total de Portas: "+casa.getTotalDePortas());
+         System.out.println("Total de Portas Abertas: "+casa.qtPortasAbertas());*/
 
     
          /////////////////////////////////////////////////////////////////////////////////////////////
         ///////////////////////////////PARTE TESTE CLASSE EDFICIO ////////////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////////////////////////////////////////////////
-  
+        
+        Edificio edificio = new Edificio();
+        edificio.pinta(JOptionPane.showInputDialog("Qual a cor do edificio? "));
+        Porta porta = new Porta();
+        for (int i = 0 ; i < 6 ; i++ ){
+            int statusPorta = Integer.parseInt(JOptionPane.showInputDialog("1 - abrir\n2 - fechar"));
+            if(statusPorta == 1){
+            porta.abre();
+            }else porta.fecha();
+            edificio.cadastrarPortas(porta);
+        }
+        int statusInserirAndar = 0 ; 
+        
+        do{
+           statusInserirAndar = JOptionPane.showConfirmDialog(null,"deseja inserir mais um andar?","edificio",statusInserirAndar); 
+           edificio.adcionarAndar();
+        }while(statusInserirAndar==0);
+        
+        System.out.println("Cor do edificio: "+edificio.getCor());
+        System.out.println("Total de Portas no Edificio: "+edificio.getTotalDePortas());
+        System.out.println("Total de portas Abertas  no edificio: "+edificio.qtPortasAbertas());
+        System.out.println("Total de andares: "+(edificio.totalAndares()-1));
+        
     
     
     }
