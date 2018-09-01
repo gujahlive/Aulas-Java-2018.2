@@ -78,10 +78,12 @@ public class Principal {
         
         Edificio edificio = new Edificio();
         edificio.pinta(JOptionPane.showInputDialog("Qual a cor do edificio? "));
-        Porta porta = new Porta();
+        
         for (int i = 0 ; i < 6 ; i++ ){
-            int statusPorta = Integer.parseInt(JOptionPane.showInputDialog("1 - abrir\n2 - fechar"));
-            if(statusPorta == 1){
+           Porta porta = new Porta();
+           int statusPorta = 0;
+            statusPorta  = JOptionPane.showConfirmDialog(null,"Deseja abrir a porta?","porta do edificio",statusPorta); 
+            if(statusPorta == 0){
             porta.abre();
             }else porta.fecha();
             edificio.cadastrarPortas(porta);
