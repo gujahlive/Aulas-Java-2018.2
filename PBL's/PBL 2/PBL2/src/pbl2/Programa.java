@@ -54,7 +54,7 @@ public class Programa {
             
        
         }   
-            hospedagem.setDiaDaSemana(dias);
+           // hospedagem.setDiaDaSemana(dias);
             inserirDias  = JOptionPane.showConfirmDialog(null,"deseja inserir mais um dia?","Hospedagem",inserirDias);
         }while(inserirDias == 0);
         
@@ -62,7 +62,7 @@ public class Programa {
         
           
         for(int i=0 ; i < hospedagem.getContDiasHospedagem() ; i++){
-             System.out.println("Dias escolhidos: "+hospedagem.getDiaDaSemana().get(i).());
+             //System.out.println("Dias escolhidos: "+hospedagem.getDiaDaSemana().get(i).());
         }
        // System.out.println("Dias escolhidos: "+dias.getDiaEscolhido());
         

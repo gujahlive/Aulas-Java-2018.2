@@ -1,0 +1,16 @@
+1 -  Crie um sistema que controle a venda direto da fábrica ou da loja de Eletrodoméstico que pode vender: Liquidificador, Batedeira ou Ferro de passar. Todos vão ter: marca, preço e voltagem. Será obrigado para cadastrar um novo eletrodoméstico já possuir um preço, voltagem e marca ou apenas marca e voltagem (para a fábrica utilizar). A classe Liquidificador terá também um atributo tampa, que por sua vez possuirá: Cor e Descrição. Já a batedeira terá uma quantidade de hélices. E todos terão um cálculo de desconto.  Porém o desconto será feito de acordo com o mês. Se estiver no mês de maio (mães) o ferro fica em promoção de 15%. Se tiver no mês de Agosto (pais) é dado um desconto de 10% no liquidificador e no mês de dezembro é o mês de dar 20% de desconto na batedeira. Além disso, a atribuição da voltagem do eletrodoméstico se dará através da validação se é 110 ou 220, mas se ele for um ferro, a verificação será também válida se for 5 volts, pois existe um modelo carregado por USB.   O liquidificador e a batedeira terão quantidade média de litros que podem ser batidos por segundo. Será calculado pela formula: quantidade(L)/Capacidade(L/S). Caso se tenha mais de uma hélice na batedeira a será multiplicado a quantidade de hélices pela capacidade.
+
+1-	Loja
+2-	Fabrica
+Itens: : Liquidificador, Batedeira ou Ferro de passar
+Itens contém: marca String, preço float, voltagem INT; classe produto
+Metódo : inserirProduto : default preço, voltagem e marca;
+Classe Liquidificador: arraylist<tampa>  // quem vai ter cor e descrição é o liquidificador ou a tampa?
+Classe Tampa: cor e descrição;
+Classe batedeira: qtHelices
+Metódos de desconto: mês de maio == 5 ferro.preço * 0,15 de desconto; mes de agosto == 8 liquidificador.preço * 0,10 de desconto, mes 12 batedeira.preco *0,20;
+ValidaçãoDeVoltagem if(110 || 220){
+	If(eletrodomestico == ferrodepassar){
+	
+}
+}
