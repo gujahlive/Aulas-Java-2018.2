@@ -47,7 +47,7 @@ public class Programa {
         System.out.println(" Cor: " + cadeira.getMaterial().get(0).getCor() + " Altura: " + cadeira.getAltura() + " Braço: " + cadeira.getBraco() + " Valor: " + cadeira.getValor());
         System.out.println(" Cor: " + cadeira.getMaterial().get(0).getCor() + " Peso: " + cadeira.getMaterial().get(0).getPeso() + " Preço Material: " + cadeira.getMaterial().get(0).getPreco());// retornando o indice estático do material
         for (i = 0; i < 3; i++) {
-            System.out.println(" Cor: " + cadeira.getMaterial().get(i).getCor() + " Peso: " + cadeira.getMaterial().get(i).getPeso() + " Preço Material: " + cadeira.getMaterial().get(i).getPreco());// retornando o indice estático do material
+            System.out.println(" Cor: " + cadeira.getMaterial().get(i).getCor() + " Peso: " + cadeira.getMaterial().get(i).getPeso() + " Preço Material: " + cadeira.getMaterial().get(i).getPreco());// retornando o indice do material
         }
 
         // TODO code application logic here

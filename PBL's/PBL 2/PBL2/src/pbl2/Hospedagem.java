@@ -20,7 +20,7 @@ public class Hospedagem {
     private Date data_volta;
     private float diaria;
     private float valor_total;
-   
+   private int contHosp;
     
     public Hospedagem(){
                 this.diasDeViagem = new ArrayList<>();
@@ -29,11 +29,14 @@ public class Hospedagem {
       this.diasDeViagem = diasDeViagem;
     }
    public void setDiaDaSemana(DiasDaSemana dia){
-       
+        this.contHosp +=1;
         this.diasDeViagem.add(dia);
     }
    public ArrayList<DiasDaSemana> getDiaDaSemana(){
        return this.diasDeViagem;
+   }
+   public int getContDiasHospedagem(){
+       return this.contHosp;
    }
     
     

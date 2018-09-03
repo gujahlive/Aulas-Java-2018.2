@@ -22,7 +22,7 @@ public class Programa {
     public static void main(String[] args) throws ParseException {
         // TODO code application logic here
         Passagem passagem = new Passagem();
-        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+        /*SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
         String dataIda = JOptionPane.showInputDialog("Digite a data Ida");
         String dataVolta = JOptionPane.showInputDialog("Digite a data Volta");
         Date dataIdaDATE = formato.parse(dataIda);
@@ -32,7 +32,8 @@ public class Programa {
         passagem.setDtIda(dataIdaDATE);
         passagem.setDtVolta(dataVoltaDATE);
         System.out.println("Data Ida: "+passagem.getDtIda());
-        System.out.println("Data Volta: "+passagem.getDtVolta());
+        System.out.println("Data Volta: "+passagem.getDtVolta());*/
+        
         DiasDaSemana dias = new DiasDaSemana(); 
         Hospedagem hospedagem = new Hospedagem(); 
         
@@ -57,7 +58,13 @@ public class Programa {
             inserirDias  = JOptionPane.showConfirmDialog(null,"deseja inserir mais um dia?","Hospedagem",inserirDias);
         }while(inserirDias == 0);
         
-        System.out.println("Dias escolhidos: "+dias.getDiaEscolhido());
+        
+        
+          
+        for(int i=0 ; i < hospedagem.getContDiasHospedagem() ; i++){
+             System.out.println("Dias escolhidos: "+hospedagem.getDiaDaSemana().get(i).());
+        }
+       // System.out.println("Dias escolhidos: "+dias.getDiaEscolhido());
         
     }
 
