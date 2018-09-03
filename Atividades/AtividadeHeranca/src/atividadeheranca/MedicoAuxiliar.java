@@ -9,6 +9,14 @@ package atividadeheranca;
  *
  * @author aluno
  */
-public class MedicoAuxiliar {
+public class MedicoAuxiliar extends Medico{
+    
+        @Override
+        public boolean medicoAposentado(){
+        if (this.idade >= 60){
+            return true;       
+        }
+        return false;
+    }
     
 }

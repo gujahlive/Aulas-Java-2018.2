@@ -15,6 +15,14 @@ public class Programa {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        Medico medico = new Medico();
+        MedicoCirurgiao medCir = new MedicoCirurgiao();
+        MedicoAuxiliar medAux = new MedicoAuxiliar();
+        
+        medAux.setIdade(55);
+        System.out.println("Pode se aposentar: "+medAux.medicoAposentado());
+        
         // TODO code application logic here
     }
     
