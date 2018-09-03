@@ -29,9 +29,15 @@ public class Gerente extends Funcionario {
         this.nGerenciado = nGerenciado;
     }
     
-    @Override
+    /*@Override//verifica se está ok
     public double getBonificacao(){
         return this.salario * 0.15;
+    }*///sobreescrita 
+    
+    @Override
+    public double getBonificacao(){//sobrecarga
+        return super.getBonificacao()+8000;
     }
+    
     
 }
