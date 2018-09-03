@@ -12,7 +12,8 @@ package herancafuncionario;
 public class Funcionario {
     protected String nome;
     protected String cpf;
-
+    protected double salario;
+    
     public String getNome() {
         return nome;
     }
@@ -36,7 +37,11 @@ public class Funcionario {
     public void setSalario(double salario) {
         this.salario = salario;
     }
-    protected double salario;
+   
+    
+    public double getBonificacao(){
+        return this.salario * 0.10;
+    }
 
 
     

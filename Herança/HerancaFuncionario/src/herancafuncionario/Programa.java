@@ -18,7 +18,13 @@ public class Programa {
         Gerente gerente = new Gerente();
         gerente.setnGerenciado(3);
         System.out.println("Numero de gerenciados: "+gerente.getnGerenciado());
-        
+        gerente.setSalario(8000);
+        double x = gerente.getBonificacao();
+        System.out.println("Bonificação Gerente: "+x);
+        Funcionario funcionario = new Funcionario();
+        funcionario.setSalario(3000);
+        double y = funcionario.getBonificacao();
+        System.out.println("Bonificação Func: "+y);       
         // TODO code application logic here
     }
     

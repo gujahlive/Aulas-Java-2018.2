@@ -12,7 +12,7 @@ package herancafuncionario;
 public class Gerente extends Funcionario {
     private String senha;
     private int nGerenciado;
-
+    
     public String getSenha() {
         return senha;
     }
@@ -29,5 +29,9 @@ public class Gerente extends Funcionario {
         this.nGerenciado = nGerenciado;
     }
     
+    @Override
+    public double getBonificacao(){
+        return this.salario * 0.15;
+    }
     
 }
