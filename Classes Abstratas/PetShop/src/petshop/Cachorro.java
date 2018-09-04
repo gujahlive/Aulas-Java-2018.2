@@ -11,13 +11,23 @@ package petshop;
  */
 public class Cachorro extends Pet{
     private boolean pedigree;
-
+    
+    @Override
+    public double calcularBanho(){
+        return 1;
+    }
+    
     public boolean isPedigree() {
         return this.pedigree;
     }
 
     public void setPedigree(boolean pedigree) {
         this.pedigree = pedigree;
+    }
+  
+    public int calcIdade(int anoNasc){
+        this.idade = 2018 - anoNasc;
+    return this.idade;
     }
     
 }

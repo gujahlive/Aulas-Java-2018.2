@@ -5,6 +5,8 @@
  */
 package petshop;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author aluno
@@ -17,6 +19,14 @@ public class Principal {
     public static void main(String[] args) {
         // TODO code application logic here
        //  Pet pet = new Pet();
+
+        Gato gato = new Gato();
+        gato.setPeso(0);
+        Cachorro cachorro = new Cachorro();
+        cachorro.setIdade(0);
+        Coelho coelho = new Coelho();
+        coelho.setNome("bichano");
+        
          
     }
     

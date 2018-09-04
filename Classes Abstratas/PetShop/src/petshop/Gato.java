@@ -10,5 +10,8 @@ package petshop;
  * @author aluno
  */
 public class Gato extends Pet{
-    
+    @Override
+    public double calcularBanho(){
+        return 1;
+    }
 }

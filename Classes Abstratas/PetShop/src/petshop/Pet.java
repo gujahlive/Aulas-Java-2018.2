@@ -16,7 +16,9 @@ public abstract class Pet {
     protected String sexo;
     protected int idade;
     protected Dono dono;
-
+    
+    public abstract double calcularBanho();
+    
     public Dono getDono() {
         return this.dono;
     }
