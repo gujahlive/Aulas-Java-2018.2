@@ -48,9 +48,9 @@ public class Principal {
         double valorDevolverD = cachorro.devolverPet();
         double valorDevolverG = gato.devolverPet();
         
-        System.out.println("O valor do banho em "+coelho.getNome()+" foi: "+valorBanhoCoelho+"Valor de devolução"+valorDevolverC); 
-        System.out.println("O valor do banho em "+gato.getNome()+" foi: "+valorBanhoGatito+"Valor de devolução"+valorDevolverC);
-        System.out.println("O valor do banho em "+cachorro.getNome()+" foi: "+valorBanhoDog+"Valor de devolução"+valorDevolverC);
+        System.out.println("O valor do banho em "+coelho.getNome()+" foi: "+valorBanhoCoelho+" Valor de devolução "+valorDevolverC); 
+        System.out.println("O valor do banho em "+gato.getNome()+" foi: "+valorBanhoGatito+" Valor de devolução "+valorDevolverC);
+        System.out.println("O valor do banho em "+cachorro.getNome()+" foi: "+valorBanhoDog+" Valor de devolução "+valorDevolverC);
         
     }
     
