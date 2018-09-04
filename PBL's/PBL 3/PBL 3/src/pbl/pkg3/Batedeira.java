@@ -25,18 +25,10 @@ public class Batedeira extends Eletrodomestico{
      public Batedeira(){
      }
     
-    public double desconto(int mes){
-        double result;
-        if(mes == 5 ){
-            result = this.preco;
-        }
-        if(mes == 4 ){
-            result = preco;
-        }
-        
-        
-        return 1;
-        
+    
+       @Override
+    public double calcDesconto() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

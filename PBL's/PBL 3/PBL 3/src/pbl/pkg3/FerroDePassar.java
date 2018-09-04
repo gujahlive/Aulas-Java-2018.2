@@ -23,6 +23,11 @@ public class FerroDePassar extends Eletrodomestico{
     }
      public FerroDePassar(){
      }
+     
+        @Override
+    public double calcDesconto() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
        
     
 }

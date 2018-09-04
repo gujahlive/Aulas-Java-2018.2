@@ -15,6 +15,8 @@ public class Liquidificador extends Eletrodomestico {
        private ArrayList<Tampa> tampas;
        private int qtTampas = 0;
        
+       
+       
         public Liquidificador(String marca, float preco, int voltagem) {
         this.marca = marca;
         this.preco = preco;
@@ -48,5 +50,14 @@ public class Liquidificador extends Eletrodomestico {
        public ArrayList<Tampa> getTampa(){
            return this.tampas;
        }
+
+    @Override
+    public double calcDesconto() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+
+
+       
     
 }
