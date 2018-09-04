@@ -21,13 +21,21 @@ public class Principal {
        //  Pet pet = new Pet();
 
         Gato gato = new Gato();
-        gato.setPeso(0);
+        gato.setPeso(12);
         Cachorro cachorro = new Cachorro();
         cachorro.setIdade(0);
+        cachorro.setPeso(15);
         Coelho coelho = new Coelho();
         coelho.setNome("bichano");
+        cachorro.setNome("bionda");
+        gato.setNome("mato gente");
+        double valorBanhoCoelho = coelho.calcularBanho();
+        double valorBanhoGatito = gato.calcularBanho();
+        double valorBanhoDog = cachorro.calcularBanho();
+        System.out.println("O valor do banho em "+coelho.getNome()+" foi: "+valorBanhoCoelho); 
+        System.out.println("O valor do banho em "+gato.getNome()+" foi: "+valorBanhoGatito);
+        System.out.println("O valor do banho em "+cachorro.getNome()+" foi: "+valorBanhoDog);
         
-         
     }
     
 }

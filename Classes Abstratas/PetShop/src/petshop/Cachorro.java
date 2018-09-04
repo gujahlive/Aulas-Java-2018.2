@@ -14,7 +14,15 @@ public class Cachorro extends Pet{
     
     @Override
     public double calcularBanho(){
-        return 1;
+        if(this.peso <= 5 ){
+            return 20;
+        }else{
+             if(this.peso <= 10){
+                 return 30;
+             }else{
+                 return 50;
+             }
+        }
     }
     
     public boolean isPedigree() {

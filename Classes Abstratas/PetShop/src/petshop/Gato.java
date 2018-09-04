@@ -12,6 +12,10 @@ package petshop;
 public class Gato extends Pet{
     @Override
     public double calcularBanho(){
-        return 1;
+        if(this.peso <= 5){
+            return 30;
+        }else{
+            return 45;
+        }
     }
 }

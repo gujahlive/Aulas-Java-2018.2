@@ -12,7 +12,7 @@ package petshop;
 public class Coelho extends Pet{
     @Override
     public double calcularBanho(){
-        return 1;
+        return 15;
     }
     
 }
