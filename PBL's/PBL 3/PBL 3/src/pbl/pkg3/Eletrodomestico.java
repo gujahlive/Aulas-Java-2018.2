@@ -41,6 +41,8 @@ public abstract class Eletrodomestico {// classe abstrata não pode ser instanci
         this.voltagem = voltagem;
     }
     public abstract double calcDesconto(int mes); // prototipo do metódo abstrato, e repito o metodo 
-                                            //nas outras clases para calcular descontos diferentes
+                                                   //nas outras clases para calcular descontos diferentes
 
+    
+    public abstract int validaVoltagem(int volt);
 }

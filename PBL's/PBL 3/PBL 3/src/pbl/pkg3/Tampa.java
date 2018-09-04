@@ -35,4 +35,8 @@ public class Tampa extends Eletrodomestico{
         return 1;
     }
     
+        @Override
+    public int validaVoltagem(int volt){
+        return 1;
+    }
 }

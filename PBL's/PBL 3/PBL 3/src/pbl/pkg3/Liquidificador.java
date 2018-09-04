@@ -53,7 +53,12 @@ public class Liquidificador extends Eletrodomestico {
         return resultDesc;
     }
 
-
+        @Override
+    public int validaVoltagem(int volt){
+          if (volt == 110){
+            return 110;
+        }else return 220;
+    }
 
        
     

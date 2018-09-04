@@ -33,6 +33,18 @@ public class FerroDePassar extends Eletrodomestico{
         }
         return resultDesc;
     }
-       
     
+        @Override
+    public int validaVoltagem(int volt){
+        if (volt == 110){
+            return 110;
+        }else{ 
+           if(volt == 220){
+               return 220;
+        }else if(volt == 5){return 5;}
+        }
+    
+        return 0;
+    }
+
 }
