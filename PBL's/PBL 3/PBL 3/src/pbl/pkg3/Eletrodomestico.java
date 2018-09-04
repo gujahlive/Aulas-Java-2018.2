@@ -13,7 +13,7 @@ public abstract class Eletrodomestico {// classe abstrata não pode ser instanci
 
     protected String marca;
     protected double preco;
-    protected int voltagem;
+    protected String voltagem;
 
     
 
@@ -33,16 +33,16 @@ public abstract class Eletrodomestico {// classe abstrata não pode ser instanci
         this.preco = preco;
     }
 
-    public int getVoltagem() {
+    public String getVoltagem() {
         return voltagem;
     }
 
-    public void setVoltagem(int voltagem) {
+    public void setVoltagem(String voltagem) {
         this.voltagem = voltagem;
     }
     public abstract double calcDesconto(int mes); // prototipo do metódo abstrato, e repito o metodo 
                                                    //nas outras clases para calcular descontos diferentes
 
     
-    public abstract int validaVoltagem(int volt);
+    public abstract String validaVoltagem(String volt);
 }

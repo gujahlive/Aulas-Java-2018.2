@@ -19,9 +19,9 @@ public class Programa {
     public static void main(String[] args) {
 
 
-        Liquidificador liqui = new Liquidificador("Arno", 100 ,110);
-        FerroDePassar ferro = new FerroDePassar("Black & Decker",100, 110);
-        Batedeira batedeira = new Batedeira("Mondial", 100 ,110);
+        Liquidificador liqui = new Liquidificador("Arno", 100 ,"110");
+        FerroDePassar ferro = new FerroDePassar("Black & Decker",100, "110");
+        Batedeira batedeira = new Batedeira("Mondial", 100 ,"110");
         
 
        /* int e = Integer.parseInt(JOptionPane.showInputDialog("1 - Fabrica\n 2 - Loja"));
@@ -34,7 +34,10 @@ public class Programa {
         
         System.out.println("Antes do desconto: "+ferro.getPreco());   
         ferro.calcDesconto(5);
+        ferro.validaVoltagem("110");
         System.out.println("Depois do desconto: "+ferro.getPreco());
+        System.out.println("Validando Voltagem: "+ferro.getVoltagem());
+        
         
         System.out.println("Antes do desconto: "+liqui.getPreco());   
         liqui.calcDesconto(8);

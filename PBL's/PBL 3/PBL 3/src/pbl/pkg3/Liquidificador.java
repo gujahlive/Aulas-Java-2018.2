@@ -17,13 +17,13 @@ public class Liquidificador extends Eletrodomestico {
        
        
        
-        public Liquidificador(String marca, double preco, int voltagem) {
+        public Liquidificador(String marca, double preco, String voltagem) {
         this.marca = marca;
         this.preco = preco;
         this.voltagem = voltagem;
     }
 
-     public Liquidificador(String marca, int voltagem) {
+     public Liquidificador(String marca, String voltagem) {
         this.marca = marca;
         this.voltagem = voltagem;
     }
@@ -54,10 +54,10 @@ public class Liquidificador extends Eletrodomestico {
     }
 
         @Override
-    public int validaVoltagem(int volt){
-          if (volt == 110){
-            return 110;
-        }else return 220;
+    public String validaVoltagem(String volt){
+          if (volt == "110"){
+            return "110";
+        }else return "220";
     }
 
        

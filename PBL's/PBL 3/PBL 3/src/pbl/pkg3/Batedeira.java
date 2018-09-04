@@ -12,13 +12,13 @@ package pbl.pkg3;
 public class Batedeira extends Eletrodomestico{
     private int qtHelices;
     
-    public Batedeira(String marca, double preco, int voltagem) {
+    public Batedeira(String marca, double preco, String voltagem) {
         this.marca = marca;
         this.preco = preco;
         this.voltagem = voltagem;
     }
 
-     public Batedeira(String marca, int voltagem) {
+     public Batedeira(String marca, String voltagem) {
         this.marca = marca;
         this.voltagem = voltagem;
     }
@@ -37,10 +37,10 @@ public class Batedeira extends Eletrodomestico{
     }
     
     @Override
-    public int validaVoltagem(int volt){
-        if (volt == 110){
-            return 110;
-        }else return 220;
+    public String validaVoltagem(String volt){
+        if (volt == "110"){
+            return "110";
+        }else return "220";
     }
     
 }
