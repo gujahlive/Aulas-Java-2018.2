@@ -46,6 +46,14 @@ public class Batedeira extends Eletrodomestico{
         
         } return "Voltagem invalida";
     }
+
+    public int getQtHelices() {
+        return this.qtHelices;
+    }
+
+    public void setQtHelices(int qtHelices) {
+        this.qtHelices = qtHelices;
+    }
     @Override
     public double mediaDeLtBatido(double qtL, double capacidade,double seg){
        double result = 0 ;

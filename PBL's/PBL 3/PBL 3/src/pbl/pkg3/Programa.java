@@ -40,19 +40,25 @@ public class Programa {
                     
                     System.out.println("Valor da compra: "+ferro.getPreco());
                     break;
+                          
+            case 3:
+                    batedeira.setMarca(JOptionPane.showInputDialog("Marca:"));
+                    batedeira.setPreco(Double.parseDouble(JOptionPane.showInputDialog("Preço")));
+                    batedeira.validaVoltagem(JOptionPane.showInputDialog("Voltagem:"));
+                    batedeira.calcDesconto(Integer.parseInt(JOptionPane.showInputDialog("Qual o mês da compra?")));
+                    batedeira.setQtHelices(Integer.parseInt(JOptionPane.showInputDialog("Quantas helices?")));
+                    double qtL, capacidade,media;
+                    qtL = Double.parseDouble(JOptionPane.showInputDialog("Quantos litros: "));
+                    capacidade = Double.parseDouble(JOptionPane.showInputDialog("capacidade: "));
+                     media = batedeira.mediaDeLtBatido(qtL, capacidade, 60);
+                    System.out.println("Marca: "+batedeira.getMarca());
+                    System.out.println("Voltagem: "+batedeira.getVoltagem());
+                    System.out.println("media de capacidade do calculo que nem sei o que faz: "+media);
+                    System.out.println("Valor da compra: "+batedeira.getPreco());
+                    break;
                 
+              
             }
-            
-            break;
-            
-            
-            
-            
-            
-            
-            
-            case 2:break; 
-
                 
         }
         

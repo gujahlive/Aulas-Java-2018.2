@@ -56,4 +56,5 @@ public abstract class Eletrodomestico {// classe abstrata não pode ser instanci
 segundo. Será calculado pela formula: quantidade(L)/Capacidade(L/S). Caso se tenha mais de
 uma hélice na batedeira a será multiplicado a quantidade de hélices pela capacidade.*///não entendi direito o que isso faz
     }
+    
 }
