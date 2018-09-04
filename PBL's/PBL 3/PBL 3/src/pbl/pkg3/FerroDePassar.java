@@ -11,7 +11,7 @@ package pbl.pkg3;
  */
 public class FerroDePassar extends Eletrodomestico{
     
-       public FerroDePassar(String marca, float preco, int voltagem) {
+       public FerroDePassar(String marca, double preco, int voltagem) {
         this.marca = marca;
         this.preco = preco;
         this.voltagem = voltagem;
@@ -25,8 +25,13 @@ public class FerroDePassar extends Eletrodomestico{
      }
      
         @Override
-    public double calcDesconto() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public double calcDesconto(int mes) {
+        double resultDesc = 0, totalDesc = 0;
+        if(mes == 5){
+            resultDesc = this.preco * 0.15;
+            this.preco = this.preco - resultDesc;
+        }
+        return resultDesc;
     }
        
     

@@ -19,44 +19,30 @@ public class Programa {
     public static void main(String[] args) {
 
 
-        Liquidificador liquiL = new Liquidificador();
-        FerroDePassar ferroL = new FerroDePassar();
-        Batedeira batedeiraL = new Batedeira();
+        Liquidificador liqui = new Liquidificador("Arno", 100 ,110);
+        FerroDePassar ferro = new FerroDePassar("Black & Decker",100, 110);
+        Batedeira batedeira = new Batedeira("Mondial", 100 ,110);
         
 
-        int e = Integer.parseInt(JOptionPane.showInputDialog("1 - Fabrica\n 2 - Loja"));
+       /* int e = Integer.parseInt(JOptionPane.showInputDialog("1 - Fabrica\n 2 - Loja"));
         switch (e) {
-            case 1:
-
-                //System.out.println("default: " + liqui.marca);
-
-                break;
-            case 2:
-                int statusButton = JOptionPane.YES_NO_OPTION;
-                int statusTampa = 0;
-                do{
-                    Tampa tampaL = new Tampa();
-                    tampaL.setCor(JOptionPane.showInputDialog("Qual a cor da tampa?"));
-                    tampaL.setDescricao(JOptionPane.showInputDialog("Qual a descrição da tampa?"));
-                    liquiL.setTampa(tampaL);
-                   statusTampa = JOptionPane.showConfirmDialog(null, "Deseja Cadastrar Mais Tampas?", "Cadastro de Tampa", statusButton);
-                   liquiL.contTampas();
-                }while(statusTampa == 0);
-                
-                 for(int i = 0 ; i < liquiL.getContTampas() ; i++ ){
-                    System.out.println("Cor da tampa do Liquidificador: " + liquiL.getTampa().get(i).getCor()+" Descrição da tampa do liquidificador: "+liquiL.getTampa().get(i).getDescricao());
-                }
-                
-                break; 
+            case 1: break;
+            case 2:break; 
 
                 
-                 
-                
-        }
+        }*/
         
-           
+        System.out.println("Antes do desconto: "+ferro.getPreco());   
+        ferro.calcDesconto(5);
+        System.out.println("Depois do desconto: "+ferro.getPreco());
         
+        System.out.println("Antes do desconto: "+liqui.getPreco());   
+        liqui.calcDesconto(8);
+        System.out.println("Depois do desconto: "+liqui.getPreco());
         
+        System.out.println("Antes do desconto: "+batedeira.getPreco());   
+        batedeira.calcDesconto(12);
+        System.out.println("Depois do desconto: "+batedeira.getPreco());
     }
 
 }

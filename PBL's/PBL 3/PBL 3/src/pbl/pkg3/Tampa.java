@@ -30,7 +30,7 @@ public class Tampa extends Eletrodomestico{
         this.descricao = descricao;
     }
     @Override
-    public double calcDesconto() {
+    public double calcDesconto(int mes) {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         return 1;
     }

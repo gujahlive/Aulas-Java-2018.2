@@ -12,7 +12,7 @@ package pbl.pkg3;
 public class Batedeira extends Eletrodomestico{
     private int qtHelices;
     
-    public Batedeira(String marca, float preco, int voltagem) {
+    public Batedeira(String marca, double preco, int voltagem) {
         this.marca = marca;
         this.preco = preco;
         this.voltagem = voltagem;
@@ -27,8 +27,13 @@ public class Batedeira extends Eletrodomestico{
     
     
        @Override
-    public double calcDesconto() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public double calcDesconto(int mes) {
+        double resultDesc = 0, totalDesc = 0;
+        if(mes == 12){
+            resultDesc = this.preco * 0.20;
+            this.preco = this.preco - resultDesc;
+        }
+        return resultDesc;
     }
     
 }

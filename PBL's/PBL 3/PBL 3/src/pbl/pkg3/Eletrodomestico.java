@@ -12,7 +12,7 @@ package pbl.pkg3;
 public abstract class Eletrodomestico {// classe abstrata não pode ser instanciada
 
     protected String marca;
-    protected float preco;
+    protected double preco;
     protected int voltagem;
 
     
@@ -25,11 +25,11 @@ public abstract class Eletrodomestico {// classe abstrata não pode ser instanci
         this.marca = marca;
     }
 
-    public float getPreco() {
+    public double getPreco() {
         return preco;
     }
 
-    public void setPreco(float preco) {
+    public void setPreco(double preco) {
         this.preco = preco;
     }
 
@@ -40,7 +40,7 @@ public abstract class Eletrodomestico {// classe abstrata não pode ser instanci
     public void setVoltagem(int voltagem) {
         this.voltagem = voltagem;
     }
-    public abstract double calcDesconto(); // prototipo do metódo abstrato, e repito o metodo 
+    public abstract double calcDesconto(int mes); // prototipo do metódo abstrato, e repito o metodo 
                                             //nas outras clases para calcular descontos diferentes
 
 }

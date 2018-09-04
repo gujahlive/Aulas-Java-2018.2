@@ -12,12 +12,12 @@ import java.util.ArrayList;
  * @author gusta
  */
 public class Liquidificador extends Eletrodomestico {
-       private ArrayList<Tampa> tampas;
+       private Tampa tampa;
        private int qtTampas = 0;
        
        
        
-        public Liquidificador(String marca, float preco, int voltagem) {
+        public Liquidificador(String marca, double preco, int voltagem) {
         this.marca = marca;
         this.preco = preco;
         this.voltagem = voltagem;
@@ -37,23 +37,20 @@ public class Liquidificador extends Eletrodomestico {
        public int getContTampas(){
            return this.qtTampas;
        }
-         public Liquidificador(){
-                    this.tampas = new ArrayList<>();
-        } 
        
-         public void setTampas(ArrayList<Tampa> tampas){
-        this.tampas= tampas;
+         public void setTampas(Tampa tampa){
+        this.tampa= tampa;
         }
-       public void setTampa(Tampa tampa){
-            this.tampas.add(tampa);
-        }
-       public ArrayList<Tampa> getTampa(){
-           return this.tampas;
-       }
+ 
 
     @Override
-    public double calcDesconto() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public double calcDesconto(int mes) {
+        double resultDesc = 0, totalDesc = 0;
+        if(mes == 8){
+            resultDesc = this.preco * 0.10;
+            this.preco = this.preco - resultDesc;
+        }
+        return resultDesc;
     }
 
 
