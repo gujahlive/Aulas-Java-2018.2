@@ -60,7 +60,7 @@ public class Programa {
                     System.out.println("Cor da tampa do Liquidificador: " + liquiL.getTampa().get(i).getCor()+" Descrição da tampa do liquidificador: "+liquiL.getTampa().get(i).getDescricao());
                 }
                 
-                break;
+                break; 
 
                 
                  
