@@ -55,9 +55,13 @@ public class Liquidificador extends Eletrodomestico {
 
         @Override
     public String validaVoltagem(String volt){
-          if (volt == "110"){
+      if (volt == "110"){
             return "110";
-        }else return "220";
+        }else{if(volt == "220"){
+            return "220";
+        }
+        
+        } return "Voltagem invalida";
     }
 
        

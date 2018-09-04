@@ -40,7 +40,19 @@ public class Batedeira extends Eletrodomestico{
     public String validaVoltagem(String volt){
         if (volt == "110"){
             return "110";
-        }else return "220";
+        }else{if(volt == "220"){
+            return "220";
+        }
+        
+        } return "Voltagem invalida";
+    }
+    @Override
+    public double mediaDeLtBatido(double qtL, double capacidade,double seg){
+       double result = 0 ;
+        if(this.qtHelices > 1 ){    
+             result = super.mediaDeLtBatido(qtL, capacidade,seg) * this.qtHelices;
+        }
+        return result;
     }
     
 }

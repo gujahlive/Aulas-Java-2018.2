@@ -45,4 +45,15 @@ public abstract class Eletrodomestico {// classe abstrata não pode ser instanci
 
     
     public abstract String validaVoltagem(String volt);
+    
+    public double mediaDeLtBatido(double qtL, double capacidade,double seg){
+     double podeSerBatido;
+      capacidade = qtL / seg;
+      podeSerBatido = qtL / capacidade;
+     return podeSerBatido;
+    
+    /*O liquidificador e a batedeira terão quantidade média de litros que podem ser batidos por
+segundo. Será calculado pela formula: quantidade(L)/Capacidade(L/S). Caso se tenha mais de
+uma hélice na batedeira a será multiplicado a quantidade de hélices pela capacidade.*///não entendi direito o que isso faz
+    }
 }
