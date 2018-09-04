@@ -39,9 +39,9 @@ public class Batedeira extends Eletrodomestico{
     @Override
     public String validaVoltagem(String volt){
         if (volt == "110"){
-            return "110";
+            return  this.voltagem = "110 volts";
         }else{if(volt == "220"){
-            return "220";
+            return this.voltagem = "220 volts";
         }
         
         } return "Voltagem invalida";

@@ -37,18 +37,19 @@ public class FerroDePassar extends Eletrodomestico{
         @Override
     public String validaVoltagem(String volt){
         if (volt == "110"){
-            return this.voltagem = "110";
+            return this.voltagem = "110 volts";
              
         }else{ 
            if(volt == "220"){
-               return this.voltagem = "220";
+               return this.voltagem = "220 volts";
         }else if(volt == "5"){
-            return this.voltagem = "5";
+            return this.voltagem = "5 volts";
         
         }
         }
     
         return this.voltagem = "Voltagem Invalida";
     }
+
 
 }

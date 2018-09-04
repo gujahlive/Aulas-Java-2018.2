@@ -24,17 +24,41 @@ public class Programa {
         Batedeira batedeira = new Batedeira("Mondial", 100 ,"110");
         
 
-       /* int e = Integer.parseInt(JOptionPane.showInputDialog("1 - Fabrica\n 2 - Loja"));
+       int e = Integer.parseInt(JOptionPane.showInputDialog("1 - Fabrica\n 2 - Loja"));
         switch (e) {
-            case 1: break;
+            case 1:
+            int eF = Integer.parseInt(JOptionPane.showInputDialog("1 - Cadastrar Ferro\n 2 - Cadastrar Liquidificador\n3 - Cadastrar Batedeira"));
+            switch(eF){
+                case 1: 
+                    ferro.setMarca(JOptionPane.showInputDialog("Marca:"));
+                    ferro.setPreco(Double.parseDouble(JOptionPane.showInputDialog("Preço")));
+                    ferro.validaVoltagem(JOptionPane.showInputDialog("Voltagem:"));
+                    ferro.calcDesconto(Integer.parseInt(JOptionPane.showInputDialog("Qual o mês da compra?")));
+                    
+                    System.out.println("Marca: "+ferro.getMarca());
+                    System.out.println("Voltagem: "+ferro.getVoltagem());
+                    
+                    System.out.println("Valor da compra: "+ferro.getPreco());
+                    break;
+                
+            }
+            
+            break;
+            
+            
+            
+            
+            
+            
+            
             case 2:break; 
 
                 
-        }*/
+        }
         
-        System.out.println("Antes do desconto: "+ferro.getPreco());   
+       /* System.out.println("Antes do desconto: "+ferro.getPreco());   
         ferro.calcDesconto(5);
-        ferro.validaVoltagem("110");
+        ferro.validaVoltagem("11");
         System.out.println("Depois do desconto: "+ferro.getPreco());
         System.out.println("Validando Voltagem: "+ferro.getVoltagem());
         
@@ -45,7 +69,7 @@ public class Programa {
         
         System.out.println("Antes do desconto: "+batedeira.getPreco());   
         batedeira.calcDesconto(12);
-        System.out.println("Depois do desconto: "+batedeira.getPreco());
+        System.out.println("Depois do desconto: "+batedeira.getPreco());*/
     }
 
 }
