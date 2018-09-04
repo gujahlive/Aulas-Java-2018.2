@@ -28,6 +28,11 @@ public class Principal {
         } else {
           System.out.println("No Option");
         }
+        int statusButton = JOptionPane.YES_NO_OPTION;
+        int statusResult = 0;
+        do{
+             statusResult = JOptionPane.showConfirmDialog(null, "Your Message", "Title on Box", statusButton);
+        }while(statusResult == 0);
     
     
     

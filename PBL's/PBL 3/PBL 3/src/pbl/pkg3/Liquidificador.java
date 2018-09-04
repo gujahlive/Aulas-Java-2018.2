@@ -13,6 +13,17 @@ import java.util.ArrayList;
  */
 public class Liquidificador extends Eletrodomestico {
        private ArrayList<Tampa> tampas;
+       private int qtTampas = 0;
+       
+       public void contTampas(){
+           this.qtTampas++;
+       }
+       public int getContTampas(){
+           return this.qtTampas;
+       }
+         public Liquidificador(){
+                    this.tampas = new ArrayList<>();
+        } 
        
          public void setTampas(ArrayList<Tampa> tampas){
         this.tampas= tampas;
@@ -20,7 +31,7 @@ public class Liquidificador extends Eletrodomestico {
        public void setTampa(Tampa tampa){
             this.tampas.add(tampa);
         }
-       public ArrayList<Tampa> getTampas(){
+       public ArrayList<Tampa> getTampa(){
            return this.tampas;
        }
     
