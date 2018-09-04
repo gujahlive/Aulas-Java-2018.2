@@ -37,5 +37,13 @@ public class Cachorro extends Pet{
         this.idade = 2018 - anoNasc;
     return this.idade;
     }
+    @Override
+    public double devolverPet(){
+       double valorInicial=  super.devolverPet();
+        
+       double  valorFinal = (valorInicial * 0.10) + valorInicial;
+       return valorFinal;
+       
+    }
     
 }

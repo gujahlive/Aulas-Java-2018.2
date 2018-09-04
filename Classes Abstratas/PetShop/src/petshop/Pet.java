@@ -10,15 +10,42 @@ package petshop;
  * @author aluno
  */
 public abstract class Pet {
-    
+
     protected String nome;
     protected float peso;
     protected String sexo;
     protected int idade;
     protected Dono dono;
-    
+
+    public void enviarMensagem(String mensagem) {
+        String telefone = this.dono.getTelefone();
+        System.out.println("A mensagem:" + mensagem + " foi enviada para " + telefone);
+    }
+
+    public double calcDistancia() {//simulando calculo de distancia
+        return 10;
+    }
+
+    public double devolverPet() {
+        this.enviarMensagem("Olá,  seu pet já está pronto!");
+        double distancia = this.calcDistancia();
+        if (distancia <= 1) {
+            return 20;
+        } else {
+            if (distancia <= 5) {
+                return 30;
+            } else {
+                if (distancia <= 15) {
+                    return 45;
+                } else {
+                    return distancia * 2 + 20;
+                }
+            }
+        }
+    }
+
     public abstract double calcularBanho();
-    
+
     public Dono getDono() {
         return this.dono;
     }
@@ -26,7 +53,7 @@ public abstract class Pet {
     public void setDono(Dono dono) {
         this.dono = dono;
     }
-    
+
     public String getNome() {
         return this.nome;
     }
@@ -58,7 +85,5 @@ public abstract class Pet {
     public void setIdade(int idade) {
         this.idade = idade;
     }
-    
-    
-    
+
 }

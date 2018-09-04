@@ -18,4 +18,11 @@ public class Gato extends Pet{
             return 45;
         }
     }
+    @Override
+    public double devolverPet(){
+       double valorInicial=  super.devolverPet();
+       double  valorFinal = (valorInicial * 0.05) + valorInicial;
+       return valorFinal;
+       
+    }
 }
