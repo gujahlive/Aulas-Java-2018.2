@@ -15,6 +15,20 @@ public class Liquidificador extends Eletrodomestico {
        private ArrayList<Tampa> tampas;
        private int qtTampas = 0;
        
+        public Liquidificador(String marca, float preco, int voltagem) {
+        this.marca = marca;
+        this.preco = preco;
+        this.voltagem = voltagem;
+    }
+
+     public Liquidificador(String marca, int voltagem) {
+        this.marca = marca;
+        this.voltagem = voltagem;
+    }
+ 
+       
+       
+       
        public void contTampas(){
            this.qtTampas++;
        }

@@ -12,6 +12,19 @@ package pbl.pkg3;
 public class Batedeira extends Eletrodomestico{
     private int qtHelices;
     
+    public Batedeira(String marca, float preco, int voltagem) {
+        this.marca = marca;
+        this.preco = preco;
+        this.voltagem = voltagem;
+    }
+
+     public Batedeira(String marca, int voltagem) {
+        this.marca = marca;
+        this.voltagem = voltagem;
+    }
+     public Batedeira(){
+     }
+    
     public double desconto(int mes){
         double result;
         if(mes == 5 ){

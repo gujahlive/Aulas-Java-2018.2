@@ -11,4 +11,18 @@ package pbl.pkg3;
  */
 public class FerroDePassar extends Eletrodomestico{
     
+       public FerroDePassar(String marca, float preco, int voltagem) {
+        this.marca = marca;
+        this.preco = preco;
+        this.voltagem = voltagem;
+    }
+
+     public FerroDePassar(String marca, int voltagem) {
+        this.marca = marca;
+        this.voltagem = voltagem;
+    }
+     public FerroDePassar(){
+     }
+       
+    
 }

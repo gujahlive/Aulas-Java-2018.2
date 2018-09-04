@@ -10,9 +10,12 @@ package pbl.pkg3;
  * @author gusta
  */
 public class Eletrodomestico {
-        protected String marca;
-        protected float preco ;
-        protected int voltagem ;
+
+    protected String marca;
+    protected float preco;
+    protected int voltagem;
+
+    
 
     public String getMarca() {
         return marca;
@@ -37,6 +40,5 @@ public class Eletrodomestico {
     public void setVoltagem(int voltagem) {
         this.voltagem = voltagem;
     }
-   
-   
+
 }

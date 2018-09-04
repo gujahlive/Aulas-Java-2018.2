@@ -18,19 +18,6 @@ public class Programa {
      */
     public static void main(String[] args) {
 
-        Eletrodomestico eletro = new Eletrodomestico();
-        eletro.marca = "Marca";
-        eletro.voltagem = 110;
-        Liquidificador liqui = new Liquidificador();
-        liqui.marca = eletro.marca;
-        liqui.voltagem = eletro.voltagem;
-        FerroDePassar ferro = new FerroDePassar();
-        ferro.marca = eletro.marca;
-        ferro.voltagem = eletro.voltagem;
-        Batedeira batedeira = new Batedeira();
-        batedeira.marca = eletro.marca;
-        batedeira.voltagem = eletro.voltagem;
-        Tampa tampa = new Tampa();
 
         Liquidificador liquiL = new Liquidificador();
         FerroDePassar ferroL = new FerroDePassar();
@@ -41,7 +28,7 @@ public class Programa {
         switch (e) {
             case 1:
 
-                System.out.println("default: " + liqui.marca);
+                //System.out.println("default: " + liqui.marca);
 
                 break;
             case 2:
