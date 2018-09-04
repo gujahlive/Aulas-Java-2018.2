@@ -9,6 +9,6 @@ package petshop;
  *
  * @author aluno
  */
-public class Coelho {
+public class Coelho extends Pet{
     
 }

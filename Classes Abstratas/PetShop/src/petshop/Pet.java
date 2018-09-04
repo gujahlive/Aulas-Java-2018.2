@@ -15,7 +15,16 @@ public abstract class Pet {
     protected float peso;
     protected String sexo;
     protected int idade;
+    protected Dono dono;
 
+    public Dono getDono() {
+        return this.dono;
+    }
+
+    public void setDono(Dono dono) {
+        this.dono = dono;
+    }
+    
     public String getNome() {
         return this.nome;
     }

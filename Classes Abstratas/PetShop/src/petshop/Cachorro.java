@@ -9,6 +9,15 @@ package petshop;
  *
  * @author aluno
  */
-public class Cachorro {
+public class Cachorro extends Pet{
+    private boolean pedigree;
+
+    public boolean isPedigree() {
+        return this.pedigree;
+    }
+
+    public void setPedigree(boolean pedigree) {
+        this.pedigree = pedigree;
+    }
     
 }
