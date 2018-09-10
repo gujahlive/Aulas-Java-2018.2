@@ -13,7 +13,8 @@ public abstract class Eletrodomestico {// classe abstrata não pode ser instanci
 
     protected String marca;
     protected double preco;
-    protected String voltagem;
+    protected int voltagem;
+    protected boolean validVolt;
 
     
 
@@ -33,28 +34,29 @@ public abstract class Eletrodomestico {// classe abstrata não pode ser instanci
         this.preco = preco;
     }
 
-    public String getVoltagem() {
+    public int getVoltagem() {
         return voltagem;
     }
 
-    public void setVoltagem(String voltagem) {
+    public void setVoltagem(int voltagem) {
         this.voltagem = voltagem;
     }
     public abstract double calcDesconto(int mes); // prototipo do metódo abstrato, e repito o metodo 
                                                    //nas outras clases para calcular descontos diferentes
 
     
-    public abstract String validaVoltagem(String volt);
+    //public abstract boolean validaVoltagem(int volt);
     
-    public double mediaDeLtBatido(double qtL, double capacidade,double seg){
-     double podeSerBatido;
-      capacidade = qtL / seg;
-      podeSerBatido = qtL / capacidade;
-     return podeSerBatido;
-    
-    /*O liquidificador e a batedeira terão quantidade média de litros que podem ser batidos por
-segundo. Será calculado pela formula: quantidade(L)/Capacidade(L/S). Caso se tenha mais de
-uma hélice na batedeira a será multiplicado a quantidade de hélices pela capacidade.*///não entendi direito o que isso faz
+    public boolean validaVoltagem(int volt) {
+        if (volt == 110) {
+            return true;
+        }
+        if (volt == 220) {
+            return true;
+        }
+        return false;
     }
+    
+
     
 }

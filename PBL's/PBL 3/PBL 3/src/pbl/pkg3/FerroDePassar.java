@@ -11,13 +11,13 @@ package pbl.pkg3;
  */
 public class FerroDePassar extends Eletrodomestico{
     
-       public FerroDePassar(String marca, double preco, String voltagem) {
+       public FerroDePassar(String marca, double preco, int voltagem) {
         this.marca = marca;
         this.preco = preco;
         this.voltagem = voltagem;
     }
 
-     public FerroDePassar(String marca, String voltagem) {
+     public FerroDePassar(String marca, int voltagem) {
         this.marca = marca;
         this.voltagem = voltagem;
     }
@@ -34,22 +34,18 @@ public class FerroDePassar extends Eletrodomestico{
         return resultDesc;
     }
     
-        @Override
-    public String validaVoltagem(String volt){
-        if (volt == "110"){
-            return this.voltagem = "110 volts";
-             
-        }else{ 
-           if(volt == "220"){
-               return this.voltagem = "220 volts";
-        }else if(volt == "5"){
-            return this.voltagem = "5 volts";
-        
+      @Override
+      public boolean validaVoltagem(int volt) {
+        double result = 0;
+        if (super.validaVoltagem(volt) || volt == 5) {
+            this.voltagem = volt;
+            return true;
         }
-        }
-    
-        return this.voltagem = "Voltagem Invalida";
+        return false;
     }
-
+     
+   
+      
+     
 
 }

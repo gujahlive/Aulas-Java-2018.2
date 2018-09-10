@@ -18,11 +18,13 @@ public class Programa {
      */
     public static void main(String[] args) {
 
-        Liquidificador liqui = new Liquidificador("Arno", 100, "110");
-        FerroDePassar ferro = new FerroDePassar("Black & Decker", 100, "110");
-        Batedeira batedeira = new Batedeira("Mondial", 100, "110");
+        Liquidificador liqui = new Liquidificador("Arno", 100, 110);
+        FerroDePassar ferro = new FerroDePassar("Black & Decker", 100, 110);
+        Batedeira batedeira = new Batedeira("Mondial", 100, 110);
         Tampa tampa = new Tampa();
-        int e = Integer.parseInt(JOptionPane.showInputDialog("1 - Fabrica\n 2 - Loja"));
+        System.out.println("Valida Voltagem: "+ferro.validaVoltagem(5));
+        
+       /* int e = Integer.parseInt(JOptionPane.showInputDialog("1 - Fabrica\n 2 - Loja"));
         switch (e) {
             case 1:
                 int eF = Integer.parseInt(JOptionPane.showInputDialog("FABRICA: \n1 - Cadastrar Ferro\n 2 - Cadastrar Liquidificador\n3 - Cadastrar Batedeira"));
@@ -31,7 +33,7 @@ public class Programa {
                     case 1:
                         ferro.setMarca(JOptionPane.showInputDialog("Marca:"));
                         ferro.setPreco(Double.parseDouble(JOptionPane.showInputDialog("Preço")));
-                        ferro.validaVoltagem(JOptionPane.showInputDialog("Voltagem:"));
+                        //ferro.validaVoltagem(JOptionPane.showInputDialog("Voltagem:"));
                         ferro.calcDesconto(Integer.parseInt(JOptionPane.showInputDialog("Qual o mês da compra?")));
 
                         System.out.println("Marca: " + ferro.getMarca());
@@ -47,7 +49,7 @@ public class Programa {
                         
                         liqui.setMarca(JOptionPane.showInputDialog("Marca:"));
                         liqui.setPreco(Double.parseDouble(JOptionPane.showInputDialog("Preço")));
-                        liqui.validaVoltagem(JOptionPane.showInputDialog("Voltagem:"));
+                      //  liqui.validaVoltagem(JOptionPane.showInputDialog("Voltagem:"));
                         liqui.calcDesconto(Integer.parseInt(JOptionPane.showInputDialog("Qual o mês da compra?")));
 
                         System.out.println("Marca: " + liqui.getMarca());
@@ -59,7 +61,7 @@ public class Programa {
                     case 3:
                         batedeira.setMarca(JOptionPane.showInputDialog("Marca:"));
                         batedeira.setPreco(Double.parseDouble(JOptionPane.showInputDialog("Preço")));
-                        batedeira.validaVoltagem(JOptionPane.showInputDialog("Voltagem:"));
+                       // batedeira.validaVoltagem(JOptionPane.showInputDialog("Voltagem:"));
                         batedeira.calcDesconto(Integer.parseInt(JOptionPane.showInputDialog("Qual o mês da compra?")));
                         batedeira.setQtHelices(Integer.parseInt(JOptionPane.showInputDialog("Quantas helices?")));
                         double qtL,
@@ -80,7 +82,7 @@ public class Programa {
                     case 1:
                         ferro.setMarca(JOptionPane.showInputDialog("Marca:"));
                         ferro.setPreco(Double.parseDouble(JOptionPane.showInputDialog("Preço")));
-                        ferro.validaVoltagem(JOptionPane.showInputDialog("Voltagem:"));
+                        //ferro.validaVoltagem(JOptionPane.showInputDialog("Voltagem:"));
                         ferro.calcDesconto(Integer.parseInt(JOptionPane.showInputDialog("Qual o mês da compra?")));
 
                         System.out.println("Marca: " + ferro.getMarca());
@@ -96,7 +98,7 @@ public class Programa {
                         liqui.setTampa(tampa);
                         liqui.setMarca(JOptionPane.showInputDialog("Marca:"));
                         liqui.setPreco(Double.parseDouble(JOptionPane.showInputDialog("Preço")));
-                        liqui.validaVoltagem(JOptionPane.showInputDialog("Voltagem:"));
+                       // liqui.validaVoltagem(JOptionPane.showInputDialog("Voltagem:"));
                         liqui.calcDesconto(Integer.parseInt(JOptionPane.showInputDialog("Qual o mês da compra?")));
 
                         System.out.println("Marca: " + liqui.getMarca());
@@ -109,7 +111,7 @@ public class Programa {
                     case 3:
                         batedeira.setMarca(JOptionPane.showInputDialog("Marca:"));
                         batedeira.setPreco(Double.parseDouble(JOptionPane.showInputDialog("Preço")));
-                        batedeira.validaVoltagem(JOptionPane.showInputDialog("Voltagem:"));
+                      //  batedeira.validaVoltagem(JOptionPane.showInputDialog("Voltagem:"));
                         batedeira.calcDesconto(Integer.parseInt(JOptionPane.showInputDialog("Qual o mês da compra?")));
                         batedeira.setQtHelices(Integer.parseInt(JOptionPane.showInputDialog("Quantas helices?")));
                         double qtL,
@@ -125,7 +127,7 @@ public class Programa {
                         break;
                 }
                 break;
-        }
+        }*/
 
     }
 
