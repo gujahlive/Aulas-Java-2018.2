@@ -21,11 +21,11 @@ public class Programa {
         Liquidificador liqui = new Liquidificador("Arno", 100, "110");
         FerroDePassar ferro = new FerroDePassar("Black & Decker", 100, "110");
         Batedeira batedeira = new Batedeira("Mondial", 100, "110");
-
+        Tampa tampa = new Tampa();
         int e = Integer.parseInt(JOptionPane.showInputDialog("1 - Fabrica\n 2 - Loja"));
         switch (e) {
             case 1:
-                int eF = Integer.parseInt(JOptionPane.showInputDialog("1 - Cadastrar Ferro\n 2 - Cadastrar Liquidificador\n3 - Cadastrar Batedeira"));
+                int eF = Integer.parseInt(JOptionPane.showInputDialog("FABRICA: \n1 - Cadastrar Ferro\n 2 - Cadastrar Liquidificador\n3 - Cadastrar Batedeira"));
                 switch (eF) {
                     
                     case 1:
@@ -41,6 +41,10 @@ public class Programa {
                         break;
 
                     case 2:
+                        tampa.setCor(JOptionPane.showInputDialog("Cor da tampa: "));
+                        tampa.setDescricao(JOptionPane.showInputDialog("Descrição da Tampa: "));
+                        liqui.setTampa(tampa);
+                        
                         liqui.setMarca(JOptionPane.showInputDialog("Marca:"));
                         liqui.setPreco(Double.parseDouble(JOptionPane.showInputDialog("Preço")));
                         liqui.validaVoltagem(JOptionPane.showInputDialog("Voltagem:"));
@@ -69,9 +73,9 @@ public class Programa {
                         System.out.println("media de capacidade do calculo que nem sei o que faz: " + media);
                         System.out.println("Valor da compra: " + batedeira.getPreco());
                         break;
-                }
+                } break;
             case 2:
-                int eL = Integer.parseInt(JOptionPane.showInputDialog("1 - Cadastrar Ferro\n 2 - Cadastrar Liquidificador\n3 - Cadastrar Batedeira"));
+                int eL = Integer.parseInt(JOptionPane.showInputDialog("LOJA: \n1 - Cadastrar Ferro\n 2 - Cadastrar Liquidificador\n3 - Cadastrar Batedeira"));
                 switch (eL) {
                     case 1:
                         ferro.setMarca(JOptionPane.showInputDialog("Marca:"));
@@ -86,6 +90,10 @@ public class Programa {
                         break;
 
                     case 2:
+                        
+                        tampa.setCor(JOptionPane.showInputDialog("Cor da tampa: "));
+                        tampa.setDescricao(JOptionPane.showInputDialog("Descrição da Tampa: "));
+                        liqui.setTampa(tampa);
                         liqui.setMarca(JOptionPane.showInputDialog("Marca:"));
                         liqui.setPreco(Double.parseDouble(JOptionPane.showInputDialog("Preço")));
                         liqui.validaVoltagem(JOptionPane.showInputDialog("Voltagem:"));
@@ -93,7 +101,8 @@ public class Programa {
 
                         System.out.println("Marca: " + liqui.getMarca());
                         System.out.println("Voltagem: " + liqui.getVoltagem());
-
+                        System.out.println("Cor da tampa: "+liqui.getTampa().getCor());
+                        System.out.println("Descricao da tampa: "+liqui.getTampa().getDescricao());
                         System.out.println("Valor da compra: " + liqui.getPreco());
                         break;
 

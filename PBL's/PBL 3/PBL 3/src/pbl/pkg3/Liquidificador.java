@@ -39,9 +39,12 @@ public class Liquidificador extends Eletrodomestico {
            return this.qtTampas;
        }
        
-         public void setTampas(Tampa tampa){
+         public void setTampa(Tampa tampa){
         this.tampa= tampa;
         }
+         public Tampa getTampa(){
+             return this.tampa;
+         }
  
 
     @Override
