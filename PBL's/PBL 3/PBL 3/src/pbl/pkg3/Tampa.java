@@ -9,10 +9,10 @@ package pbl.pkg3;
  *
  * @author gusta
  */
-public class Tampa extends Eletrodomestico{
+public class Tampa {
+
     private String cor;
     private String descricao;
- 
 
     public String getCor() {
         return cor;
@@ -29,14 +29,5 @@ public class Tampa extends Eletrodomestico{
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-    @Override
-    public double calcDesconto(int mes) {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        return 1;
-    }
-    
-    
-    public boolean validaVoltagem(int volt){
-        return true;
-    }
+
 }

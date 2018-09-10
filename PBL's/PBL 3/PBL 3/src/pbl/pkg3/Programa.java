@@ -22,9 +22,9 @@ public class Programa {
         FerroDePassar ferro = new FerroDePassar("Black & Decker", 100, 110);
         Batedeira batedeira = new Batedeira("Mondial", 100, 110);
         Tampa tampa = new Tampa();
-        System.out.println("Valida Voltagem: "+ferro.validaVoltagem(5));
-        
-       /* int e = Integer.parseInt(JOptionPane.showInputDialog("1 - Fabrica\n 2 - Loja"));
+        System.out.println("Valida Voltagem: " + ferro.validaVoltagem(5));
+
+        /* int e = Integer.parseInt(JOptionPane.showInputDialog("1 - Fabrica\n 2 - Loja"));
         switch (e) {
             case 1:
                 int eF = Integer.parseInt(JOptionPane.showInputDialog("FABRICA: \n1 - Cadastrar Ferro\n 2 - Cadastrar Liquidificador\n3 - Cadastrar Batedeira"));
@@ -128,7 +128,6 @@ public class Programa {
                 }
                 break;
         }*/
-
     }
 
     /* System.out.println("Antes do desconto: "+ferro.getPreco());   
