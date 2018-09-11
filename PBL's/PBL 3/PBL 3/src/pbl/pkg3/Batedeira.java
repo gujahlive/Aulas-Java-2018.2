@@ -15,7 +15,7 @@ public class Batedeira extends Eletrodomestico {
 
     public Batedeira(String marca, double preco, int voltagem) {//construtor do método da classe mãe, com sobrecarga
         super(marca, preco, voltagem);
-    }
+    }//faz o construtor com a sobrecarga por conta do contrutor Eletrodomestico que é classe mãe
 
     @Override
     public double calcDesconto(int mes) {

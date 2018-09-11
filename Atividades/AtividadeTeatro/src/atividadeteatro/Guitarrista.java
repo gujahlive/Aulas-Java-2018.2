@@ -3,13 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pkginterface;
+package atividadeteatro;
 
 /**
  *
  * @author aluno
  */
-public interface InterfaceA {
-    
+public class Guitarrista extends Artista{
     
 }
