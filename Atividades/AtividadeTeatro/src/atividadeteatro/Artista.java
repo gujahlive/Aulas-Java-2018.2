@@ -47,5 +47,9 @@ public abstract class  Artista {
         this.tempo_servico = tempo_servico;
     }
     
-    
+    private static double pontuacaoTotal(){
+    return 1;
+    }
+    public static void setPontuacao(int pont){
+    }
 }

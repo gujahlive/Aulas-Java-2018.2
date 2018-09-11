@@ -10,7 +10,7 @@ package atividadeteatro;
  * @author aluno
  */
 public interface InterfacePontuacao {
-    public int calcPontuacao();
-    
+    public void calcPontuacao(int qtShow);
+    public boolean liberaShowGratis();
     
 }

@@ -15,6 +15,7 @@ public class Ator extends Artista implements InterfacePontuacao{
     public int calcPontuacao() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
     private boolean formado;
 
     public boolean isFormado() {
