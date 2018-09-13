@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package atividadeteatro;
+package pbl.pkg4;
 
 /**
  *
@@ -14,6 +14,42 @@ public abstract class  Artista {
     protected String cpf;
     protected int ano_nasc;
     protected double tempo_servico;
+    private static int pontos;
+    protected int qtApresentacao;
+    protected int contApresentacoes;// conta quantas aprestações os artistas fazem, quando chega na quantidade que é exigida, tem que zerar o contador e iniciar novamente
+    private static int pontuacaoTotal;
+
+ 
+    
+    
+    public static void setPontuacao(int ponto){// seta a apontuação de cada artista que vem de outras classes
+        Artista.pontuacaoTotal += ponto;
+    } 
+    private static double pontuacaoTotal(){// retorno da pontuação total;
+       return Artista.pontuacaoTotal;
+    }
+
+    public int getPontuacaoTotal(){
+        return Artista.pontuacaoTotal;
+    }
+    public int getPontos() {
+        pontos = Artista.pontuacaoTotal;
+        return pontos;
+    }
+
+    public void setPontos(int pontos) {
+        this.pontos = pontos;
+    }
+
+    public int getQtApresentacao() {
+        return this.qtApresentacao;
+    }
+
+    public void setQtApresentacao(int qtApresentacao) {
+        
+        this.qtApresentacao = qtApresentacao;
+        
+    }
 
     public String getNome() {
         return this.nome;
@@ -47,9 +83,5 @@ public abstract class  Artista {
         this.tempo_servico = tempo_servico;
     }
     
-    private static double pontuacaoTotal(){
-    return 1;
-    }
-    public static void setPontuacao(int pont){
-    }
+
 }

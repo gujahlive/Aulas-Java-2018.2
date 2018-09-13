@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package atividadeteatro;
+package pbl.pkg4;
 
 /**
  *
@@ -31,9 +31,19 @@ public class Cantor extends Artista implements InterfacePontuacao{
         this.banda = banda;
     }
 
+
+
     @Override
-    public int calcPontuacao() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void calcPontuacao(int qtShow) {
+        this.idade = 2018 - this.ano_nasc;
+           if(this.idade > 18 && qtShow >= 3){
+            Artista.setPontuacao(100);
+           }
+    }
+
+    @Override
+    public boolean liberaShowGratis() {
+        return true;
     }
     
 }

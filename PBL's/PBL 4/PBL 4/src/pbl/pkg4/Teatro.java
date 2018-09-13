@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package atividadeteatro;
+package pbl.pkg4;
 
 /**
  *
@@ -13,13 +13,7 @@ public class Teatro implements InterfacePontuacao{
     private Artista artista;
     private int contPontuacao;
     
-
-    @Override
-    public int calcPontuacao() {
-        if(contPontuacao >= 1000){
-            return 1;
-        }return 1;
-    }
+  
      @Override
     public boolean liberaShowGratis(){
            if(contPontuacao >= 1000){
@@ -33,6 +27,13 @@ public class Teatro implements InterfacePontuacao{
 
     public void setContPontuacao(int contPontuacao) {
         this.contPontuacao = contPontuacao;
+    }
+
+    @Override
+    public void calcPontuacao(int qtShow) {
+            if(contPontuacao >= 1000){
+          
+        }
     }
     
     

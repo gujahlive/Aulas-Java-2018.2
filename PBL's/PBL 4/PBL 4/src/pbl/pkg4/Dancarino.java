@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package atividadeteatro;
+package pbl.pkg4;
 
 /**
  *
@@ -11,16 +11,21 @@ package atividadeteatro;
  */
 public class Dancarino extends Artista implements InterfacePontuacao{
 
-    @Override
-    public int calcPontuacao() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+ 
     //pontuação total não será chamada com o this, será chamada pelo artista
     
-    public double calcularPontuacao(int qtShow){
-        if(qtShow >= 5){
+    
+   
+
+    @Override
+    public void calcPontuacao(int qtShow) {
+           if(qtShow >= 5){
             Artista.setPontuacao(100);
-            return 100;
-        }else return 0;
+           }
+    }
+
+    @Override
+    public boolean liberaShowGratis() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

@@ -1,4 +1,4 @@
-/*
+  /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -14,6 +14,33 @@ public abstract class  Artista {
     protected String cpf;
     protected int ano_nasc;
     protected double tempo_servico;
+    protected int pontos;
+    protected int qtApresentacao;
+    private static int pontuacaoTotal;
+    
+    
+    public static void setPontuacao(int ponto){// seta a apontuação de cada artista que vem de outras classes
+        Artista.pontuacaoTotal += ponto;
+    } 
+    private static double pontuacaoTotal(){// retorno da pontuação total;
+    return 1;
+    }
+
+    public int getPontos() {
+        return this.pontos;
+    }
+
+    public void setPontos(int pontos) {
+        this.pontos = pontos;
+    }
+
+    public int getQtApresentacao() {
+        return this.qtApresentacao;
+    }
+
+    public void setQtApresentacao(int qtApresentacao) {
+        this.qtApresentacao = qtApresentacao;
+    }
 
     public String getNome() {
         return this.nome;
@@ -47,9 +74,5 @@ public abstract class  Artista {
         this.tempo_servico = tempo_servico;
     }
     
-    private static double pontuacaoTotal(){
-    return 1;
-    }
-    public static void setPontuacao(int pont){
-    }
+
 }

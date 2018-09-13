@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package atividadeteatro;
+package pbl.pkg4;
 
 /**
  *
  * @author aluno
  */
 public interface InterfacePontuacao {
-    public void calcPontuacao(int qtShow);
+    public void calcPontuacao(int qtShow);// seria um double 
     public boolean liberaShowGratis();
     
 }
