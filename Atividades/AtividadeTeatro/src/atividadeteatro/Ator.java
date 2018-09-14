@@ -11,10 +11,6 @@ package atividadeteatro;
  */
 public class Ator extends Artista implements InterfacePontuacao{
 
-    @Override
-    public int calcPontuacao() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
     private boolean formado;
 
@@ -24,6 +20,16 @@ public class Ator extends Artista implements InterfacePontuacao{
 
     public void setFormado(boolean formado) {
         this.formado = formado;
+    }
+
+    @Override
+    public void calcPontuacao(int qtShow) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean liberaShowGratis() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     

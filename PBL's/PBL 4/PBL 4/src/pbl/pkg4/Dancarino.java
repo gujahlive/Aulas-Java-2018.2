@@ -19,9 +19,12 @@ public class Dancarino extends Artista implements InterfacePontuacao{
 
     @Override
     public void calcPontuacao(int qtShow) {
-           if(qtShow >= 5){
+         this.saldoApresentacoes += qtShow; 
+            while(this.saldoApresentacoes > 5){
             Artista.setPontuacao(100);
+            this.saldoApresentacoes -= 5;
            }
+           //this.saldoApresentacoes = this.saldoApresentacoes;
     }
 
     @Override

@@ -14,12 +14,26 @@ public abstract class  Artista {
     protected String cpf;
     protected int ano_nasc;
     protected double tempo_servico;
-    private static int pontos;
+    protected  int saldoApresentacoes = 0;
     protected int qtApresentacao;
-    protected int contApresentacoes;// conta quantas aprestações os artistas fazem, quando chega na quantidade que é exigida, tem que zerar o contador e iniciar novamente
+    protected  int contApresentacoes;// conta quantas aprestações os artistas fazem, quando chega na quantidade que é exigida, tem que zerar o contador e iniciar novamente
     private static int pontuacaoTotal;
+    private static int qtPontos;
+    
+    public int getSaldoApresentacoes() {
+        return this.saldoApresentacoes;
+    }
 
+    public void setSaldoApresentacoes(int saldoApresentacoes) {
+        this.saldoApresentacoes = saldoApresentacoes;
+    }
  
+    
+     public  void contApresentacoes(int qtApresentacoes){// conta as quantidades de apresentações de cada artista,
+      this.contApresentacoes += qtApresentacoes;        // tem que fazer um calculo das quantidades de apresentações tranformando em pontos para
+                                                        // que quando chegue no 1000, pontos libere a atuação gratis                           
+    } 
+
     
     
     public static void setPontuacao(int ponto){// seta a apontuação de cada artista que vem de outras classes
@@ -34,12 +48,12 @@ public abstract class  Artista {
         return Artista.pontuacaoTotal;
     }
     public int getPontos() {
-        pontos = Artista.pontuacaoTotal;
-        return pontos;
+       qtPontos = Artista.pontuacaoTotal;
+        return qtPontos;
     }
 
     public void setPontos(int pontos) {
-        this.pontos = pontos;
+        this.qtPontos = pontos;
     }
 
     public int getQtApresentacao() {

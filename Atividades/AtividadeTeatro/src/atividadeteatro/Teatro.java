@@ -12,29 +12,18 @@ package atividadeteatro;
 public class Teatro implements InterfacePontuacao{
     private Artista artista;
     private int contPontuacao;
-    
 
     @Override
-    public int calcPontuacao() {
-        if(contPontuacao >= 1000){
-            return 1;
-        }return 1;
-    }
-     @Override
-    public boolean liberaShowGratis(){
-           if(contPontuacao >= 1000){
-            return true;
-        }else return false; 
+    public void calcPontuacao(int qtShow) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public int getContPontuacao() {
-        return this.contPontuacao;
-    }
-
-    public void setContPontuacao(int contPontuacao) {
-        this.contPontuacao = contPontuacao;
+    @Override
+    public boolean liberaShowGratis() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
+
     
     
 }
