@@ -23,7 +23,7 @@ public class Programa {
         Cantor cantor = new Cantor();
         Ator ator = new Ator();
         
-        qtApresentacoesDanc = Integer.parseInt(JOptionPane.showInputDialog("Quantas apresentações o dançarino fez?"));
+        /*qtApresentacoesDanc = Integer.parseInt(JOptionPane.showInputDialog("Quantas apresentações o dançarino fez?"));
         dancarino.calcPontuacao(qtApresentacoesDanc);
         dancarino.setQtApresentacao(qtApresentacoesDanc);
         System.out.println("Pontuação total do teatro: "+dancarino.getPontos());
@@ -36,18 +36,22 @@ public class Programa {
         System.out.println("dancarino.getPontos(): "+dancarino.getPontos());
         System.out.println("cantor.getPontos(): "+cantor.getPontos());
          System.out.println("dancarino.getPontuacaoTotal(): "+dancarino.getPontuacaoTotal());/*/
-    /*  qtApresentacoesAtor =  Integer.parseInt(JOptionPane.showInputDialog("Quantas apresentações o ator fez?"));
-      ator.setQtApresentacao(qtApresentacoesAtor);
-    ator.setQtApresentacao(Integer.parseInt(JOptionPane.showInputDialog("Quantas apresentações o ator fez?")));
+      qtApresentacoesAtor =  Integer.parseInt(JOptionPane.showInputDialog("Quantas apresentações o ator fez?"));
+      
+    //ator.setQtApresentacao(Integer.parseInt(JOptionPane.showInputDialog("Quantas apresentações o ator fez?")));
         boolean formado;
-        int verifica = JOptionPane.showConfirmDialog(null, "O ator é formado?");
-        if(verifica == 1){
+        int verificac = 0;
+        verificac  = JOptionPane.showConfirmDialog(null,"Ator formado?","ator",verificac); 
+        //int verifica = JOptionPane.showConfirmDialog(null, "O ator é formado?");
+        if(verificac == 1){
             formado = false;
         }else formado = true;
-       ator.setFormado(formado);
-     
+      ator.setFormado(formado);
+       
+      ator.setQtApresentacao(qtApresentacoesAtor);
         System.out.println("Pontuação total do teatro: "+ator.getPontuacaoTotal());
-         System.out.println("Pontuação total do teatro: "+ator.getPontos());*/
+         System.out.println("Pontuação total do teatro: "+ator.getPontos());
+         System.out.println("Ator formado: "+ator.isFormado());
     }
     
 }

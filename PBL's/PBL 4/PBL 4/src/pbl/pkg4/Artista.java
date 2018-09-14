@@ -23,12 +23,13 @@ public abstract class  Artista {
     
     
     public static void setPontuacao(int ponto){// seta a apontuação de cada artista que vem de outras classes
-        Artista.pontuacaoTotal += ponto;
+      Artista.pontuacaoTotal += ponto;
+        
     } 
     private static double pontuacaoTotal(){// retorno da pontuação total;
        return Artista.pontuacaoTotal;
     }
-
+    
     public int getPontuacaoTotal(){
         return Artista.pontuacaoTotal;
     }
