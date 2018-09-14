@@ -9,7 +9,8 @@ package pbl.pkg4;
  *
  * @author aluno
  */
-public class Cantor extends Artista implements InterfacePontuacao{
+public class Cantor extends Artista implements InterfacePontuacao {
+
     private Banda banda;
     private int idade;
     private static int EspetaculosRealizados;
@@ -17,10 +18,6 @@ public class Cantor extends Artista implements InterfacePontuacao{
 
     public int getIdade() {
         return this.idade;
-    }
-
-    public void setIdade(int idade) {
-        this.idade = idade;
     }
 
     public Banda getBanda() {
@@ -31,19 +28,14 @@ public class Cantor extends Artista implements InterfacePontuacao{
         this.banda = banda;
     }
 
-
-
     @Override
     public void calcPontuacao(int qtShow) {
         this.idade = 2018 - this.ano_nasc;
-           if(this.idade > 18 && qtShow >= 3){
+        this.saldoApresentacoes += qtShow;
+        while (this.idade > 18 && this.saldoApresentacoes > 3) {
             Artista.setPontuacao(100);
-           }
+            this.saldoApresentacoes -= 3;
+        }
     }
 
-    @Override
-    public boolean liberaShowGratis() {
-        return true;
-    }
-    
 }

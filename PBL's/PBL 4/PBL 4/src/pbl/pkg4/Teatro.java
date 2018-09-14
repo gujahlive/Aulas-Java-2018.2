@@ -14,12 +14,7 @@ public class Teatro implements InterfacePontuacao{
     private int contPontuacao;
     
   
-     @Override
-    public boolean liberaShowGratis(){
-           if(contPontuacao >= 1000){
-            return true;
-        }else return false; 
-    }
+    
 
     public int getContPontuacao() {
         return this.contPontuacao;

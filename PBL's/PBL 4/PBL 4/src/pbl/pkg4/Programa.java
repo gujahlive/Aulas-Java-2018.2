@@ -22,7 +22,41 @@ public class Programa {
         Dancarino dancarino = new Dancarino();
         Cantor cantor = new Cantor();
         Ator ator = new Ator();
-        int verificad = 0;
+        int e = 1;
+        do{
+         e = Integer.parseInt(JOptionPane.showInputDialog("1 - Dancarino\n 2 - Cantor\n 0 - sair"));
+        switch (e) {
+            case 1:
+                int verificad = 0;
+                do {
+
+                    qtApresentacoesDanc = Integer.parseInt(JOptionPane.showInputDialog("Quantas apresentações o dançarino fez?"));
+                    dancarino.calcPontuacao(qtApresentacoesDanc);
+                    System.out.println("Pontuação total do teatro: " + dancarino.getPontos());
+                    System.out.println("Saldo Dancarino: " + dancarino.getSaldoApresentacoes());
+                    verificad = JOptionPane.showConfirmDialog(null, "Inserir mais Apresentações?", "Dancarino", verificad);
+                } while (verificad == 0);
+
+                break;
+            case 2:
+                int verificaA = 0;
+                do {
+                    cantor.setAno_nasc(Integer.parseInt(JOptionPane.showInputDialog("Qual ano o Cantor nasceu?")));
+                    qtApresentacoesDanc = Integer.parseInt(JOptionPane.showInputDialog("Quantas apresentações o cantor fez?"));
+                    cantor.calcPontuacao(qtApresentacoesDanc);
+                    System.out.println("Idade: " + cantor.getIdade());
+                    System.out.println("Pontuação total do teatro: " + cantor.getPontos());
+                    System.out.println("Saldo Cantor: " + cantor.getSaldoApresentacoes());
+
+                    verificaA = JOptionPane.showConfirmDialog(null, "Inserir mais Apresentações?", "Dancarino", verificaA);
+                } while (verificaA == 0);
+
+                break;
+
+        }
+        //break;
+        }while(e != 0);
+        /* int verificad = 0;
         do {
 
             qtApresentacoesDanc = Integer.parseInt(JOptionPane.showInputDialog("Quantas apresentações o dançarino fez?"));
@@ -30,31 +64,8 @@ public class Programa {
             System.out.println("Pontuação total do teatro: " + dancarino.getPontos());
             System.out.println("Saldo: " + dancarino.getSaldoApresentacoes());
             verificad = JOptionPane.showConfirmDialog(null, "Inserir mais Apresentações?", "Dancarino", verificad);
-        } while (verificad == 0);
+        } while (verificad == 0);*///funfanuuu tudo!!! teste de saldo de apresentações batenuuu
 
-        /*cantor.setAno_nasc(Integer.parseInt(JOptionPane.showInputDialog("Qual o ano de nasc do canto: ")));
-        cantor.setQtApresentacao(Integer.parseInt(JOptionPane.showInputDialog("Quantas apresentações o cantor fez?")));
-       qtApresentacoesCantor = Integer.parseInt(JOptionPane.showInputDialog("Quantas apresentações o cantor fez?"));
-        cantor.calcPontuacao(qtApresentacoesCantor);
-        cantor.setQtApresentacao(qtApresentacoesCantor);
-        System.out.println("dancarino.getPontos(): "+dancarino.getPontos());
-        System.out.println("cantor.getPontos(): "+cantor.getPontos());
-         System.out.println("dancarino.getPontuacaoTotal(): "+dancarino.getPontuacaoTotal());/*/
-        // qtApresentacoesAtor =  Integer.parseInt(JOptionPane.showInputDialog("Quantas apresentações o ator fez?"));
-        //ator.setQtApresentacao(Integer.parseInt(JOptionPane.showInputDialog("Quantas apresentações o ator fez?")));
-        /*  boolean formado;
-        int verificac = 0;
-        verificac  = JOptionPane.showConfirmDialog(null,"Ator formado?","ator",verificac); 
-        //int verifica = JOptionPane.showConfirmDialog(null, "O ator é formado?");
-        if(verificac == 1){
-            formado = false;
-        }else formado = true;
-      ator.setFormado(formado);
-       
-      ator.setQtApresentacao(qtApresentacoesAtor);
-        System.out.println("Pontuação total do teatro: "+ator.getPontuacaoTotal());
-         System.out.println("Pontuação total do teatro: "+ator.getPontos());
-         System.out.println("Ator formado: "+ator.isFormado());*/
     }
 
 }

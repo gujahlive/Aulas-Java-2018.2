@@ -24,11 +24,7 @@ public class Dancarino extends Artista implements InterfacePontuacao{
             Artista.setPontuacao(100);
             this.saldoApresentacoes -= 5;
            }
-           //this.saldoApresentacoes = this.saldoApresentacoes;
     }
 
-    @Override
-    public boolean liberaShowGratis() {
-        return true;
-    }
+   
 }

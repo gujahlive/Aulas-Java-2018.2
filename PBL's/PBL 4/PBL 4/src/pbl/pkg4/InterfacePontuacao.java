@@ -11,6 +11,6 @@ package pbl.pkg4;
  */
 public interface InterfacePontuacao {
     public void calcPontuacao(int qtShow);// seria um double 
-    public boolean liberaShowGratis();
+
     
 }
