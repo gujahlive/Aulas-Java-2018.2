@@ -29,6 +29,8 @@ public class Teatro implements InterfacePontuacao{
             if(contPontuacao >= 1000){
           
         }
+            
+            
     }
     
     

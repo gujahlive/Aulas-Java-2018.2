@@ -35,6 +35,7 @@ public class Programa {
                         dancarino.calcPontuacao(qtApresentacoesDanc);
                         System.out.println("Pontuação total do teatro: " + dancarino.getPontos());
                         System.out.println("Saldo Dancarino: " + dancarino.getSaldoApresentacoes());
+                        System.out.println("Gratuito Liberada?: "+dancarino.getLiberada());
                         verificad = JOptionPane.showConfirmDialog(null, "Inserir mais Apresentações?", "Dancarino", verificad);
                     } while (verificad == 0);
 
@@ -48,6 +49,7 @@ public class Programa {
                         System.out.println("Idade: " + cantor.getIdade());
                         System.out.println("Pontuação total do teatro: " + cantor.getPontos());
                         System.out.println("Saldo Cantor: " + cantor.getSaldoApresentacoes());
+                        System.out.println("Gratuito Liberada?: "+cantor.getLiberada());
 
                         verificaA = JOptionPane.showConfirmDialog(null, "Inserir mais Apresentações?", "Dancarino", verificaA);
                     } while (verificaA == 0);
@@ -68,6 +70,7 @@ public class Programa {
                     System.out.println("Pontuação total do teatro: " + ator.getPontos());
                     System.out.println("Ator Formado: " + ator.isFormado());
                     System.out.println("Saldo ator: " + ator.getSaldoApresentacoes());
+                    System.out.println("Gratuito Liberada?: "+ator.getLiberada());
 
                     break;
             }
