@@ -49,7 +49,7 @@ public abstract class  Artista {
 
     
     
-    public static void setPontuacao(int ponto){// seta a apontuação de cada artista que vem de outras classes
+    /*public static void setPontuacao(int ponto){// seta a apontuação de cada artista que vem de outras classes
       Artista.pontuacaoTotal += ponto;
              while(Artista.pontuacaoTotal > 1000){
                Artista.apresentacaoLiberada = true;
@@ -63,7 +63,22 @@ public abstract class  Artista {
              
       
         
-    } 
+    }*/ 
+        public static void setPontuacao(int ponto){// seta a apontuação de cada artista que vem de outras classes
+      Artista.pontuacaoTotal += ponto;
+            while(Artista.pontuacaoTotal == 0 && Artista.pontuacaoTotal < 1000){
+                  Artista.apresentacaoLiberada = false;
+            }
+            if(Artista.pontuacaoTotal == 1000){
+                  Artista.apresentacaoLiberada = true;
+                  Artista.pontuacaoTotal = 0;
+            }
+            if (Artista.pontuacaoTotal > 1000){
+                Artista.apresentacaoLiberada = false;
+            }
+           
+      }
+    
     private static double pontuacaoTotal(){// retorno da pontuação total;
        return Artista.pontuacaoTotal;
     }

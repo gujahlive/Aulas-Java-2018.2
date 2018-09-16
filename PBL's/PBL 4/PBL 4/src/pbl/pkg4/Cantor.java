@@ -32,7 +32,7 @@ public class Cantor extends Artista implements InterfacePontuacao {
     public void calcPontuacao(int qtShow) {
         this.idade = 2018 - this.ano_nasc;
         this.saldoApresentacoes += qtShow;
-        while (this.idade > 18 && this.saldoApresentacoes > 3) {
+        while (this.idade > 18 && this.saldoApresentacoes >= 3) {
             Artista.setPontuacao(100);
             this.saldoApresentacoes -= 3;
         }

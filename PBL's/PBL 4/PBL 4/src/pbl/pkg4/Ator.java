@@ -27,7 +27,7 @@ public class Ator extends Artista implements InterfacePontuacao{
     @Override
     public void calcPontuacao(int qtShow) {
         this.saldoApresentacoes += qtShow;
-        while(this.formado == true && this.saldoApresentacoes > 3) {
+        while(this.formado == true && this.saldoApresentacoes >= 3) {
             Artista.setPontuacao(100);
             this.saldoApresentacoes -= 3;
         }
