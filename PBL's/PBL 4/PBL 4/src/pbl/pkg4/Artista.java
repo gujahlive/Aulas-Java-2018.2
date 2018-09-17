@@ -51,11 +51,11 @@ public abstract class  Artista {
     
     public static void setPontuacao(int ponto){// seta a apontuação de cada artista que vem de outras classes
       Artista.pontuacaoTotal += ponto;
-             while(Artista.pontuacaoTotal > 1000){
+             if(Artista.pontuacaoTotal >= 1000){
                Artista.apresentacaoLiberada = true;
                Artista.pontuacaoTotal -= Artista.pontuacaoTotal; // pontuacao total tem que zerar e iniciar novamente, mas se ele passar mais de 200 pontos ele tem que iniciar dos 200 por exe 
-               //if(Artista.apresentacaoLiberada = true){
-               // Artista.apresentacaoLiberada = false; //tenho que dar false depois 
+             }else if(Artista.apresentacaoLiberada = true){
+                Artista.apresentacaoLiberada = false; //tenho que dar false depois 
                //}
               
                
