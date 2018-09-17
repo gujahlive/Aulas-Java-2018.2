@@ -11,7 +11,8 @@ import java.util.ArrayList;
  *
  * @author aluno
  */
-public abstract class Dispositivo implements RegulaTamanho {
+public abstract class Dispositivo  {
+    public Conteudo conteudo;
  
     
 }

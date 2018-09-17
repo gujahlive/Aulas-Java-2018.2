@@ -9,7 +9,17 @@ package framework;
  *
  * @author aluno
  */
-public class Desktop extends Dispositivo {
+public class Desktop extends Dispositivo implements RegulaTamanho {
+
+    @Override
+    public double AumentaTamanho() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public double DiminuiTamanho() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 
     

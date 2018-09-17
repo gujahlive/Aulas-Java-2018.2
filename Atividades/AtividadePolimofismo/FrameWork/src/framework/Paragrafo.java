@@ -11,9 +11,9 @@ import java.util.ArrayList;
  *
  * @author aluno
  */
-public class Paragrafos extends TamanhoECor{
+public class Paragrafo extends Conteudo{
    protected ArrayList<Integer> paragrafos; 
-    public Paragrafos(){
+    public Paragrafo(){
         paragrafos = new ArrayList<>();
     }
     

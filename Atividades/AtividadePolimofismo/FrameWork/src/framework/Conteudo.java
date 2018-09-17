@@ -11,10 +11,10 @@ import java.util.ArrayList;
  *
  * @author aluno
  */
-public class Links extends TamanhoECor{
+public class Conteudo {
+    protected double tamanho;
+    protected String cor;
     
-    protected ArrayList<String> links; 
-    public Links(){
-        links = new ArrayList<>();
-    }
+
+    
 }

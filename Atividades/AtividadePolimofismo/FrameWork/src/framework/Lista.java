@@ -9,6 +9,6 @@ package framework;
  *
  * @author aluno
  */
-public class Listas extends TamanhoECor{
+public class Lista extends Conteudo{
     
 }
