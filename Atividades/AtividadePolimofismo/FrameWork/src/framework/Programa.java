@@ -5,6 +5,8 @@
  */
 package framework;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author aluno
@@ -18,13 +20,29 @@ public class Programa {
         // TODO code application logic here
         Desktop desktop = new Desktop();
         Conteudo link = new Link();
+        Conteudo paragrafo = new Paragrafo();
+        Conteudo lista = new Lista();        
+        
         link.setCor("Azivis");
         link.setTamanho(14);
+
         
+        
+        paragrafo.setCor("Verde");
+        paragrafo.setTamanho(14);
+       
+        lista.setCor("Verde");
+        lista.setTamanho(14);
+        desktop.setConteudo(lista);
         desktop.setConteudo(link);
-        double tamanhoNovo = desktop.redimensionar();
-        System.out.println("Tamanho original do link: "+desktop.getConteudo().getTamanho());
-        System.out.println("Tamanho modificado do link: "+tamanhoNovo);
+        desktop.setConteudo(paragrafo);
+        ArrayList<Double> novosValores = new ArrayList<>();
+        novosValores = desktop.redimensionar();
+        for(int i =0 ; i<novosValores.size();i++){
+            System.out.println("Conteudo: "+i+": "+novosValores.get(i));
+        
+        }
+        
  
     }
     

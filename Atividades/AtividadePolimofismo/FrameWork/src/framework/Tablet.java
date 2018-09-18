@@ -5,19 +5,27 @@
  */
 package framework;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author aluno
  */
 public class Tablet extends Dispositivo {
-    
-        @Override
-    public double redimensionar() { 
-          this.conteudo.setTamanho(this.conteudo.getTamanho() * 0.3);
-           return this.conteudo.getTamanho();
-    
+      public Tablet(){
+        this.conteudos = new ArrayList<>();
     }
- 
 
-    
+    @Override
+    public ArrayList<Double> redimensionar() {
+        ArrayList<Double> novosTam = new ArrayList<Double>();
+        double novoTam;
+        for (int i = 0; i < this.conteudos.size(); i++) {
+            novoTam = this.conteudos.get(i).getTamanho();
+            novosTam.add(novoTam);
+        }
+
+        return novosTam;
+
+    }
 }

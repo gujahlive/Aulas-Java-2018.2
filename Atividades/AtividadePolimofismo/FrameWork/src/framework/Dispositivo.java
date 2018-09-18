@@ -7,24 +7,32 @@ package framework;
 
 //import java.util.ArrayList;
 
+import java.util.ArrayList;
+
+
 /**
  *
  * @author aluno
  */
 public abstract class Dispositivo   {
-    protected Conteudo conteudo;
-
-    public Conteudo getConteudo() {
-        return this.conteudo;
+    protected ArrayList<Conteudo> conteudos;
+    
+  
+   
+    
+    public ArrayList<Conteudo> getConteudos() {
+        return this.conteudos;
     }
 
     public void setConteudo(Conteudo conteudo) {
-        this.conteudo = conteudo;
+        this.conteudos.add(conteudo);
     }
     
-
+     public void setConteudo(ArrayList<Conteudo> conteudos) {
+        this.conteudos = conteudos;
+    }
           
-    public abstract double  redimensionar();
+    public abstract ArrayList<Double>  redimensionar();
 
    
 }

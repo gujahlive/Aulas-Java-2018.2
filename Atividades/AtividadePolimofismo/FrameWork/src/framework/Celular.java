@@ -5,18 +5,37 @@
  */
 package framework;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author aluno
  */
 public class Celular extends Dispositivo {
 
+        public Celular(){
+        this.conteudos = new ArrayList<>();
+    }
+    
         @Override
-    public double redimensionar() { 
+    public ArrayList<Double> redimensionar() { 
         
-          double novoTam =  this.conteudo.getTamanho();
-          novoTam -= novoTam * 0.3;
-          return novoTam;
+    ArrayList<Double> novosTam = new ArrayList<Double>();
+        double novoTam;
+        for(int i=0 ; i<this.conteudos.size();i++){
+        if (this.conteudos.get(i) instanceof Lista || this.conteudos.get(i) instanceof Paragrafo) {
+            novoTam = this.conteudos.get(i).getTamanho();
+            novoTam += novoTam * 1.5;
+           novosTam.add(novoTam);
+
+        }else{
+        novoTam = this.conteudos.get(i).getTamanho(); 
+        novoTam += novoTam * 1.2;
+        
+        } 
+        }
+            return novosTam;        
+   
     
     }
     

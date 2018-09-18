@@ -5,18 +5,27 @@
  */
 package framework;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author aluno
  */
-public class Notebook extends Dispositivo{
+public class Notebook extends Dispositivo {
     
-    
-        @Override
-    public double redimensionar() { 
-           return this.conteudo.getTamanho()*2;
+      public Notebook(){
+        this.conteudos = new ArrayList<>();
     }
-
-
+    @Override
+    public ArrayList<Double> redimensionar() {
+            ArrayList<Double> novosTam = new ArrayList<Double>();
+        double novoTam;
+        for (int i = 0; i < this.conteudos.size(); i++) {
+            novoTam = this.conteudos.get(i).getTamanho();
+            novoTam = novoTam * 2;
+            novosTam.add(novoTam);
+        }
+        return novosTam;
+    }
 
 }
