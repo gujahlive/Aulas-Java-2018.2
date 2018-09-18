@@ -20,13 +20,13 @@ public class Responsividade extends Conteudo{
              this.tamanho = 1;    
         }
         if (dispositivo instanceof Notebook) {
-             this.tamanho *= 1.5;   // aumenta 100% 
+             this.tamanho *= 2;   // aumenta 100% 
         }
         if (dispositivo instanceof Tablet) {
-             this.tamanho *= 1.5;    // mantem
+             this.tamanho *= 3;    // mantem
         }
         if (dispositivo instanceof Celular) {
-             this.tamanho *= 1.5;   // diminui 30% 
+             this.tamanho *= 4;   // diminui 30% 
         }
         return this.tamanho;
     }
