@@ -17,7 +17,7 @@ public class Responsividade extends Conteudo{
 
     public double calcResponsividade(Dispositivo dispositivo) {
         if (dispositivo instanceof Desktop) {
-             this.tamanho *= 1.5;    
+             this.tamanho = 1;    
         }
         if (dispositivo instanceof Notebook) {
              this.tamanho *= 1.5;   // aumenta 100% 

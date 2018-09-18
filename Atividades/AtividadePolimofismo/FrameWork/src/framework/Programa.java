@@ -21,14 +21,19 @@ public class Programa {
       //  Dispositivo note = new Notebook();
         Dispositivo pc = new Desktop();
         Paragrafo paragrafoPC = new Paragrafo(220,"Azul");
-        
+        Responsividade rPC = new Responsividade(110,"Teste");
         
         Conteudo conteudo = new Conteudo(110,"Vermelho");
+        
         pc.setConteudo(conteudo);
+       
+        
         
         System.out.println("Tamanho: "+pc.getConteudo().getTamanho());
         System.out.println("Cor: "+pc.getConteudo().getCor());
-        
+         pc.setResponsividade(rPC);
+        System.out.println("Tamanho: "+pc.getConteudo().getTamanho());
+        System.out.println("Cor: "+pc.getConteudo().getCor());
     }
     
 }

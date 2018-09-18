@@ -16,6 +16,15 @@ public abstract class Dispositivo   {
     protected Paragrafo paragrafo;
     protected Link link;
     protected Lista lista;
+    protected Responsividade responsividade;
+
+    public Responsividade getResponsividade() {
+        return this.responsividade;
+    }
+
+    public void setResponsividade(Responsividade responsividade) {
+        this.responsividade = responsividade;
+    }
 
     public Conteudo getConteudo() {
         return this.conteudo;
