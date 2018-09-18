@@ -11,11 +11,13 @@ import java.util.ArrayList;
  *
  * @author aluno
  */
-public class Conteudo {
+public abstract class Conteudo {
 
     protected double tamanho;
     protected String cor;
     
+    public Conteudo(){
+    }
     public Conteudo (double tamanho, String cor){
         this.tamanho = tamanho;
         this.cor = cor;

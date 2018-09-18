@@ -10,7 +10,12 @@ package framework;
  * @author aluno
  */
 public class Notebook extends Dispositivo{
-
+    
+    
+        @Override
+    public double redimensionar() { 
+           return this.conteudo.getTamanho()*2;
+    }
 
 
 

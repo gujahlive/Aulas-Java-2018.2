@@ -11,6 +11,9 @@ package framework;
  */
 public class Lista extends Conteudo{
     
+    public Lista(){
+    }
+    
     public Lista(double tamanho, String cor) {
         super(tamanho, cor);
     }

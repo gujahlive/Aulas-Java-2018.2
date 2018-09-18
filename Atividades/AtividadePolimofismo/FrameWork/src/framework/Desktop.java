@@ -11,8 +11,20 @@ package framework;
  */
 public class Desktop extends Dispositivo {
 
+    @Override
+    public double redimensionar() {
+        double novoTam=0;
+        if (this.conteudo instanceof Lista || this.conteudo instanceof Paragrafo) {
+            novoTam = this.conteudo.getTamanho();
+            novoTam += novoTam * 1.5;
+           
 
+        }else{
+        novoTam = this.conteudo.getTamanho(); 
+        novoTam += novoTam * 1.2;
+        
+        }
+            return novoTam;        
+    }
 
-
-    
 }

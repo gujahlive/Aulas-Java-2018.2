@@ -11,6 +11,13 @@ package framework;
  */
 public class Celular extends Dispositivo {
 
+        @Override
+    public double redimensionar() { 
+        
+          double novoTam =  this.conteudo.getTamanho();
+          novoTam -= novoTam * 0.3;
+          return novoTam;
     
+    }
     
 }

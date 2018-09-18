@@ -5,7 +5,7 @@
  */
 package framework;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 
 /**
  *
@@ -13,10 +13,8 @@ import java.util.ArrayList;
  */
 public class Paragrafo extends Conteudo{
   
-    protected ArrayList<Integer> paragrafos; 
-    /*   public Paragrafo(){
-    paragrafos = new ArrayList<>();
-    }*/
+      public Paragrafo(){
+    }
     
     public Paragrafo(double tamanho, String cor) {
         super(tamanho, cor);

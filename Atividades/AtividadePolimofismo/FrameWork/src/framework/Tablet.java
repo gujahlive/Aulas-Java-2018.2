@@ -10,7 +10,13 @@ package framework;
  * @author aluno
  */
 public class Tablet extends Dispositivo {
-
+    
+        @Override
+    public double redimensionar() { 
+          this.conteudo.setTamanho(this.conteudo.getTamanho() * 0.3);
+           return this.conteudo.getTamanho();
+    
+    }
  
 
     
