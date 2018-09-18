@@ -14,7 +14,12 @@ import java.util.ArrayList;
 public class Link extends Conteudo{
     
     protected ArrayList<String> links; 
-    public Link(){
-        links = new ArrayList<>();
+    /*    public Link(){
+    links = new ArrayList<>();
+    }
+    */
+
+    public Link(double tamanho, String cor) {
+        super(tamanho, cor);
     }
 }

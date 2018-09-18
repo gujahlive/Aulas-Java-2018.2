@@ -12,9 +12,14 @@ import java.util.ArrayList;
  * @author aluno
  */
 public class Paragrafo extends Conteudo{
-   protected ArrayList<Integer> paragrafos; 
-    public Paragrafo(){
-        paragrafos = new ArrayList<>();
+  
+    protected ArrayList<Integer> paragrafos; 
+    /*   public Paragrafo(){
+    paragrafos = new ArrayList<>();
+    }*/
+    
+    public Paragrafo(double tamanho, String cor) {
+        super(tamanho, cor);
     }
     
 }

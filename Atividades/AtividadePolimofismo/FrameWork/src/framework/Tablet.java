@@ -9,16 +9,9 @@ package framework;
  *
  * @author aluno
  */
-public class Tablet extends Dispositivo implements RegulaTamanho{
+public class Tablet extends Dispositivo {
 
-    @Override
-    public double AumentaTamanho() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+ 
 
-    @Override
-    public double DiminuiTamanho() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
 }

@@ -5,14 +5,52 @@
  */
 package framework;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 
 /**
  *
  * @author aluno
  */
-public abstract class Dispositivo  {
-    public Conteudo conteudo;
- 
+public abstract class Dispositivo   {
+    protected Conteudo conteudo;
+    protected Paragrafo paragrafo;
+    protected Link link;
+    protected Lista lista;
+
+    public Conteudo getConteudo() {
+        return this.conteudo;
+    }
+
+    public void setConteudo(Conteudo conteudo) {
+        this.conteudo = conteudo;
+    }
+    
+    
+    public Paragrafo getParagrafo() {
+        return this.paragrafo;
+    }
+
+    public void setParagrafo(Paragrafo paragrafo) {
+        this.paragrafo = paragrafo;
+    }
+
+    public Link getLink() {
+        return this.link;
+    }
+
+    public void setLink(Link link) {
+        this.link = link;
+    }
+
+    public Lista getLista() {
+        return this.lista;
+    }
+
+    public void setLista(Lista lista) {
+        this.lista = lista;
+    }
+    
+          
+
     
 }

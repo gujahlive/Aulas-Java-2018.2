@@ -23,6 +23,7 @@ public class Programa {
         Batedeira batedeira = new Batedeira("Mondial", 100, 110);
         Tampa tampa = new Tampa();
         System.out.println("Valida Voltagem: " + ferro.validaVoltagem(5));
+        
 
         /* int e = Integer.parseInt(JOptionPane.showInputDialog("1 - Fabrica\n 2 - Loja"));
         switch (e) {

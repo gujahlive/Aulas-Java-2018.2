@@ -16,11 +16,18 @@ public class Programa {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Dispositivo cel = new Celular();
-        Dispositivo tab = new Tablet();
-        Dispositivo note = new Notebook();
+          Dispositivo cel = new Celular();
+      //  Dispositivo tab = new Tablet();
+      //  Dispositivo note = new Notebook();
         Dispositivo pc = new Desktop();
+        Paragrafo paragrafoPC = new Paragrafo(220,"Azul");
         
+        
+        Conteudo conteudo = new Conteudo(110,"Vermelho");
+        pc.setConteudo(conteudo);
+        
+        System.out.println("Tamanho: "+pc.getConteudo().getTamanho());
+        System.out.println("Cor: "+pc.getConteudo().getCor());
         
     }
     
