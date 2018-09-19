@@ -5,16 +5,23 @@
  */
 package petshoppolimorfismo;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author gusta
  */
 public class Cliente {
-    private Endereco endereco; // pode ser um arraylist de enderecos
+    private ArrayList<Endereco> enderecos; // pode ser um arraylist de enderecos
     private String nome;
     private String cpf;
-    private Pet pet; // 1 dono pode ter vários pets
-
+    private ArrayList<Pet> pets; // 1 dono pode ter vários pets
+    
+    
+    public Cliente(){
+        this.pets = new ArrayList<>();
+        this.enderecos = new ArrayList<>();
+    }
     public String getNome() {
         return this.nome;
     }
@@ -31,13 +38,18 @@ public class Cliente {
         this.cpf = cpf;
     }
 
-    public Endereco getEndereco() {
-        return endereco;
+    public ArrayList<Endereco> getEndereco() {
+        return this.enderecos;
     }
 
     public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
+        this.enderecos.add(endereco);
     }
-    
+    public void setPets(Pet pet){
+        this.pets.add(pet);
+    }
+    public ArrayList<Pet> getPets(){
+        return this.pets;
+    }
     
 }

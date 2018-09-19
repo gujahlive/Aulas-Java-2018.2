@@ -22,23 +22,33 @@ public class Principal {
 
         Pet coelho = new Coelho();
         Cachorro dog = new Cachorro();
+        Pet gato = new Gato();
         Cliente cliente = new Cliente();
         Endereco endereco = new Endereco();
         Servico servico = new Servico();
 
-        int sair = 1,i = 0;
+        int sair = 1, i = 0;
         int statusInserirCadastro = JOptionPane.YES_NO_OPTION;
         do {
 
-            int e = Integer.parseInt(JOptionPane.showInputDialog("1 - Cadastrar Cliente\n2 - Cadastrar Pet\n3 - Listar Clientes\n4 - Listar Pets\n5-Cadastrar Serviço\n6 - Listar Servicos\n7 - Sair"));
+            int e = Integer.parseInt(JOptionPane.showInputDialog("1 - Cadastrar Cliente\n2 - Cadastrar Pet\n3 - Listar Clientes\n4 - Listar Pets\n5-Cadastrar Serviço\n6 - Listar Servicos\n7 - setados\n8 - Sair"));
             switch (e) {
                 case 1:
+                    int statusInsereEndereco = JOptionPane.YES_NO_OPTION;
+
                     cliente.setNome(JOptionPane.showInputDialog("Nome: ", "Fulano Da Silva Souza"));
                     cliente.setCpf(JOptionPane.showInputDialog("CPF: ", "123.456.789-10"));
-                    endereco.setRua(JOptionPane.showInputDialog("Rua: "));
-                    endereco.setBairro(JOptionPane.showInputDialog("Bairro: "));
-                    endereco.setCidade(JOptionPane.showInputDialog("Cidade: "));
-                    cliente.setEndereco(endereco);
+
+                    do {
+
+                        endereco.setRua(JOptionPane.showInputDialog("Rua: "));
+                        endereco.setBairro(JOptionPane.showInputDialog("Bairro: "));
+                        endereco.setCidade(JOptionPane.showInputDialog("Cidade: "));
+                      //  cliente.setEnderecos(endereco);
+                        cliente.setEndereco(endereco);
+                        statusInsereEndereco = JOptionPane.showConfirmDialog(null, "Deseja Inserir Mais 1 endereço?", "Endereco", statusInsereEndereco);
+                    } while (statusInsereEndereco == 0);
+
                     break;
 
                 case 2:
@@ -59,6 +69,11 @@ public class Principal {
 
                             break;
                         case 2:
+                            gato.setNome(JOptionPane.showInputDialog("Nome: ", "Totó"));
+                            gato.setNascimento(Integer.parseInt(JOptionPane.showInputDialog("Ano Nascimento: ", "2010")));
+
+                            gato.setCliente(cliente);
+                            gato.setServico(servico);
                             break;
                         case 3:
                             break;
@@ -78,51 +93,88 @@ public class Principal {
                     System.out.println("---------------------- Clientes ----------------- ");
                     System.out.println("Nome: " + cliente.getNome());
                     System.out.println("CPF: " + cliente.getCpf());
-                    System.out.println("Rua: " + cliente.getEndereco().getRua());
-                    System.out.println("Bairro: " + cliente.getEndereco().getBairro());
-                    System.out.println("Cidade: " + cliente.getEndereco().getCidade());
+                    System.out.println("Rua: " + cliente.getEndereco().get(i).getRua());
+                    System.out.println("Bairro: " + cliente.getEndereco().get(i).getBairro());
+                    System.out.println("Cidade: " + cliente.getEndereco().get(i).getCidade());
 
                     break;
 
                 case 4:
-                   
+
                     System.out.println("---------------------- Pets ----------------- ");
                     System.out.println("Nome: " + dog.getNome());
                     System.out.println("Idade: " + dog.CalcularIdade());
                     System.out.println("Pedigree: " + dog.isPedigree());
                     System.out.println("Dono: " + dog.getCliente().getNome());
-                    System.out.println("Descrição do serviço: "+dog.getServicos().get(i).getDescricoes());
-                    System.out.println("Valor Banho: "+dog.getServicos().get(i).CalcularServico(dog));
-                    
+                    System.out.println("Descrição do serviço: " + dog.getServicos().get(i).getDescricoes());
+                    System.out.println("Valor Banho: " + dog.getServicos().get(i).CalcularServico(dog));
+
                     break;
 
                 case 5:
                     int statusInsereDescricao = JOptionPane.YES_NO_OPTION;
                     do {
+                        int eServ = Integer.parseInt(JOptionPane.showInputDialog("1 - Inseirir Banho\n2 - Inserir Tosa\n3 - Inserir Consulta"));
+                        switch(eServ){
+                            
+                         case 1:
+                              String descricao = "banho";
+                              servico.setDescricao(descricao);
+                             break;
+                            case 2:
+                              descricao = "tosa";
+                              servico.setDescricao(descricao);
+                             break;
+                           case 3:
+                              descricao = "consulta";
+                              servico.setDescricao(descricao);
+                             break;
+                     }
 
-                        String descricao = JOptionPane.showInputDialog("Descrição: ", "banho");
-                        servico.setDescricao(descricao);
+                        
                         dog.setServico(servico);
-                        statusInsereDescricao = JOptionPane.showConfirmDialog(null, "Escreva: banho - tosa?", "Servico", statusInsereDescricao);
+                        statusInsereDescricao = JOptionPane.showConfirmDialog(null, "Deseja inserir mais um serviço?", "Servico", statusInsereDescricao);
                     } while (statusInsereDescricao == 0);
                     break;
                 case 6:
-                   ArrayList<Servico> servicos = new ArrayList<>();
+                   
+                     
+                    ArrayList<Servico> servicos = new ArrayList<>();
                     servicos = dog.getServicos();
-                    
+
                     //for(int i = 0 ; i < servicos.size() ; i++){// só vai servir para uma classe, nesse caso estou imprimindo o arraylist de atributos
-                          System.out.println("Servicos: "+dog.getServicos().get(i).getDescricoes());
+                    System.out.println("Servicos: " + dog.getServicos().get(i).getDescricoes());
                     //}
                     break;
+                
+
+           
+            
                 case 7:
+                    cliente.setNome("Gu");
+                    cliente.setCpf("1234");
+                    endereco.setRua("Nova Bahia");
+                    endereco.setBairro("Capelinha");
+                    dog.setNome("Bionda");
+                    dog.setNascimento(2015);
+                    servico.setDescricao("banho");
+                    servico.setDescricao("consulta");
+          
+                    cliente.setEndereco(endereco);
+                    cliente.setPets(dog);
+                    dog.setServico(servico);
+                    System.out.println("Servico: "+dog.getServicos().get(i).getDescricoes());
+                    
+                    break;
+            
+            
+            case 8:
                     sair = 0;
                 // default: e = JOptionPane.showMessageDialog("Opção errada",e); JOptionPane.showMessageDialog(frame, "A basic JOptionPane message dialog");
-
             }
 
         } while (sair != 0);
 
-   
     }
 
 }

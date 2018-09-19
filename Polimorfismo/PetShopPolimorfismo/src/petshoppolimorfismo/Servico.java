@@ -17,6 +17,12 @@ public class Servico {
     private int data;
     private double preco;
     private ArrayList<String> descricoes;
+    private static double totalValorServico;
+    
+    public static double totalServico(){
+        return Servico.totalValorServico;
+    }
+    
     
     public Servico(){
         this.descricoes = new ArrayList<>();
@@ -58,39 +64,39 @@ public class Servico {
         int i = 0;
         if ("banho".equals(this.descricoes.get(i))) {
             if (animal instanceof Coelho) {
-                this.preco += 10;
+                Servico.totalValorServico = this.preco += 10;
             }
 
             if (animal instanceof Cachorro) {
-                this.preco += 30;
+                Servico.totalValorServico = this.preco += 30;
             }
             if (animal instanceof Gato) {
-                this.preco += 20;
+               Servico.totalValorServico = this.preco += 20;
             }
         }
         if ("tosa".equals(this.descricoes.get(i))) {
 
             if (animal instanceof Cachorro) {
-                this.preco += 30;
+               Servico.totalValorServico = this.preco += 30;
             }
             if (animal instanceof Gato) {
-                this.preco += 20;
+               Servico.totalValorServico = this.preco += 20;
             }
         }
         if ("consulta".equals(this.descricoes.get(i))) {
             if (animal instanceof Coelho) {
-                this.preco += 10;
+                Servico.totalValorServico =this.preco += 10;
             }
 
             if (animal instanceof Cachorro) {
-                this.preco += 40;
+                Servico.totalValorServico = this.preco += 40;
             }
             if (animal instanceof Gato) {
-                this.preco += 20;
+               Servico.totalValorServico = this.preco += 20;
             }
         } 
 
-        return this.preco;
+        return Servico.totalValorServico;
 
     }
 

@@ -5,19 +5,25 @@
  */
 package petshoppolimorfismo;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author gusta
  */
 public class Endereco {
      private int cep;
-    private String bairro;
-    private String rua;
-    private String cidade;
+    private ArrayList<String> bairros;
+    private ArrayList<String> ruas;
+    private ArrayList<String> cidades;
     private String estado;
     private String pais;
 
-    
+    public Endereco(){
+        this.ruas = new ArrayList<>();
+        this.bairros = new ArrayList<>();
+        this.cidades = new ArrayList<>();
+    } 
     //ENCAPSULAMENTO  -------------------------------------------------------
     public int getCep() {
         return this.cep;
@@ -28,30 +34,30 @@ public class Endereco {
     }
 
     
-    public String getBairro() {
-        return this.bairro;
+    public ArrayList<String> getBairro() {
+        return this.bairros;
     }
 
     public void setBairro(String bairro) {
-        this.bairro = bairro;
+        this.bairros.add(bairro);
     }
 
     
-    public String getRua() {
-        return this.rua;
+    public ArrayList<String> getRua() {
+        return this.ruas;
     }
 
     public void setRua(String rua) {
-        this.rua = rua;
+        this.ruas.add(rua);
     }
 
     
-    public String getCidade() {
-        return this.cidade;
+    public ArrayList<String> getCidade() {
+        return this.cidades;
     }
 
     public void setCidade(String cidade) {
-        this.cidade = cidade;
+        this.cidades.add(cidade);
     }
 
     

@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public abstract class Pet {
 
     protected Cliente cliente;//talvez tire daqui, pq um pet raramente pode ter vários donos, então n seria um arraylist, mas na classe dono sim, um done possui vários pets
-    protected String nome;
+    protected ArrayList<String> nomes;
     protected int nascimento;
     protected String cor;
     protected int tamanho;
@@ -25,6 +25,7 @@ public abstract class Pet {
     //--------------ENCAPSULAMENTO ----------------------
     public Pet(){
         this.servicos = new ArrayList<>();
+        this.nomes = new ArrayList<>();
     }
     
     public ArrayList<Servico> getServicos() {
@@ -51,12 +52,12 @@ public abstract class Pet {
         this.cliente = dono;
     }
 
-    public String getNome() {
-        return this.nome;
+    public ArrayList<String> getNome() {
+        return this.nomes;
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        this.nomes.add(nome);
     }
 
     public int getNascimento() {
