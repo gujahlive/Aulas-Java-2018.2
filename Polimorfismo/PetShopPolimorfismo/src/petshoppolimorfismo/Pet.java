@@ -17,7 +17,7 @@ public abstract class Pet {
     protected String cor;
     protected int tamanho;
     protected float peso;
-    protected Servico servico;
+    protected Servico servico;// arraylist de servicos, pode ser banho, tosa ou mais e incrementar no preço
     protected String raca;
 
     //--------------ENCAPSULAMENTO ----------------------
