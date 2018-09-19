@@ -10,30 +10,18 @@ package petshoppolimorfismo;
  * @author gusta
  */
 public class Cachorro extends Pet{ // classe filha 
-    private String raca;
+    private boolean pedigree;
     
-//--------------------------------------------------------------    
-    public String getRaca() {
-        
-        return this.raca;
-        
+    public void setPedigree(boolean pedigree){
+        this.pedigree = pedigree;
+    
     }
-
-    public void setRaca(String raca) {
-        this.raca = raca;
+    public boolean isPedigree(){
+        return this.pedigree;
     }
     
     
     
     
     
-public int CalcularIdade (){
-         int idade;
-         
-         
-         idade = 2018 - this.nascimento;
-         
-        return idade;
-        
-    }
 }

@@ -10,26 +10,25 @@ package petshoppolimorfismo;
  * @author gusta
  */
 public abstract class Pet {
-       protected Dono dono;
-        protected String nome;
-        protected int nascimento;
-        protected String cor;
-        protected int tamanho;
-        protected float peso;
-        protected Servico servico;
 
-    
-        
-        
-        
-        //--------------ENCAPSULAMENTO ----------------------
-public Servico getServico() {
+    protected Dono dono;
+    protected String nome;
+    protected int nascimento;
+    protected String cor;
+    protected int tamanho;
+    protected float peso;
+    protected Servico servico;
+    protected String raca;
+
+    //--------------ENCAPSULAMENTO ----------------------
+    public Servico getServico() {
         return servico;
     }
 
     public void setServico(Servico servico) {
         this.servico = servico;
     }
+
     public Dono getDono() {
         return this.dono;
     }
@@ -77,10 +76,24 @@ public Servico getServico() {
     public void setPeso(float peso) {
         this.peso = peso;
     }
-        
-        
-        
-        
-        
-    
+
+    public String getRaca() {
+
+        return this.raca;
+
+    }
+
+    public void setRaca(String raca) {
+        this.raca = raca;
+    }
+
+    public int CalcularIdade() {
+        int idade;
+
+        idade = 2018 - this.nascimento;
+
+        return idade;
+
+    }
+
 }
