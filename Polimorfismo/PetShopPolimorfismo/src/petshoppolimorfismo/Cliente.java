@@ -12,7 +12,7 @@ package petshoppolimorfismo;
 public class Cliente {
     private Endereco endereco; // pode ser um arraylist de enderecos
     private String nome;
-    private int cpf;
+    private String cpf;
     private Pet pet; // 1 dono pode ter vários pets
 
     public String getNome() {
@@ -23,11 +23,11 @@ public class Cliente {
         this.nome = nome;
     }
 
-    public int getCpf() {
+    public String getCpf() {
         return this.cpf;
     }
 
-    public void setCpf(int cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 

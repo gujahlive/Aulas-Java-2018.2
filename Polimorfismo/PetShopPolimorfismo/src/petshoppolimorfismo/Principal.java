@@ -5,6 +5,7 @@
  */
 package petshoppolimorfismo;
 
+import java.awt.Component;
 import javax.swing.JOptionPane;
 
 /**
@@ -24,29 +25,58 @@ public class Principal {
         Endereco endereco = new Endereco();
         Servico servico = new Servico();
 
-        int e = Integer.parseInt(JOptionPane.showInputDialog("1 - Cadastrar Cliente\n2 - Cadastrar endereço\n3 - Listar Clientes\n4 - Listar Pets"));
-        switch (e) {
-            case 1:
-                cliente.setNome(JOptionPane.showInputDialog("Nome: "));
-                cliente.setCpf(Integer.parseInt(JOptionPane.showInputDialog("CPF: ")));
+        int sair = 1;
+        int statusInserirCadastro = JOptionPane.YES_NO_OPTION;
+        do {
 
-                break;
+            int e = Integer.parseInt(JOptionPane.showInputDialog("1 - Cadastrar Cliente\n2 - Cadastrar Pet\n3 - Listar Clientes\n4 - Listar Pets\n5 - Sair"));
+            switch (e) {
+                case 1:
+                    cliente.setNome(JOptionPane.showInputDialog("Nome: ", "Fulano Da Silva Souza"));
+                    cliente.setCpf(JOptionPane.showInputDialog("CPF: ", "123.456.789-10"));
+                    endereco.setRua(JOptionPane.showInputDialog("Rua: "));
+                    endereco.setBairro(JOptionPane.showInputDialog("Bairro: "));
+                    endereco.setCidade(JOptionPane.showInputDialog("Cidade: "));
+                    cliente.setEndereco(endereco);
+                    break;
 
-            case 2:
+                case 2:
+                    dog.setNome(JOptionPane.showInputDialog("Nome: ","Totó"));
+                    dog.setNascimento(Integer.parseInt(JOptionPane.showInputDialog("Ano Nascimento: ","2010")));
+                    int pedigree= JOptionPane.YES_NO_OPTION;
+                    pedigree = JOptionPane.showConfirmDialog(null,"Pedigree?","Dog",pedigree);
+                    if(pedigree == 0){
+                        dog.setPedigree(true);
+                    }else dog.setPedigree(false);
+                    dog.setCliente(cliente);
+                    break;
 
-                endereco.setRua(JOptionPane.showInputDialog("Rua: "));
-                endereco.setBairro(JOptionPane.showInputDialog("Bairro: "));
-                endereco.setCidade(JOptionPane.showInputDialog("Cidade: "));
+                case 3:
+                    System.out.println("---------------------- Clientes ----------------- ");
+                    System.out.println("Nome: " + cliente.getNome());
+                    System.out.println("CPF: " + cliente.getCpf());
+                    System.out.println("Rua: " + cliente.getEndereco().getRua());
+                    System.out.println("Bairro: " + cliente.getEndereco().getBairro());
+                    System.out.println("Cidade: " + cliente.getEndereco().getCidade());
 
-                break;
+                    break;
 
-            case 3:
-                break;
+                case 4:
+                     System.out.println("---------------------- Pets ----------------- ");
+                     System.out.println("Nome: " + dog.getNome());
+                     System.out.println("Idade: "+dog.CalcularIdade());
+                     System.out.println("Pedigree: "+dog.isPedigree());
+                     System.out.println("Dono: "+dog.getCliente().getNome());
+                     
+                     
+                    break;
+                case 5:
+                    sair = 0;
+                // default: e = JOptionPane.showMessageDialog("Opção errada",e); JOptionPane.showMessageDialog(frame, "A basic JOptionPane message dialog");
 
-            case 4:
-                break;
-
-        }
+            }
+            //statusInserirCadastro = JOptionPane.showConfirmDialog(null,"deseja inserir mais uma porta?","Casa",statusInserirCadastro);
+        } while (sair != 0);
 
         /*
           int statusInserirCadastro = JOptionPane.YES_NO_OPTION;
@@ -54,15 +84,11 @@ public class Principal {
           
           statusInserirCadastro = JOptionPane.showConfirmDialog(null,"deseja inserir mais uma porta?","Casa",statusInserirCadastro);
           
-          //  dog.setNome(JOptionPane.showInputDialog("Nome: "));
-          // dog.setNascimento(Integer.parseInt(JOptionPane.showInputDialog("Ano Nascimento: ")));
-
-          dog.setPedigree(true);
-          dog.setDono(cliente);
+       
           cliente.setEndereco(endereco);
           dog.setServico(servico);
           System.out.println("Valor Banho: "+dog.getServico().CalcularBanho(dog));
-          System.out.println("Pedigree: "+dog.isPedigree());
+         
           }while(statusInserirCadastro == 0); */
     }
 

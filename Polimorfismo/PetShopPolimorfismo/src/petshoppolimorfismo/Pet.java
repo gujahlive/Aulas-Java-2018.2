@@ -29,11 +29,11 @@ public abstract class Pet {
         this.servico = servico;
     }
 
-    public Cliente getDono() {
+    public Cliente getCliente() {
         return this.cliente;
     }
 
-    public void setDono(Cliente dono) {
+    public void setCliente(Cliente dono) {
         this.cliente = dono;
     }
 
