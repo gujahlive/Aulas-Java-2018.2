@@ -11,7 +11,7 @@ package petshoppolimorfismo;
  */
 public abstract class Pet {
 
-    protected Dono dono;
+    protected Cliente cliente;//talvez tire daqui, pq um pet raramente pode ter vários donos, então n seria um arraylist, mas na classe dono sim, um done possui vários pets
     protected String nome;
     protected int nascimento;
     protected String cor;
@@ -29,12 +29,12 @@ public abstract class Pet {
         this.servico = servico;
     }
 
-    public Dono getDono() {
-        return this.dono;
+    public Cliente getDono() {
+        return this.cliente;
     }
 
-    public void setDono(Dono dono) {
-        this.dono = dono;
+    public void setDono(Cliente dono) {
+        this.cliente = dono;
     }
 
     public String getNome() {

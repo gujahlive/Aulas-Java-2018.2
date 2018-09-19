@@ -9,10 +9,11 @@ package petshoppolimorfismo;
  *
  * @author gusta
  */
-public class Dono {
-    private Endereco endereco;
+public class Cliente {
+    private Endereco endereco; // pode ser um arraylist de enderecos
     private String nome;
     private int cpf;
+    private Pet pet; // 1 dono pode ter vários pets
 
     public String getNome() {
         return this.nome;
