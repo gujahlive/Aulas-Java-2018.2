@@ -83,7 +83,7 @@ public class Servico {
             }
 
             if (animal instanceof Cachorro) {
-                this.preco += 30;
+                this.preco += 40;
             }
             if (animal instanceof Gato) {
                 this.preco += 20;

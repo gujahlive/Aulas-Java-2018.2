@@ -122,18 +122,7 @@ public class Principal {
 
         } while (sair != 0);
 
-        /*
-          int statusInserirCadastro = JOptionPane.YES_NO_OPTION;
-          do {
-          
-          statusInserirCadastro = JOptionPane.showConfirmDialog(null,"deseja inserir mais uma porta?","Casa",statusInserirCadastro);
-          
-       
-          cliente.setEndereco(endereco);
-          dog.setServico(servico);
-          
-         
-          }while(statusInserirCadastro == 0); */
+   
     }
 
 }
