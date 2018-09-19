@@ -5,6 +5,8 @@
  */
 package petshoppolimorfismo;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author gusta
@@ -14,8 +16,11 @@ public class Servico {
     private int horario;
     private int data;
     private double preco;
-    private String descricao;
-
+    private ArrayList<String> descricoes;
+    
+    public Servico(){
+        this.descricoes = new ArrayList<>();
+    }
     public int getHorario() {
         return this.horario;
     }
@@ -40,17 +45,18 @@ public class Servico {
         this.preco = preco;
     }
 
-    public String getDescricao() {
-        return this.descricao;
+    public ArrayList<String> getDescricoes() {
+        return this.descricoes;
     }
 
     public void setDescricao(String descricao) {
-        this.descricao = descricao;
+        this.descricoes.add(descricao);
     }
 
     // método para calcular o banho 
     public double CalcularServico(Pet animal) {
-        if ("banho".equals(this.descricao)) {
+        int i = 0;
+        if ("banho".equals(this.descricoes.get(i))) {
             if (animal instanceof Coelho) {
                 this.preco += 10;
             }
@@ -62,7 +68,7 @@ public class Servico {
                 this.preco += 20;
             }
         }
-         if ("tosa".equals(this.descricao)) {
+        if ("tosa".equals(this.descricoes.get(i))) {
 
             if (animal instanceof Cachorro) {
                 this.preco += 30;
@@ -71,7 +77,7 @@ public class Servico {
                 this.preco += 20;
             }
         }
-        if ("consulta".equals(this.descricao)) {
+        if ("consulta".equals(this.descricoes.get(i))) {
             if (animal instanceof Coelho) {
                 this.preco += 10;
             }

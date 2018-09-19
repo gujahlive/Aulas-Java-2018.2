@@ -6,6 +6,7 @@
 package petshoppolimorfismo;
 
 import java.awt.Component;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -25,11 +26,11 @@ public class Principal {
         Endereco endereco = new Endereco();
         Servico servico = new Servico();
 
-        int sair = 1;
+        int sair = 1,i = 0;
         int statusInserirCadastro = JOptionPane.YES_NO_OPTION;
         do {
 
-            int e = Integer.parseInt(JOptionPane.showInputDialog("1 - Cadastrar Cliente\n2 - Cadastrar Pet\n3 - Listar Clientes\n4 - Listar Pets\n5-Cadastrar Serviço\n6 - Sair"));
+            int e = Integer.parseInt(JOptionPane.showInputDialog("1 - Cadastrar Cliente\n2 - Cadastrar Pet\n3 - Listar Clientes\n4 - Listar Pets\n5-Cadastrar Serviço\n6 - Listar Servicos\n7 - Sair"));
             switch (e) {
                 case 1:
                     cliente.setNome(JOptionPane.showInputDialog("Nome: ", "Fulano Da Silva Souza"));
@@ -55,17 +56,23 @@ public class Principal {
                             }
                             dog.setCliente(cliente);
                             dog.setServico(servico);
-                            
+
                             break;
-                        case 2:break;
-                        case 3:break;
-                        case 4:break;
-                        case 5:break;
-                        case 6:break;
-                        case 7:break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                        case 4:
+                            break;
+                        case 5:
+                            break;
+                        case 6:
+                            break;
+                        case 7:
+                            break;
 
                     }
-                    
+
                     break;
                 case 3:
                     System.out.println("---------------------- Clientes ----------------- ");
@@ -78,27 +85,41 @@ public class Principal {
                     break;
 
                 case 4:
+                   
                     System.out.println("---------------------- Pets ----------------- ");
                     System.out.println("Nome: " + dog.getNome());
                     System.out.println("Idade: " + dog.CalcularIdade());
                     System.out.println("Pedigree: " + dog.isPedigree());
                     System.out.println("Dono: " + dog.getCliente().getNome());
-                    System.out.println("Servico: "+dog.getServico().getDescricao());
-                    System.out.println("Valor Banho: "+dog.getServico().CalcularServico(dog));
+                    System.out.println("Descrição do serviço: "+dog.getServicos().get(i).getDescricoes());
+                    System.out.println("Valor Banho: "+dog.getServicos().get(i).CalcularServico(dog));
                     
-
                     break;
-                    
+
                 case 5:
-                    servico.setDescricao(JOptionPane.showInputDialog("Descrição: ", "banho"));
-                    
-                    break;    
+                    int statusInsereDescricao = JOptionPane.YES_NO_OPTION;
+                    do {
+
+                        String descricao = JOptionPane.showInputDialog("Descrição: ", "banho");
+                        servico.setDescricao(descricao);
+                        dog.setServico(servico);
+                        statusInsereDescricao = JOptionPane.showConfirmDialog(null, "Escreva: banho - tosa?", "Servico", statusInsereDescricao);
+                    } while (statusInsereDescricao == 0);
+                    break;
                 case 6:
+                   ArrayList<Servico> servicos = new ArrayList<>();
+                    servicos = dog.getServicos();
+                    
+                    //for(int i = 0 ; i < servicos.size() ; i++){// só vai servir para uma classe, nesse caso estou imprimindo o arraylist de atributos
+                          System.out.println("Servicos: "+dog.getServicos().get(i).getDescricoes());
+                    //}
+                    break;
+                case 7:
                     sair = 0;
                 // default: e = JOptionPane.showMessageDialog("Opção errada",e); JOptionPane.showMessageDialog(frame, "A basic JOptionPane message dialog");
 
             }
-            //statusInserirCadastro = JOptionPane.showConfirmDialog(null,"deseja inserir mais uma porta?","Casa",statusInserirCadastro);
+
         } while (sair != 0);
 
         /*

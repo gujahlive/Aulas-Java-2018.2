@@ -5,6 +5,8 @@
  */
 package petshoppolimorfismo;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author gusta
@@ -17,17 +19,29 @@ public abstract class Pet {
     protected String cor;
     protected int tamanho;
     protected float peso;
-    protected Servico servico;// arraylist de servicos, pode ser banho, tosa ou mais e incrementar no preço
+    protected ArrayList<Servico> servicos;// arraylist de servicos, pode ser banho, tosa ou mais e incrementar no preço
     protected String raca;
 
     //--------------ENCAPSULAMENTO ----------------------
-    public Servico getServico() {
-        return servico;
+    public Pet(){
+        this.servicos = new ArrayList<>();
     }
-
+    
+    public ArrayList<Servico> getServicos() {
+    return this.servicos;
+    }
+    
     public void setServico(Servico servico) {
-        this.servico = servico;
+    this.servicos.add(servico);
     }
+    
+    /*   public Servico getServico() {
+    return servico;
+    }
+    
+    public void setServico(Servico servico) {
+    this.servico = servico;
+    }*/
 
     public Cliente getCliente() {
         return this.cliente;
