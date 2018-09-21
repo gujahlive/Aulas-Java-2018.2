@@ -22,11 +22,15 @@ public class Principal {
 
         Pet coelho = new Coelho();
         Cachorro dog = new Cachorro();
+        ArrayList<Cachorro> dogs = new ArrayList<>();
+        Pet caoPet = new Cachorro();
         Pet gato = new Gato();
+        
         Cliente cliente = new Cliente();
         Endereco endereco = new Endereco();
         Servico servico = new Servico();
-
+        ArrayList<Cliente> listaCliente = new ArrayList<>(); // array list para obter vários clientes
+        ArrayList<Pet> listaPet = new ArrayList<>();// e a mesma coisa pro pet
         int sair = 1, i = 0;
         int statusInserirCadastro = JOptionPane.YES_NO_OPTION;
         do {
@@ -66,14 +70,16 @@ public class Principal {
                             }
                             dog.setCliente(cliente);
                             dog.setServico(servico);
+                            dogs.add(dog);
+                            listaPet.add(dog);
 
                             break;
                         case 2:
                             gato.setNome(JOptionPane.showInputDialog("Nome: ", "Totó"));
                             gato.setNascimento(Integer.parseInt(JOptionPane.showInputDialog("Ano Nascimento: ", "2010")));
-
                             gato.setCliente(cliente);
                             gato.setServico(servico);
+                            listaPet.add(gato);
                             break;
                         case 3:
                             break;
@@ -100,15 +106,17 @@ public class Principal {
                     break;
 
                 case 4:
-
+                    for ( i = 0 ; i < listaPet.size() ; i ++){
                     System.out.println("---------------------- Pets ----------------- ");
-                    System.out.println("Nome: " + dog.getNome());
-                    System.out.println("Idade: " + dog.CalcularIdade());
-                    System.out.println("Pedigree: " + dog.isPedigree());
-                    System.out.println("Dono: " + dog.getCliente().getNome());
-                    System.out.println("Descrição do serviço: " + dog.getServicos().get(i).getDescricoes());
-                    System.out.println("Valor Banho: " + dog.getServicos().get(i).CalcularServico(dog));
-
+                    System.out.println("Nome: " + listaPet.get(i).getNome());
+                    System.out.println("Idade: " + listaPet.get(i).CalcularIdade());
+                    if (listaPet.get(i) instanceof Cachorro ){
+                    System.out.println("Pedigree: " + dogs.get(i).isPedigree());
+                    }
+                   // System.out.println("Dono: " + dog.getCliente().getNome());
+                   // System.out.println("Descrição do serviço: " + dog.getServicos().get(i).getDescricoes());
+                   // System.out.println("Valor Banho: " + dog.getServicos().get(i).CalcularServico(dog));
+                    }
                     break;
 
                 case 5:
