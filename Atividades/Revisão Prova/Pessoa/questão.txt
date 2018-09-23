@@ -1,0 +1,10 @@
+Você foi convidado a fazer um sistema para uma loja de instrumentos musicais.
+nesse sistema, deverá ter o controle de funcionarios, e controle de estoque dos produtos
+nos funcionários são  divididos em gerentes,vendedores, luthiers e comercial.
+
+os clientes da loja, são cadastrados de acordo com o seu perfil se ele é pessoa fisica ou juridica
+se ele for pessoa fisica, será acrescentado 20% do valor total no produto para a venda, 
+para venda juridica será acrescentado 10% do valor do produto.
+
+no final da venda, o sistema deve listar os produtos com os seus respectivos donos (clientes).
+
