@@ -23,9 +23,10 @@ public class Principal {
         Pet coelho = new Coelho();
         Cachorro dog = new Cachorro();
         ArrayList<Cachorro> dogs = new ArrayList<>();
-        Pet caoPet = new Cachorro();
+
+        Pet caoPet = new Cachorro();// posso instanciar uma clase que não é filha do tipo?!
         Pet gato = new Gato();
-        
+
         Cliente cliente = new Cliente();
         Endereco endereco = new Endereco();
         Servico servico = new Servico();
@@ -48,7 +49,7 @@ public class Principal {
                         endereco.setRua(JOptionPane.showInputDialog("Rua: "));
                         endereco.setBairro(JOptionPane.showInputDialog("Bairro: "));
                         endereco.setCidade(JOptionPane.showInputDialog("Cidade: "));
-                      //  cliente.setEnderecos(endereco);
+                        //  cliente.setEnderecos(endereco);
                         cliente.setEndereco(endereco);
                         statusInsereEndereco = JOptionPane.showConfirmDialog(null, "Deseja Inserir Mais 1 endereço?", "Endereco", statusInsereEndereco);
                     } while (statusInsereEndereco == 0);
@@ -106,16 +107,17 @@ public class Principal {
                     break;
 
                 case 4:
-                    for ( i = 0 ; i < listaPet.size() ; i ++){
-                    System.out.println("---------------------- Pets ----------------- ");
-                    System.out.println("Nome: " + listaPet.get(i).getNome());
-                    System.out.println("Idade: " + listaPet.get(i).CalcularIdade());
-                    if (listaPet.get(i) instanceof Cachorro ){
-                    System.out.println("Pedigree: " + dogs.get(i).isPedigree());
-                    }
-                   // System.out.println("Dono: " + dog.getCliente().getNome());
-                   // System.out.println("Descrição do serviço: " + dog.getServicos().get(i).getDescricoes());
-                   // System.out.println("Valor Banho: " + dog.getServicos().get(i).CalcularServico(dog));
+                    for (i = 0; i < listaPet.size(); i++) {
+                        System.out.println("---------------------- Pets ----------------- ");
+                        System.out.println("Nome: " + listaPet.get(i).getNome());
+                        System.out.println("Idade: " + listaPet.get(i).CalcularIdade());
+                        if (listaPet.get(i) instanceof Cachorro) {
+                            System.out.println("Pedigree: " + dogs.get(i).isPedigree());
+                        }
+
+                        // System.out.println("Dono: " + dog.getCliente().getNome());
+                        // System.out.println("Descrição do serviço: " + dog.getServicos().get(i).getDescricoes());
+                        // System.out.println("Valor Banho: " + dog.getServicos().get(i).CalcularServico(dog));
                     }
                     break;
 
@@ -123,30 +125,28 @@ public class Principal {
                     int statusInsereDescricao = JOptionPane.YES_NO_OPTION;
                     do {
                         int eServ = Integer.parseInt(JOptionPane.showInputDialog("1 - Inseirir Banho\n2 - Inserir Tosa\n3 - Inserir Consulta"));
-                        switch(eServ){
-                            
-                         case 1:
-                              String descricao = "banho";
-                              servico.setDescricao(descricao);
-                             break;
-                            case 2:
-                              descricao = "tosa";
-                              servico.setDescricao(descricao);
-                             break;
-                           case 3:
-                              descricao = "consulta";
-                              servico.setDescricao(descricao);
-                             break;
-                     }
+                        switch (eServ) {
 
-                        
+                            case 1:
+                                String descricao = "banho";
+                                servico.setDescricao(descricao);
+                                break;
+                            case 2:
+                                descricao = "tosa";
+                                servico.setDescricao(descricao);
+                                break;
+                            case 3:
+                                descricao = "consulta";
+                                servico.setDescricao(descricao);
+                                break;
+                        }
+
                         dog.setServico(servico);
                         statusInsereDescricao = JOptionPane.showConfirmDialog(null, "Deseja inserir mais um serviço?", "Servico", statusInsereDescricao);
                     } while (statusInsereDescricao == 0);
                     break;
                 case 6:
-                   
-                     
+
                     ArrayList<Servico> servicos = new ArrayList<>();
                     servicos = dog.getServicos();
 
@@ -154,10 +154,7 @@ public class Principal {
                     System.out.println("Servicos: " + dog.getServicos().get(i).getDescricoes());
                     //}
                     break;
-                
 
-           
-            
                 case 7:
                     cliente.setNome("Gu");
                     cliente.setCpf("1234");
@@ -167,16 +164,15 @@ public class Principal {
                     dog.setNascimento(2015);
                     servico.setDescricao("banho");
                     servico.setDescricao("consulta");
-          
+
                     cliente.setEndereco(endereco);
                     cliente.setPets(dog);
                     dog.setServico(servico);
-                    System.out.println("Servico: "+dog.getServicos().get(i).getDescricoes());
-                    
+                    System.out.println("Servico: " + dog.getServicos().get(i).getDescricoes());
+
                     break;
-            
-            
-            case 8:
+
+                case 8:
                     sair = 0;
                 // default: e = JOptionPane.showMessageDialog("Opção errada",e); JOptionPane.showMessageDialog(frame, "A basic JOptionPane message dialog");
             }
