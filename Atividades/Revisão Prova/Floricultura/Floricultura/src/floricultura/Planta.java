@@ -57,18 +57,19 @@ public abstract class Planta {
     }
 
     public void setTipo(Planta tipo) {
+        
         if (tipo instanceof Azaleia) { 
             this.tipo = tipo;
             this.descricaoPlanta = "Aza";
             this.valor = 10 + vaso.getValor();
         
-        }
+        }else 
 
         if (tipo instanceof Orquidia) {
             this.valor = 18 + vaso.getValor();
             this.tipo = tipo;
             this.descricaoPlanta = "Orq";
-        }
+        } else 
 
         if (tipo instanceof Violeta) {
             this.valor = 7.5 + vaso.getValor();
@@ -89,5 +90,8 @@ public abstract class Planta {
     public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
-
+    public abstract boolean regar(int diaRegado);
+    
+    public abstract boolean adubar(int diaAdubado);
+    
 }

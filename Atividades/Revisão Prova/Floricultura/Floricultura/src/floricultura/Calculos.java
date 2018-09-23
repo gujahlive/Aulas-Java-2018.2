@@ -11,5 +11,6 @@ package floricultura;
  */
 public interface Calculos {
     public double valorTotal();
+   
     
 }

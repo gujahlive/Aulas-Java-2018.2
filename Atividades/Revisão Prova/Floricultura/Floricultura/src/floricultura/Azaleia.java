@@ -9,14 +9,22 @@ package floricultura;
  *
  * @author gusta
  */
-public class Azaleia extends Planta implements Calculos{
-
-    @Override
-    public double valorTotal() {
-       // double total = 0;
-       // total = Planta.valor + 1;
-        return 1;
-    }
-   
+public class Azaleia extends Planta {
     
+    @Override
+    public boolean regar(int diaRegado) {
+        if(diaRegado > 1){
+            return true;
+        }
+        return false;
+    }
+    
+    @Override
+    public boolean adubar(int diaAdubado) {
+         if(diaAdubado > 90){
+            return true;
+        }
+        return false;
+    }
+
 }
