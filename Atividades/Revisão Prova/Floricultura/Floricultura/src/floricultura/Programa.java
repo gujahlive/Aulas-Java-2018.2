@@ -56,7 +56,9 @@ public class Programa {
                             azaleia.setEspecificacao(JOptionPane.showInputDialog("Especificação: ", "Para casa"));
 
                             azaleia.setDia(Integer.parseInt(JOptionPane.showInputDialog("Dia: ", "1")));
-                            azaleia.setDiaRegado(Integer.parseInt(JOptionPane.showInputDialog("Dia regado: ", "5")));
+                             azaleia.setDiaRegado(Integer.parseInt(JOptionPane.showInputDialog("Dia regado: ", "5")));
+                            boolean regado =  azaleia.regar(Integer.parseInt(JOptionPane.showInputDialog("quantos dias para regar: ", "2")));
+                           boolean adubar =  azaleia.regar(Integer.parseInt(JOptionPane.showInputDialog("quantos dias para Adubar: ", "91")));
                             azaleia.setVaso(vaso);
                             azaleia.setTipo(azaleia);
 
@@ -64,6 +66,8 @@ public class Programa {
                             System.out.println("Valor do vaso: " + vaso.getValor());
                             System.out.println("Material: " + vaso.getMaterial());
                             System.out.println("Tamanho: " + vaso.getTamanho());
+                            System.out.println("Regado: "+regado);
+                            System.out.println("Adubar: "+adubar);
                             break;
 
                         case 2:
