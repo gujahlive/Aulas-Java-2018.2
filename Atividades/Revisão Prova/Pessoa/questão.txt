@@ -1,5 +1,6 @@
 Você foi convidado a fazer um sistema para uma loja de instrumentos musicais.
 nesse sistema, deverá ter o controle de funcionarios, e controle de estoque dos produtos
+produtos: guitarra, cavaquinho, violão
 nos funcionários são  divididos em gerentes,vendedores, luthiers e comercial.
 
 os clientes da loja, são cadastrados de acordo com o seu perfil se ele é pessoa fisica ou juridica
@@ -8,3 +9,11 @@ para venda juridica será acrescentado 10% do valor do produto.
 
 no final da venda, o sistema deve listar os produtos com os seus respectivos donos (clientes).
 
+para cada vendedor que conseguir vender 5 cavaquinhos, 5 violoes e 5 guitarras, ganhará um bônus de 40% do seu salário 
+
+
+
+gerente salário de 1500
+vendedor 1200
+comercial 900
+luthier 1000
