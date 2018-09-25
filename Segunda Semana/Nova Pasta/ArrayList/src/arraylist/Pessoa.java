@@ -30,10 +30,10 @@ public class Pessoa {
     public void setApelido(String apelido){
         this.apelidos.add(apelido);
     }
-    public void setEndereco(Endereco endereco){
+    public void setEndereco(Endereco endereco){ // seta um endereço por vez dentro do laço isso em cada nova instancia
         this.enderecos.add(endereco);
     }
-    public void setEnderecos(ArrayList<Endereco> enderecos){ // adcniona todos os enderecos
+    public void setEnderecos(ArrayList<Endereco> enderecos){ // adciona todos os enderecos de uma vez, fora do laço
         this.enderecos = enderecos;
     }
    

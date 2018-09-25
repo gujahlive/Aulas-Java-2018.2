@@ -20,38 +20,25 @@ public class Principal {
     public static void main(String[] args) {
         // TODO code application logic here
         Pessoa p = new Pessoa();
-        
-        ArrayList<Endereco> enderecos = new ArrayList<>();
+        ArrayList<Endereco> enderecos = new ArrayList<>();//arraylist de endereços
         int i;
         int statusMenu = JOptionPane.YES_NO_OPTION;
         do{
-            Endereco e = new Endereco();
+            Endereco e = new Endereco();// mesma lógica, cada instancia deve ser criada ao começo de um novo laço
             e.setCep(Integer.parseInt(JOptionPane.showInputDialog("Digite o cep")));
             e.setRua(JOptionPane.showInputDialog("Digite a rua"));
             
             enderecos.add(e);
             statusMenu = JOptionPane.showConfirmDialog(null, "ir mais uma?", "menu", statusMenu);
         }while(statusMenu == 0);
-        p.setEnderecos(enderecos);
-        for(i=0 ; i< enderecos.size() ; i++){
+        p.setEnderecos(enderecos);//utiliza o setEnderecos para setar todos os endereços já na lista de enderecos.add
+        for(i=0 ; i< enderecos.size() ; i++){//
             System.out.println("Rua: "+p.getEnderecos().get(i).getRua());
             System.out.println("Cep: "+p.getEnderecos().get(i).getCep());
             
         }
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+             
         
         
        /* int i;
