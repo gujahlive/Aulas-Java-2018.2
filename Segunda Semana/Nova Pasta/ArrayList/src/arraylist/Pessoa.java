@@ -33,6 +33,9 @@ public class Pessoa {
     public void setEndereco(Endereco endereco){
         this.enderecos.add(endereco);
     }
+    public void setEnderecos(ArrayList<Endereco> enderecos){ // adcniona todos os enderecos
+        this.enderecos = enderecos;
+    }
    
      public ArrayList<Endereco> getEnderecos(){
         return this.enderecos;

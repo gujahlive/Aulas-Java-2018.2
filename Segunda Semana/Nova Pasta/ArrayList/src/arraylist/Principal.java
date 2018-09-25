@@ -5,6 +5,7 @@
  */
 package arraylist;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -19,8 +20,41 @@ public class Principal {
     public static void main(String[] args) {
         // TODO code application logic here
         Pessoa p = new Pessoa();
-        //Endereco e = new Endereco();
+        
+        ArrayList<Endereco> enderecos = new ArrayList<>();
         int i;
+        int statusMenu = JOptionPane.YES_NO_OPTION;
+        do{
+            Endereco e = new Endereco();
+            e.setCep(Integer.parseInt(JOptionPane.showInputDialog("Digite o cep")));
+            e.setRua(JOptionPane.showInputDialog("Digite a rua"));
+            
+            enderecos.add(e);
+            statusMenu = JOptionPane.showConfirmDialog(null, "ir mais uma?", "menu", statusMenu);
+        }while(statusMenu == 0);
+        p.setEnderecos(enderecos);
+        for(i=0 ; i< enderecos.size() ; i++){
+            System.out.println("Rua: "+p.getEnderecos().get(i).getRua());
+            System.out.println("Cep: "+p.getEnderecos().get(i).getCep());
+            
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       /* int i;
         for(i = 0 ; i < 3 ;i ++){
             Endereco e = new Endereco();
             p.setApelido(JOptionPane.showInputDialog("Digite um apelido"));
@@ -38,7 +72,7 @@ public class Principal {
             System.out.println("Rua: "+p.getEnderecos().get(i).getRua());
             System.out.println("Cep: "+p.getEnderecos().get(i).getCep());
             
-        }
+        }*/
         
         
         
