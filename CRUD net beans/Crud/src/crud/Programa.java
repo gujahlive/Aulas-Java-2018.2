@@ -5,6 +5,9 @@
  */
 package crud;
 
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author aluno
@@ -23,12 +26,51 @@ public class Programa {
         }else{
             System.out.println("deu ruim!!! ");
         }
-        String nome = "Guga";
-        String telefone = "321";
-        int idade = 11;
-          String script = "Insert into cliente (nome,telefone,idade) values"
-               +" ('"+nome+"','"+telefone+"',"+idade+");";
-        System.out.println(script);
+             Cliente cliente = new Cliente();  /* 
+        cliente.setNome(JOptionPane.showInputDialog("Digite seu nome: "));
+        cliente.setTelefone(JOptionPane.showInputDialog("Digite seu telefone: "));
+        cliente.setIdade(Integer.parseInt(JOptionPane.showInputDialog("Digite sua idade: ")));
+        c.cadastrarCliente(cliente);
+        
+        //int id = Integer.parseInt(JOptionPane.showInputDialog("Digite sua idade: "));
+        c.listarCliente();
+        ArrayList<Cliente> clientes = c.listarCliente();
+        for(int i = 0 ; i<clientes.size() ; i++){
+        System.out.println("Cliente: "+(i+1));
+        System.out.println("Nome: "+clientes.get(i).getNome());
+        System.out.println("Telefone: "+clientes.get(i).getTelefone());
+        System.out.println("Idade: "+clientes.get(i).getIdade());
+        System.out.println("_______________________________________________");
+        }
+        */
+        String nome = JOptionPane.showInputDialog("Informe o nome da busca");
+        //c.buscarClientePorNome(nome);
+        ArrayList<Cliente> clientes = c.buscarClientePorNome(nome);
+     
+        for(int i = 0 ; i<clientes.size() ; i++){
+        System.out.println("Cliente: "+(i+1));
+        System.out.println("Nome: "+clientes.get(i).getNome());
+        System.out.println("Telefone: "+clientes.get(i).getTelefone());
+        System.out.println("Idade: "+clientes.get(i).getIdade());
+        }
+        if(clientes.isEmpty()){
+            System.out.println("Usuário n encontrado");
+        }
+        int id = Integer.parseInt(JOptionPane.showInputDialog("Informe o id para modificar"));
+        cliente.setNome(JOptionPane.showInputDialog("Digite seu nome: "));
+        cliente.setTelefone(JOptionPane.showInputDialog("Digite seu telefone: "));
+        cliente.setIdade(Integer.parseInt(JOptionPane.showInputDialog("Digite sua idade: ")));
+        c.editarCliente(id, cliente);
+        clientes=c.listarCliente();
+        
+        for(int i = 0 ; i<clientes.size() ; i++){
+        System.out.println("Cliente: "+(i+1));
+        System.out.println("Nome: "+clientes.get(i).getNome());
+        System.out.println("Telefone: "+clientes.get(i).getTelefone());
+        System.out.println("Idade: "+clientes.get(i).getIdade());
+        System.out.println("_______________________________________________");
+        }
+    
     }
     
 }
