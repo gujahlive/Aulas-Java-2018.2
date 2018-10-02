@@ -119,6 +119,14 @@ public class Conexao {
         
             
     }
+    public void excluirCliente(int id){
+        String script = "delete from cliente where idcliente ="+id;
+        try{
+            this.statement.executeUpdate(script);
+        }catch(Exception e){
+            System.out.println("Erro: "+e.getMessage());
+        }
+    }
         
     
 }

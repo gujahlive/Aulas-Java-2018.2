@@ -43,24 +43,43 @@ public class Programa {
         System.out.println("_______________________________________________");
         }
         */
-        String nome = JOptionPane.showInputDialog("Informe o nome da busca");
-        //c.buscarClientePorNome(nome);
-        ArrayList<Cliente> clientes = c.buscarClientePorNome(nome);
-     
-        for(int i = 0 ; i<clientes.size() ; i++){
-        System.out.println("Cliente: "+(i+1));
-        System.out.println("Nome: "+clientes.get(i).getNome());
-        System.out.println("Telefone: "+clientes.get(i).getTelefone());
-        System.out.println("Idade: "+clientes.get(i).getIdade());
-        }
-        if(clientes.isEmpty()){
-            System.out.println("Usuário n encontrado");
-        }
-        int id = Integer.parseInt(JOptionPane.showInputDialog("Informe o id para modificar"));
-        cliente.setNome(JOptionPane.showInputDialog("Digite seu nome: "));
-        cliente.setTelefone(JOptionPane.showInputDialog("Digite seu telefone: "));
-        cliente.setIdade(Integer.parseInt(JOptionPane.showInputDialog("Digite sua idade: ")));
-        c.editarCliente(id, cliente);
+             
+             
+             
+             
+             /*        String nome = JOptionPane.showInputDialog("Informe o nome da busca");
+             //c.buscarClientePorNome(nome);
+             ArrayList<Cliente> clientes = c.buscarClientePorNome(nome);
+             
+             for(int i = 0 ; i<clientes.size() ; i++){
+             System.out.println("Cliente: "+(i+1));
+             System.out.println("Nome: "+clientes.get(i).getNome());
+             System.out.println("Telefone: "+clientes.get(i).getTelefone());
+             System.out.println("Idade: "+clientes.get(i).getIdade());
+             }
+             if(clientes.isEmpty()){
+             System.out.println("Usuário n encontrado");
+             }
+             int id = Integer.parseInt(JOptionPane.showInputDialog("Informe o id para modificar"));
+             cliente.setNome(JOptionPane.showInputDialog("Digite seu nome: "));
+             cliente.setTelefone(JOptionPane.showInputDialog("Digite seu telefone: "));
+             cliente.setIdade(Integer.parseInt(JOptionPane.showInputDialog("Digite sua idade: ")));
+             c.editarCliente(id, cliente);
+             clientes=c.listarCliente();
+             
+             for(int i = 0 ; i<clientes.size() ; i++){
+             System.out.println("Cliente: "+(i+1));
+             System.out.println("Nome: "+clientes.get(i).getNome());
+             System.out.println("Telefone: "+clientes.get(i).getTelefone());
+             System.out.println("Idade: "+clientes.get(i).getIdade());
+             System.out.println("_______________________________________________");
+             }
+             */
+        
+        
+        ArrayList<Cliente> clientes = c.listarCliente();
+        int idE = Integer.parseInt(JOptionPane.showInputDialog("Informe o id para excluir"));
+        c.excluirCliente(idE);
         clientes=c.listarCliente();
         
         for(int i = 0 ; i<clientes.size() ; i++){
