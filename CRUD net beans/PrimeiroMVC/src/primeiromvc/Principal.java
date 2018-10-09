@@ -43,7 +43,7 @@ public class Principal {
         
          CandidatoView cand = new CandidatoView();
         cand.setVisible(true);//é exibido na tela
-        CandidatoController cc = new CandidatoController(cand);
+        CandidatoController cc = new CandidatoController(cand);//o controller que inicia toda a configuração com o banco
         
         
         
