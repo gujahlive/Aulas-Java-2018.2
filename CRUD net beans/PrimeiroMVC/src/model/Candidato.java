@@ -10,12 +10,23 @@ package model;
  * @author francisleide
  */
 public class Candidato {
+    private int idcandidato;
     private String nome;
     private int numero;
     private boolean lavaJato;
     private String cpf;
     private String partido;
 
+    public int getIdcandidato() {
+        return idcandidato;
+    }
+
+    public void setIdcandidato(int idcandidato) {
+        this.idcandidato = idcandidato;
+    }
+
+    
+    
     public String getNome() {
         return nome;
     }

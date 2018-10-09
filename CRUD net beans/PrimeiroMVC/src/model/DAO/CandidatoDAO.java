@@ -7,6 +7,8 @@ package model.DAO;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
 import model.Candidato;
 import model.Conexao;
 
@@ -39,5 +41,29 @@ public class CandidatoDAO {
         }catch(Exception e){
             System.out.println("Erro: "+e.getMessage());
         }
+    }
+    
+    public ArrayList<Candidato> buscarCandidato(){
+        String script = "select * from candidato";
+        ArrayList<Candidato> candidatos = new ArrayList<>();
+        Candidato candidato;
+        try{
+           Connection c = this.conexao.conectar();
+           PreparedStatement ps = c.prepareStatement(script);
+           ResultSet rs = ps.executeQuery();
+           while(rs.next()){
+               candidato = new Candidato();
+               candidato.setNome(rs.getString("nome"));
+               candidato.setPartido(rs.getString("partido"));
+               candidato.setNumero(rs.getInt("numero"));
+               candidato.setCpf(rs.getString("cpf"));
+               candidato.setLavaJato(rs.getBoolean("lavajato"));
+               candidato.setIdcandidato(rs.getInt("idcandidato"));
+               candidatos.add(candidato);
+           }
+        }catch(Exception e){
+            System.out.println("Erro: "+e.getMessage());
+        }
+        return candidatos;
     }
 }

@@ -8,6 +8,7 @@ package primeiromvc;
 import controller.CandidatoController;
 import model.Conexao;
 import java.sql.Connection;
+import java.util.ArrayList;
 import model.Candidato;
 import model.DAO.CandidatoDAO;
 import views.CandidatoView;
@@ -31,17 +32,26 @@ public class Principal {
             System.out.println("Deu ruim!");
         }
         
-        /*        CandidatoDAO cDAO = new CandidatoDAO();
+                CandidatoDAO cDAO = new CandidatoDAO();
         Candidato candidato = new Candidato();
-        candidato.setCpf("12345");
+        /*candidato.setCpf("12345");
         candidato.setLavaJato(false);
         candidato.setNome("Hadadd");
         candidato.setPartido("PT");
         candidato.setNumero(13);
         cDAO.insereCandidato(candidato);*/
-        CandidatoView cand = new CandidatoView();
+        
+         CandidatoView cand = new CandidatoView();
         cand.setVisible(true);//é exibido na tela
         CandidatoController cc = new CandidatoController(cand);
+        
+        
+        
+        /*        ArrayList<Candidato> candidatos = new ArrayList<>();
+        candidatos = cDAO.buscarCandidato();
+        for(int i = 0 ; i < candidatos.size() ; i++){
+        System.out.println("teste: "+candidatos.get(i).getNome());
+        }*/
         
         
                 
