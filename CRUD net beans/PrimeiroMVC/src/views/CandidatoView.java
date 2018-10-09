@@ -96,7 +96,7 @@ public class CandidatoView extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "ID", "Nome", "LAVA JATO", "CPF","PARTIDO","NUMERO"
             }
         ));
         jScrollPane2.setViewportView(tableCandidatos);
