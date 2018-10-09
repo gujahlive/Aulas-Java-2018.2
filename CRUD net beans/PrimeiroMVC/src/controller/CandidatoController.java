@@ -19,7 +19,7 @@ public class CandidatoController implements ActionListener {
     CandidatoView cv = new CandidatoView();
     CandidatoDAO cDAO = new CandidatoDAO();
     
-    public CandidatoController(CandidatoView candidato){
+    public CandidatoController(CandidatoView candidato){//passa por parametro a view e atribui a instancia view que é tratada no controle
         this.cv = candidato;
         cv.btnSalvar.addActionListener(this);//a instancia da view passando o botão, e o metódo add passando por parametro a tela que é o this
         

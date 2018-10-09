@@ -42,6 +42,8 @@ public class Principal {
         CandidatoView cand = new CandidatoView();
         cand.setVisible(true);//é exibido na tela
         CandidatoController cc = new CandidatoController(cand);
+        
+        
                 
     }
     
