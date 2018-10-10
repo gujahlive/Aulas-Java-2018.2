@@ -5,9 +5,11 @@
  */
 package controller;
 
+import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import model.Candidato;
@@ -64,6 +66,9 @@ public class CandidatoController implements ActionListener {
                    candidato.setLavaJato(false);
                 }
                 cDAO.insereCandidato(candidato);//dentro do if pra passar o objeto
+                Component frame = null;
+                JOptionPane.showMessageDialog(frame, "Candidato Cadastrado!");
+                preencheTabela(cv.tableCandidatos);
        }
        
        if(ae.getSource() == cv.btnBuscar){
