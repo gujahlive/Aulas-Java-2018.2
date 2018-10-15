@@ -10,7 +10,14 @@ package model;
  * @author aluno
  */
 public class Dependente {
+   
+    
     private int id;
+    private String nome;
+    private String grau;
+    private int id_candidato;
+    
+    
 
     public int getId() {
         return id;
@@ -43,8 +50,5 @@ public class Dependente {
     public void setId_candidato(int id_candidato) {
         this.id_candidato = id_candidato;
     }
-    private String nome;
-    private String grau;
-    private int id_candidato;
     
 }
