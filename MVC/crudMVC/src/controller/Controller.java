@@ -26,7 +26,7 @@ public class Controller implements ActionListener, KeyListener{
     JFCrud viewCRUD = new JFCrud();
     PessoaDAO pDAO = new PessoaDAO();
     
-    public Controller(JFCrud viewCRUD, PessoaDAO pDAO){
+    public Controller(JFCrud viewCRUD, PessoaDAO pDAO){//passa um parametro o DAO para construir a tabela.
         this.pDAO = pDAO;
         this.viewCRUD = viewCRUD;
         this.viewCRUD.btnAdd.addActionListener(this);
@@ -34,7 +34,7 @@ public class Controller implements ActionListener, KeyListener{
         this.viewCRUD.btnExcluir.addActionListener(this);
         this.viewCRUD.btnEditar.addActionListener(this);
         this.viewCRUD.btnedit.addActionListener(this);
-        preencheTabela(viewCRUD.jtDados);
+        preencheTabela(viewCRUD.jtDados);//tras o preenchimento da tabela assim que a view é aberta
      //   this.viewCRUD.txtApelido.addKeyListener(this);
       //  this.viewCRUD.txtNome.addKeyListener(this);
         
@@ -65,6 +65,7 @@ public class Controller implements ActionListener, KeyListener{
             p1.setNome(nome);
             p1.setNick(nick);
             pDAO.inserePessoa(p1);
+            preencheTabela(viewCRUD.jtDados);
         }
         
         if(e.getSource() == viewCRUD.btnListar){
@@ -110,9 +111,10 @@ public class Controller implements ActionListener, KeyListener{
            
         
             Integer id = 0;
-             id = Integer.parseInt(viewCRUD.jtDados.getValueAt(filainicio, 0).toString());
+             id = Integer.parseInt(viewCRUD.jtDados.getValueAt(filainicio, 0).toString());// pelo id da pessoa, passa para o DAO para excluir
               pDAO.eliminarPessoa(id);
-              preencheTabela(viewCRUD.jtDados);
+              preencheTabela(viewCRUD.jtDados);//preenche a tabela com os dados atualizados
+              
          
                     
         }
