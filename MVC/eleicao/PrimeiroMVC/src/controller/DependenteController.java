@@ -21,6 +21,7 @@ import views.DependenteView;
 public class DependenteController implements ActionListener {
     DependenteDAO dDAO = new DependenteDAO();
     ArrayList<Candidato> candidatos;
+    //Candidato candidato = new Candidato();
     DependenteView dv = new DependenteView();
     public DependenteController(DependenteView dependenteView){
         this.dv = dependenteView;
@@ -30,11 +31,14 @@ public class DependenteController implements ActionListener {
     }
     
     public void preencheCombo(){
+        
         CandidatoDAO cDAO = new CandidatoDAO();
-        candidatos = cDAO.buscarCandidato();
+        
+        candidatos = cDAO.ordenaDESC();
         for (int i = 0; i < candidatos.size(); i++) {
-            dv.comboCandidato.addItem(candidatos.get(i).toString());
+           dv.comboCandidato.addItem(candidatos.get(i).toString());
         }
+     
     }
 
     @Override

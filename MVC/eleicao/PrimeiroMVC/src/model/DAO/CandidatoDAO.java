@@ -17,14 +17,15 @@ import model.Conexao;
  * @author francisleide
  */
 public class CandidatoDAO {
+
     Conexao conexao;
-    
-    public CandidatoDAO(){
+
+    public CandidatoDAO() {
         conexao = new Conexao();
     }
-    
-    public void insereCandidato(Candidato candidato){
-        try{
+
+    public void insereCandidato(Candidato candidato) {
+        try {
             Connection c = conexao.conectar();
             String script = "INSERT INTO CANDIDATO "
                     + "(NOME,LAVAJATO,CPF,PARTIDO,NUMERO) "
@@ -36,22 +37,22 @@ public class CandidatoDAO {
             ps.setString(4, candidato.getPartido());
             ps.setInt(5, candidato.getNumero());
             ps.executeUpdate();
-            
+
             //ps.
-        }catch(Exception e){
-            System.out.println("Erro: "+e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Erro: " + e.getMessage());
         }
     }
-    
-    public ArrayList<Candidato> buscarCandidato(){
+
+    public ArrayList<Candidato> buscarCandidato() {
         String script = "select * from candidato";
         ArrayList<Candidato> candidatos = new ArrayList<>();
         Candidato candidato;
-        try{
-           Connection c = this.conexao.conectar();
-           PreparedStatement ps =c.prepareStatement(script);
+        try {
+            Connection c = this.conexao.conectar();
+            PreparedStatement ps = c.prepareStatement(script);
             ResultSet rs = ps.executeQuery();
-            while(rs.next()){
+            while (rs.next()) {
                 candidato = new Candidato();
                 candidato.setNome(rs.getString("nome"));
                 candidato.setNumero(rs.getInt("numero"));
@@ -61,9 +62,36 @@ public class CandidatoDAO {
                 candidato.setIdCandidato(rs.getInt("idCandidato"));
                 candidatos.add(candidato);
             }
-        }catch(Exception e){
-            System.out.println("Erro: "+e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Erro: " + e.getMessage());
         }
         return candidatos;
     }
+
+    public ArrayList<Candidato> ordenaDESC() {
+        String script = "SELECT  *\n"
+                + "FROM candidato\n"
+                + "ORDER BY idcandidato DESC;";
+        ArrayList<Candidato> candidatosDESC = new ArrayList<>();
+        Candidato candidato;
+        try {
+            Connection c = this.conexao.conectar();
+            PreparedStatement ps = c.prepareStatement(script);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                candidato = new Candidato();
+                candidato.setNome(rs.getString("nome"));
+                candidato.setNumero(rs.getInt("numero"));
+               candidato.setCpf(rs.getString("cpf"));
+               candidato.setLavaJato(rs.getBoolean("lavajato"));
+                candidato.setPartido(rs.getString("partido"));
+                candidato.setIdCandidato(rs.getInt("idCandidato"));
+                candidatosDESC.add(candidato);
+            }
+        } catch (Exception e) {
+            System.out.println("Erro: " + e.getMessage());
+        }
+        return candidatosDESC;
+    }
+
 }

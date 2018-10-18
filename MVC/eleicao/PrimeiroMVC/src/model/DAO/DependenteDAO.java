@@ -43,7 +43,7 @@ public class DependenteDAO {
         }
     }
     
-  /*  public ArrayList<Candidato> buscarCandidato(){
+    public ArrayList<Candidato> buscarCandidato(){
         String script = "select * from candidato";
         ArrayList<Candidato> candidatos = new ArrayList<>();
         Candidato candidato;
@@ -65,5 +65,5 @@ public class DependenteDAO {
             System.out.println("Erro: "+e.getMessage());
         }
         return candidatos;
-    }*/
+    }
 }
