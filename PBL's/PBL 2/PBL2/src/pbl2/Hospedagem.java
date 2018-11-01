@@ -1,43 +1,31 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pbl2;
 
-import java.util.ArrayList;
-import java.util.Date;
-
-/**
- *
- * @author gusta
- */
 public class Hospedagem {
-   // private String diasDeViagem;//segunda terça quarta - arraylist
-    private ArrayList<DiasDaSemana> diasDeViagem;
-    private int qtDias;
-    private Date data_ida;
-    private Date data_volta;
-    private float diaria;
-    private float valor_total;
-   private int contHosp;
+    private Passagem p;
+    private int diasViagem;//baseados no dia de ida e volta
+    private double valorDiaria;
+    private double valorTotal;
+
+    public int getDiasViagem() {
+        return diasViagem;
+    }
+
+    public void setDiasViagem() {
+        this.diasViagem = p.calcularDiasDeViagem() ;
+    }
+
+    public double getValorDiaria() {
+        return valorDiaria;
+    }
+
+    public void setValorDiaria(double valorDiaria) {
+        this.valorDiaria = valorDiaria;
+    }
     
-    public Hospedagem(){
-                this.diasDeViagem = new ArrayList<>();
+    public double estadia(){
+        this.valorTotal = this.diasViagem * this.valorDiaria;
+        
+        return this.valorTotal;
     } 
-    public void setDiasDeViagem(ArrayList<DiasDaSemana> diasDeViagem){
-      this.diasDeViagem = diasDeViagem;
-    }
-   public void setDiaDaSemana(DiasDaSemana dia){
-        this.contHosp +=1;
-        this.diasDeViagem.add(dia);
-    }
-   public ArrayList<DiasDaSemana> getDiaDaSemana(){
-       return this.diasDeViagem;
-   }
-   public int getContDiasHospedagem(){
-       return this.contHosp;
-   }
-    
     
 }

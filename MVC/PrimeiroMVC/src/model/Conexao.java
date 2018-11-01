@@ -17,7 +17,7 @@ public class Conexao {
     
     public Connection conectar(){
         String usuario = "root";
-        String senha = "";
+        String senha = "cimatec";
         String driver = "com.mysql.jdbc.Driver";
         String servidor = "jdbc:mysql://localhost:3306/eleicao";
         try{

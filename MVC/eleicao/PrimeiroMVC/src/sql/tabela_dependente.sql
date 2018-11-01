@@ -16,3 +16,11 @@ CREATE TABLE `dependente` (
   PRIMARY KEY (`iddependente`),
   KEY `idCandidato_idx` (`idCandidato`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8
+
+
+select dependente.nome, candidato.numero, 
+dependente.grauParentesco, candidato.nome from dependente inner join 
+candidato on dependente.idCandidato = candidato.idcandidato
+
+/*traz o nome do dependente o numero do candidaro o grau de parentesco e o nome do candidato
+ onde o dependente fk_candidato = candidato_idcandidato*/

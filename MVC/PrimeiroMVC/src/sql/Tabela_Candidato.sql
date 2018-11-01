@@ -18,3 +18,4 @@ CREATE TABLE `candidato` (
   PRIMARY KEY (`idcandidato`),
   UNIQUE KEY `numero_UNIQUE` (`numero`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8
+

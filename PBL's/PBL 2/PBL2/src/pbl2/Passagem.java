@@ -1,38 +1,62 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pbl2;
 
-import java.util.Date;
+import java.util.GregorianCalendar;
 
-/**
- *
- * @author gusta
- */
 public class Passagem {
-    private Date data_ida;
-    private Date data_volta;
-    private String cidade_Origem;
-    private String cidade_Destino;
-    private double valor;
-    
-    public void setDtIda(Date data_ida){
-        this.data_ida = data_ida;
+
+    private GregorianCalendar dataIda;
+    private GregorianCalendar dataVolta;
+    private String cidadeOrigem;
+    private String cidadeDestino;
+    private double valorPassagem;
+
+    public GregorianCalendar getDataIda() {
+        return dataIda;
     }
-    public Date getDtIda(){
-       return this.data_ida;
-    }    
-    
-     public void setDtVolta(Date data_volta){
-        this.data_volta = data_volta;
+
+    public void setDataIda(GregorianCalendar dataIda) {
+        this.dataIda = dataIda;
     }
-    public Date getDtVolta(){
-       return this.data_volta;
-    } 
-    
-    
-    
-    
+
+    public GregorianCalendar getDataVolta() {
+        return dataVolta;
+    }
+
+    public void setDataVolta(GregorianCalendar dataVolta) {
+        this.dataVolta = dataVolta;
+    }
+
+    public String getCidadeOrigem() {
+        return cidadeOrigem;
+    }
+
+    public void setCidadeOrigem(String cidadeOrigem) {
+        this.cidadeOrigem = cidadeOrigem;
+    }
+
+    public String getCidadeDestino() {
+        return cidadeDestino;
+    }
+
+    public void setCidadeDestino(String cidadeDestino) {
+        this.cidadeDestino = cidadeDestino;
+    }
+
+    public double getValorPassagem() {
+        return valorPassagem;
+    }
+
+    public void setValorPassagem(double valorPassagem) {
+        this.valorPassagem = valorPassagem;
+    }
+
+    public int calcularDiasDeViagem() {
+
+        long dt1 = this.dataIda.getTimeInMillis();
+        long dt2 = this.dataVolta.getTimeInMillis();
+        int diasViajados = (int) ((dt2 - dt1) / (24 * 60 * 60 * 1000));
+
+        return diasViajados;
+    }
+
 }

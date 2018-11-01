@@ -18,3 +18,5 @@ CREATE TABLE `candidato` (
   PRIMARY KEY (`idcandidato`),
   UNIQUE KEY `numero_UNIQUE` (`numero`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8
+
+insert into dependente (nome, grau, id_candidato) values("teste","teste",1)
